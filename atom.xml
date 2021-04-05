@@ -6,7 +6,7 @@
   <link href="http://southerose.github.io/atom.xml" rel="self"/>
   
   <link href="http://southerose.github.io/"/>
-  <updated>2021-04-05T08:26:11.711Z</updated>
+  <updated>2021-04-05T06:57:51.762Z</updated>
   <id>http://southerose.github.io/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Sql_inject</title>
-    <link href="http://southerose.github.io/2021/04/05/sql-inject01/"/>
-    <id>http://southerose.github.io/2021/04/05/sql-inject01/</id>
-    <published>2021-04-05T08:20:25.853Z</published>
-    <updated>2021-04-05T08:26:11.711Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;SQL注入&quot;&gt;&lt;a href=&quot;#SQL注入&quot; class=&quot;headerlink&quot; title=&quot;SQL注入&quot;&gt;&lt;/a&gt;SQL注入&lt;/h1&gt;&lt;h2 id=&quot;寻找SQL注入点&quot;&gt;&lt;a href=&quot;#寻找SQL注入点&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
