@@ -6,7 +6,7 @@
   <link href="http://southerose.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://southerose.gitee.io/"/>
-  <updated>2021-04-05T13:56:01.251Z</updated>
+  <updated>2021-04-05T14:36:48.149Z</updated>
   <id>http://southerose.gitee.io/</id>
   
   <author>
@@ -17,18 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>sql注入详细教程-持续更新</title>
+    <title>sql注入-详细步骤</title>
     <link href="http://southerose.gitee.io/2021/04/05/sql-inject/"/>
     <id>http://southerose.gitee.io/2021/04/05/sql-inject/</id>
     <published>2021-04-05T09:13:17.000Z</published>
-    <updated>2021-04-05T13:56:01.251Z</updated>
+    <updated>2021-04-05T14:36:48.149Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;SQL-注入&quot;&gt;&lt;a href=&quot;#SQL-注入&quot; class=&quot;headerlink&quot; title=&quot;SQL 注入&quot;&gt;&lt;/a&gt;SQL 注入&lt;/h1&gt;&lt;h2 id=&quot;寻找-SQL-注入点&quot;&gt;&lt;a href=&quot;#寻找-SQL-注入点&quot;</summary>
+    <summary type="html">&lt;p&gt; sql注入的详细步骤，包括寻找注入点，一些基本的流程，还有几种常见的sql注入分类的原理，已经修复建议等。&lt;/p&gt;
+&lt;h1 id=&quot;SQL-注入&quot;&gt;&lt;a href=&quot;#SQL-注入&quot; class=&quot;headerlink&quot; title=&quot;SQL 注入&quot;&gt;&lt;/a&gt;SQL</summary>
         
       
     
@@ -39,28 +40,7 @@
     
     <category term="sql注入" scheme="http://southerose.gitee.io/tags/sql%E6%B3%A8%E5%85%A5/"/>
     
-    <category term="哈哈" scheme="http://southerose.gitee.io/tags/%E5%93%88%E5%93%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://southerose.gitee.io/2021/04/04/hello-world/"/>
-    <id>http://southerose.gitee.io/2021/04/04/hello-world/</id>
-    <published>2021-04-04T14:02:39.426Z</published>
-    <updated>2021-04-05T06:57:51.762Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
+    <category term="教程" scheme="http://southerose.gitee.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
