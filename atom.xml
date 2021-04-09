@@ -6,7 +6,7 @@
   <link href="http://southerose.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://southerose.gitee.io/"/>
-  <updated>2021-04-05T14:36:48.149Z</updated>
+  <updated>2021-04-09T06:41:24.882Z</updated>
   <id>http://southerose.gitee.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>xmctf</title>
+    <link href="http://southerose.gitee.io/2021/04/06/xmctf/"/>
+    <id>http://southerose.gitee.io/2021/04/06/xmctf/</id>
+    <published>2021-04-06T04:36:43.000Z</published>
+    <updated>2021-04-09T06:41:24.882Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;easy-web-考核&quot;&gt;&lt;a href=&quot;#easy-web-考核&quot; class=&quot;headerlink&quot; title=&quot;easy-web-考核&quot;&gt;&lt;/a&gt;easy-web-考核&lt;/h1&gt;&lt;h2 id=&quot;源代码&quot;&gt;&lt;a href=&quot;#源代码&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CTF" scheme="http://southerose.gitee.io/categories/CTF/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>sql注入-详细步骤</title>
     <link href="http://southerose.gitee.io/2021/04/05/sql-inject/"/>
     <id>http://southerose.gitee.io/2021/04/05/sql-inject/</id>
     <published>2021-04-05T09:13:17.000Z</published>
-    <updated>2021-04-05T14:36:48.149Z</updated>
+    <updated>2021-04-09T06:37:40.980Z</updated>
     
     
       
@@ -37,10 +60,6 @@
     
     <category term="web安全" scheme="http://southerose.gitee.io/categories/web%E5%AE%89%E5%85%A8/"/>
     
-    
-    <category term="sql注入" scheme="http://southerose.gitee.io/tags/sql%E6%B3%A8%E5%85%A5/"/>
-    
-    <category term="教程" scheme="http://southerose.gitee.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
