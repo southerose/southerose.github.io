@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://southerose.gitee.io/categories/index.html</loc>
+    
+    <lastmod>2021-04-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://southerose.gitee.io/about/index.html</loc>
     
     <lastmod>2021-04-09</lastmod>
@@ -38,13 +45,6 @@
   
   <url>
     <loc>http://southerose.gitee.io/contact/index.html</loc>
-    
-    <lastmod>2021-04-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://southerose.gitee.io/categories/index.html</loc>
     
     <lastmod>2021-04-04</lastmod>
     
