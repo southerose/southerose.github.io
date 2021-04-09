@@ -242,7 +242,8 @@ mark {
 }
 
 .bg-color {
-  background-image: linear-gradient(to right, #ff9f86 0%, #454a20 100%);
+  background-image: linear-gradient(to right, #64a7ff 0%, #00c9ff 100%);
+  /*background-image: linear-gradient(to right, #225074 0%, #00c9ff 100%);*/
 }
 
 .text-color {
@@ -549,12 +550,12 @@ header .go-back i {
 .post-cover {
   height: 40vh !important;
 }
-
+/*
 .bg-cover:after {
   -webkit-animation: rainbow 60s infinite;
   animation: rainbow 60s infinite;
 }
-
+*/
 .bg-cover:before,
 .bg-cover:after {
   position: absolute;

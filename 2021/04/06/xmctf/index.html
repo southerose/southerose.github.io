@@ -36,16 +36,6 @@
 
 
 
-   <style>
-    body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
-       background-repeat:no-repeat;
-       background-size:cover;
-       background-attachment:fixed;
-    }
-</style>
-
-
 
 <body>
     <header class="navbar-fixed">
@@ -71,17 +61,6 @@
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
       <span>首页</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>标签</span>
     </a>
     
   </li>
@@ -174,17 +153,6 @@
 			    <i class="fa-fw fas fa-home"></i>
 			
 			首页
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
 		</a>
           
         </li>
@@ -509,7 +477,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="easy-web-考核"><a href="#easy-web-考核" class="headerlink" title="easy-web-考核"></a>easy-web-考核</h1><h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><p>源代码贴上，如下：</p>
+                <p> 关于星盟xmctf上的一些题目。感觉自己还是见得题太少了，有一些题目有些懵懵懂懂的，好多都是参考一些大佬的，不过自己还是整出来了。加油吧~~~</p>
+<h1 id="easy-web"><a href="#easy-web" class="headerlink" title="easy-web"></a>easy-web</h1><h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><p>源代码贴上，如下：</p>
 <pre class="line-numbers language-none"><code class="language-none"> &lt;?php
 show_source(__FILE__);
 $key = "bad";
@@ -627,7 +596,7 @@ if (isset($ip)) {
 ip=127.0.0.1%0asort%09/fla?
 其中%09是一个制表符的URL编码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="web3-考核"><a href="#web3-考核" class="headerlink" title="web3-考核"></a>web3-考核</h1><h2 id="源代码-2"><a href="#源代码-2" class="headerlink" title="源代码"></a>源代码</h2><pre class="line-numbers language-none"><code class="language-none">&lt;?php
+<h1 id="web3"><a href="#web3" class="headerlink" title="web3"></a>web3</h1><h2 id="源代码-2"><a href="#源代码-2" class="headerlink" title="源代码"></a>源代码</h2><pre class="line-numbers language-none"><code class="language-none">&lt;?php
 highlight_file(__FILE__);
 $content = @$_GET['content'] ? "---mylocalnote---\n" . $_GET['content'] : "";
 $name = @$_GET['name'] ? $_GET['name'] : '';
@@ -689,7 +658,7 @@ if (isset($_SESSION['username'])) {
 <pre class="line-numbers language-none"><code class="language-none">content=|N;username|s:5:"admin";&amp;name=sess_{your PHPSESSID}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>然后访问/flag.php</p>
-<h1 id="web4-考核"><a href="#web4-考核" class="headerlink" title="web4-考核"></a>web4-考核</h1><blockquote>
+<h1 id="web4"><a href="#web4" class="headerlink" title="web4"></a>web4</h1><blockquote>
 <p>好几个四季了，我在等我的主人回来<br>key：e086aa137fa19f67d27b39d0eca18610</p>
 </blockquote>
 <p>key扔cmd5解出1.1.1.1，可能为IP地址，放到请求头</p>
@@ -731,7 +700,7 @@ eval($_GET[shell]); <span aria-hidden="true" class="line-numbers-rows"><span></s
 <pre class="line-numbers language-none"><code class="language-none">#拼接变量
 $a=sys;$b=tem;$c=$a.$b;$d='cat flag.php';$c($d);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h1 id="web8-考核"><a href="#web8-考核" class="headerlink" title="web8-考核"></a>web8-考核</h1><h2 id="考点"><a href="#考点" class="headerlink" title="考点"></a>考点</h2><blockquote>
+<h1 id="web8"><a href="#web8" class="headerlink" title="web8"></a>web8</h1><h2 id="考点"><a href="#考点" class="headerlink" title="考点"></a>考点</h2><blockquote>
 <p>SSTI flask</p>
 </blockquote>
 <p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210409133311.png"></p>
@@ -754,7 +723,7 @@ eyJ1c2VybmFtZSI6eyIgYiI6IllXUnRhVzQ9In19.YG_mrQ.-bDC0fkgAK6CetHKwi-5h_jsPb0
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>然后在浏览器中用新的session替换后再访问/flag即可得到flag。</p>
-<h1 id="web11-考核"><a href="#web11-考核" class="headerlink" title="web11-考核"></a>web11-考核</h1><p>后端仍然使用的是flask，然后同时也存在SSTI。但是过滤了一些字符。</p>
+<h1 id="web11"><a href="#web11" class="headerlink" title="web11"></a>web11</h1><p>后端仍然使用的是flask，然后同时也存在SSTI。但是过滤了一些字符。</p>
 <p>经过fuzz之后发现过滤了一些字符如 . _ arg</p>
 <p>payload</p>
 <pre class="line-numbers language-none"><code class="language-none">#get传入
@@ -1221,7 +1190,7 @@ if(isset($_GET['exp'])){
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h1,h2, h3, h4'
         });
 
         // modify the toc link href to support Chinese.
@@ -1233,7 +1202,7 @@ if(isset($_GET['exp'])){
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1,h2, h3, h4').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
@@ -1365,7 +1334,7 @@ if(isset($_GET['exp'])){
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.8k</span>&nbsp;字
+                class="white-color">3.9k</span>&nbsp;字
             
             
             

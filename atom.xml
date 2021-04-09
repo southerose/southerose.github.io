@@ -6,7 +6,7 @@
   <link href="http://southerose.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://southerose.gitee.io/"/>
-  <updated>2021-04-09T06:41:24.882Z</updated>
+  <updated>2021-04-09T06:56:31.494Z</updated>
   <id>http://southerose.gitee.io/</id>
   
   <author>
@@ -21,14 +21,15 @@
     <link href="http://southerose.gitee.io/2021/04/06/xmctf/"/>
     <id>http://southerose.gitee.io/2021/04/06/xmctf/</id>
     <published>2021-04-06T04:36:43.000Z</published>
-    <updated>2021-04-09T06:41:24.882Z</updated>
+    <updated>2021-04-09T06:56:31.494Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;easy-web-考核&quot;&gt;&lt;a href=&quot;#easy-web-考核&quot; class=&quot;headerlink&quot; title=&quot;easy-web-考核&quot;&gt;&lt;/a&gt;easy-web-考核&lt;/h1&gt;&lt;h2 id=&quot;源代码&quot;&gt;&lt;a href=&quot;#源代码&quot;</summary>
+    <summary type="html">&lt;p&gt; 关于星盟xmctf上的一些题目。感觉自己还是见得题太少了，有一些题目有些懵懵懂懂的，好多都是参考一些大佬的，不过自己还是整出来了。加油吧~~~&lt;/p&gt;
+&lt;h1 id=&quot;easy-web&quot;&gt;&lt;a href=&quot;#easy-web&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -44,7 +45,7 @@
     <link href="http://southerose.gitee.io/2021/04/05/sql-inject/"/>
     <id>http://southerose.gitee.io/2021/04/05/sql-inject/</id>
     <published>2021-04-05T09:13:17.000Z</published>
-    <updated>2021-04-09T06:37:40.980Z</updated>
+    <updated>2021-04-09T06:45:43.937Z</updated>
     
     
       
