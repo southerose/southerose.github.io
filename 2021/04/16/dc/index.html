@@ -396,14 +396,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-20
+                    2021-04-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2k
                 </div>
                 
 
@@ -433,7 +433,28 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="DC1"><a href="#DC1" class="headerlink" title="DC1"></a>DC1</h1><h2 id="信息搜集"><a href="#信息搜集" class="headerlink" title="信息搜集"></a>信息搜集</h2><pre class="line-numbers language-none"><code class="language-none"># nat模式，先扫一下，探测下IP是多少
+                <h1 id="收获"><a href="#收获" class="headerlink" title="收获"></a>收获</h1><h2 id="DC1"><a href="#DC1" class="headerlink" title="DC1"></a>DC1</h2><ul>
+<li>回顾了metasploit的一些用法</li>
+<li>利用已知cms的exp来getshell</li>
+<li>hashcat爆破用法</li>
+<li>find提权</li>
+</ul>
+<h2 id="DC2"><a href="#DC2" class="headerlink" title="DC2"></a>DC2</h2><ul>
+<li>cewl根据网页内容生成字典</li>
+<li>wpscan结合cewl跑账号和密码</li>
+<li>用metasploit的模块来ssh爆破</li>
+<li>rbash-&gt;bash——–vim逃逸</li>
+<li>git提权</li>
+</ul>
+<h2 id="DC3"><a href="#DC3" class="headerlink" title="DC3"></a>DC3</h2><ul>
+<li>searchsploit的一些用法</li>
+<li>在github上搜罗cms探测脚本</li>
+<li>john爆破用法</li>
+<li>页面模板里添加一句话木马</li>
+<li>使用Python开启SimpleHTTPServer</li>
+<li>公开的脚本提权</li>
+</ul>
+<h1 id="DC1-1"><a href="#DC1-1" class="headerlink" title="DC1"></a>DC1</h1><h2 id="信息搜集"><a href="#信息搜集" class="headerlink" title="信息搜集"></a>信息搜集</h2><pre class="line-numbers language-none"><code class="language-none"># nat模式，先扫一下，探测下IP是多少
 nmap -sP 192.168.60.1/24<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/image-20210411102620332.png"></p>
@@ -596,7 +617,7 @@ find .-exec /bin/bash -p \;<span aria-hidden="true" class="line-numbers-rows"><s
 <p>Hopefully you’ve enjoyed this and learned some new skills.</p>
 <p>You can let me know what you thought of this little journey<br>by contacting me via Twitter - @DCAU7</p>
 </blockquote>
-<h1 id="DC2"><a href="#DC2" class="headerlink" title="DC2"></a>DC2</h1><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><pre class="line-numbers language-none"><code class="language-none">nmap -sP 192.168.60.1/24<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="DC2-1"><a href="#DC2-1" class="headerlink" title="DC2"></a>DC2</h1><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><pre class="line-numbers language-none"><code class="language-none">nmap -sP 192.168.60.1/24<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>排除宿主机、网关、kali就剩下一个192.168.60.135</p>
 <p>然后再扫一下具体信息</p>
@@ -737,7 +758,7 @@ export PATH=$PATH:/bin:/usr/bin<span aria-hidden="true" class="line-numbers-rows
 <p>A special thanks to all those who sent me tweets<br>and provided me with feedback - it’s all greatly<br>appreciated.</p>
 <p>If you enjoyed this CTF, send me a tweet via @DCAU7.</p>
 </blockquote>
-<h1 id="DC3"><a href="#DC3" class="headerlink" title="DC3"></a>DC3</h1><pre class="line-numbers language-none"><code class="language-none">nmap -sP -T 5 192.168.60.1/24
+<h1 id="DC3-1"><a href="#DC3-1" class="headerlink" title="DC3"></a>DC3</h1><pre class="line-numbers language-none"><code class="language-none">nmap -sP -T 5 192.168.60.1/24
 nmap -A -T 5 192.168.60.136<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210413195028.png"></p>
@@ -1086,17 +1107,17 @@ cat the-flag.txt<span aria-hidden="true" class="line-numbers-rows"><span></span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/04/16/dc/">
+                <a href="/2021/05/12/vul/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210417103737.png" class="responsive-img" alt="DC靶机系列">
                         
-                        <span class="card-title">DC靶机系列</span>
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1106,22 +1127,17 @@ cat the-flag.txt<span aria-hidden="true" class="line-numbers-rows"><span></span>
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-16
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-12
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E9%9D%B6%E6%9C%BA/" class="post-category">
-                                    靶机
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            southerose
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -1361,7 +1377,7 @@ cat the-flag.txt<span aria-hidden="true" class="line-numbers-rows"><span></span>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.4k</span>&nbsp;字
+                class="white-color">11k</span>&nbsp;字
             
             
             

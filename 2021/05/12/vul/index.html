@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, 信安小白 web安全 CTF southerose">
+    <meta name="keywords" content="信安小白 web安全 CTF southerose">
     <meta name="description" content="信安小白 | web安全 | CTF">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>contact | southerose&#39;s Blog</title>
+    <title>southerose&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -252,7 +252,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">contact</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -380,21 +380,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-04
+                    2021-05-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-04
+                    2021-05-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    488
                 </div>
                 
 
@@ -424,7 +424,60 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <pre class="line-numbers language-none"><code class="language-none">title: xmctf
+date: 2021-04-06 12:36:43
+categories: 
+
+  - CTF
+    img: https://gitee.com/southerose/PictureBed/raw/master/img/20210409144039.png<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<table>
+<thead>
+<tr>
+<th>漏洞类型</th>
+<th>原理</th>
+<th>防御</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sql注入</td>
+<td>数据流从前端流入后端的过程中，没有用户输入的这些数据进行严格的过滤，拼接到后台的sql语句中</td>
+<td>1.过滤用户的输入2.使用预编译sql语句</td>
+</tr>
+<tr>
+<td>xss</td>
+<td>浏览器解析用户输入的恶意js代码</td>
+<td>1.过滤用户的输入2.输出的html进行实体编码</td>
+</tr>
+<tr>
+<td>csrf</td>
+<td>攻击者会伪造一个请求（这个请求一般是一个链接），然后欺骗目标用户进行点击</td>
+<td>1.增加token；<br>2.增加验证码；<br></td>
+</tr>
+<tr>
+<td>XXE</td>
+<td>xml外部实体注入，攻击者通过向服务器注入的xml实体内容，服务端接收和解析了来自用户端的xml数据,而又没有做严格的安全控制,从而导致xml外部实体注入。</td>
+<td>使用开发语言提供的禁用外部实体的方法</td>
+</tr>
+<tr>
+<td>文件上传</td>
+<td>用户上传了一个不可预料的文件例如webshell，并通过此脚本文件获得了执行服务器端命令的能力</td>
+<td>白名单验证</td>
+</tr>
+<tr>
+<td>命令执行</td>
+<td>用户通过浏览器提交一些命令，由于服务器端没有针对执行函数做过滤，导致直接调用一些函数如system、exec、passthru、shell_exec就直接执行命令</td>
+<td>过滤输入</td>
+</tr>
+<tr>
+<td>反序列化</td>
+<td>输入一个序列化的内容，在后端反序列化生成对象后调用魔法函数，这个过程没有严格过滤</td>
+<td>即将序列化的对象进行校验</td>
+</tr>
+</tbody></table>
+<p><strong>XXE</strong><br><img src="https://image.3001.net/images/20180815/1534317368_5b73d338d44ec.png!small" alt="image.png">DTD：Document Type Definition 即文档类型定义，用来为XML文档定义语义约束。可以嵌入在XML文档中(内部声明)，也可以独立的放在另外一个单独的文件中(外部引用)。</p>
+<p>实体分为一般实体和参数实体</p>
+
                 
             </div>
             <hr/>
@@ -450,7 +503,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://southerose.gitee.io/contact/index.html">http://southerose.gitee.io/contact/index.html</a>
+                    <a href="http://southerose.gitee.io/2021/05/12/vul/">http://southerose.gitee.io/2021/05/12/vul/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -660,13 +713,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/contact/index.html">
+                <a href="/2021/05/12/vul/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="contact">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">contact</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -677,7 +730,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-12
                             </span>
                         <span class="publish-author">
                             
@@ -695,16 +748,15 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/contact/index.html">
+                <a href="/2021/04/16/dc/">
                     <div class="card-image">
                         
+                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210417103737.png" class="responsive-img" alt="DC靶机系列">
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="contact">
-                        
-                        <span class="card-title">contact</span>
+                        <span class="card-title">DC靶机系列</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -715,17 +767,20 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-16
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            southerose
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9D%B6%E6%9C%BA/" class="post-category">
+                                    靶机
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
