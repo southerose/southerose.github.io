@@ -22,9 +22,9 @@
             
             <tag> buuctf </tag>
             
-            <tag> wp </tag>
-            
             <tag> misc </tag>
+            
+            <tag> wp </tag>
             
         </tags>
       
@@ -42,10 +42,16 @@
       
       <categories>
           
-          <category> 靶机 </category>
+          <category> 渗透 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> 靶机 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -61,10 +67,18 @@
       
       <categories>
           
-          <category> 工具 </category>
+          <category> 其他 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -80,10 +94,18 @@
       
       <categories>
           
-          <category> 工具 </category>
+          <category> 其他 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> metasploit </tag>
+            
+        </tags>
       
     </entry>
     
@@ -99,10 +121,18 @@
       
       <categories>
           
-          <category> 工具 </category>
+          <category> 其他 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> netcat </tag>
+            
+        </tags>
       
     </entry>
     
@@ -118,10 +148,18 @@
       
       <categories>
           
-          <category> CTF </category>
+          <category> ctf </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> wp </tag>
+            
+            <tag> web </tag>
+            
+        </tags>
       
     </entry>
     
@@ -137,10 +175,18 @@
       
       <categories>
           
-          <category> web安全 </category>
+          <category> 其他 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> sql注入 </tag>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
       
     </entry>
     
