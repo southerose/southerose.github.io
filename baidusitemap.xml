@@ -2,26 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://southerose.gitee.io/2021/04/06/xmctf/</loc>
-    <lastmod>2021-06-05</lastmod>
-  </url>
-  <url>
-    <loc>http://southerose.gitee.io/2021/04/16/dc/</loc>
-    <lastmod>2021-04-24</lastmod>
-  </url>
-  <url>
-    <loc>http://southerose.gitee.io/2021/04/11/metasploit/</loc>
-    <lastmod>2021-04-17</lastmod>
-  </url>
-  <url>
-    <loc>http://southerose.gitee.io/2021/04/11/git/</loc>
-    <lastmod>2021-04-11</lastmod>
+    <lastmod>2021-06-20</lastmod>
   </url>
   <url>
     <loc>http://southerose.gitee.io/2021/04/05/sql-inject/</loc>
-    <lastmod>2021-04-11</lastmod>
+    <lastmod>2021-06-20</lastmod>
   </url>
   <url>
     <loc>http://southerose.gitee.io/2021/04/11/netcat/</loc>
-    <lastmod>2021-04-11</lastmod>
+    <lastmod>2021-06-20</lastmod>
+  </url>
+  <url>
+    <loc>http://southerose.gitee.io/2021/04/11/metasploit/</loc>
+    <lastmod>2021-06-20</lastmod>
+  </url>
+  <url>
+    <loc>http://southerose.gitee.io/2021/04/11/git/</loc>
+    <lastmod>2021-06-20</lastmod>
+  </url>
+  <url>
+    <loc>http://southerose.gitee.io/2021/04/16/dc/</loc>
+    <lastmod>2021-06-20</lastmod>
+  </url>
+  <url>
+    <loc>http://southerose.gitee.io/2021/06/20/buuctf-misc-wp/</loc>
+    <lastmod>2021-06-20</lastmod>
   </url>
 </urlset> 
