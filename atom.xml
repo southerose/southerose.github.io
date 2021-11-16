@@ -6,7 +6,7 @@
   <link href="http://southerose.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://southerose.gitee.io/"/>
-  <updated>2021-06-20T06:30:14.813Z</updated>
+  <updated>2021-11-16T09:38:04.204Z</updated>
   <id>http://southerose.gitee.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>buuctf-web-wp</title>
+    <link href="http://southerose.gitee.io/2021/07/10/buuctf-web-wp/"/>
+    <id>http://southerose.gitee.io/2021/07/10/buuctf-web-wp/</id>
+    <published>2021-07-10T02:00:32.000Z</published>
+    <updated>2021-11-16T09:38:04.204Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;HCTF-2018-WarmUp&quot;&gt;&lt;a href=&quot;#HCTF-2018-WarmUp&quot; class=&quot;headerlink&quot; title=&quot;[HCTF 2018]WarmUp&quot;&gt;&lt;/a&gt;[HCTF 2018]WarmUp&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="ctf" scheme="http://southerose.gitee.io/categories/ctf/"/>
+    
+    
+    <category term="buuctf" scheme="http://southerose.gitee.io/tags/buuctf/"/>
+    
+    <category term="wp" scheme="http://southerose.gitee.io/tags/wp/"/>
+    
+    <category term="web" scheme="http://southerose.gitee.io/tags/web/"/>
+    
+  </entry>
   
   <entry>
     <title>buuctf-misc-wp</title>

