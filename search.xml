@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>shiro550_CVE-2016-4437</title>
+      <link href="2021/09/20/shiro-fan-xu-lie-hua-cve-2016-4437/"/>
+      <url>2021/09/20/shiro-fan-xu-lie-hua-cve-2016-4437/</url>
+      
+        <content type="html"><![CDATA[<h1 id="0X01-漏洞描述"><a href="#0X01-漏洞描述" class="headerlink" title="0X01 漏洞描述"></a>0X01 漏洞描述</h1><p>Apache Shiro是一个强大且易用的Java安全框架,执行身份验证、授权、密码和会话管理。</p><p>rememberMe的AES加密泄露可影响任意版本的shiro，造成反序列化漏洞。</p><h1 id="0X02-漏洞原理"><a href="#0X02-漏洞原理" class="headerlink" title="0X02 漏洞原理"></a>0X02 漏洞原理</h1><p>Apache Shiro框架在cookie中有一个字段，提供记住我（rememberMe）的功能，也就是关闭了浏览器以后再打开，不需要在登陆。</p><p>shiro对rememberMe的加密过程：</p><ul><li>获取rememberMe cookie</li><li>序列化</li><li>AES加密</li><li>Base64编码操作</li></ul><p>shiro在识别身份时对rememberMe的解密密过程：</p><ul><li>获取rememberMe cookie</li><li>Base64解码操作</li><li>AES解密（加密密钥硬编码）</li><li>反序列化（没有过滤）</li></ul><p>但是，AES加密的密钥Key被硬编码在代码里，意味着每个人通过源代码都能拿到AES加密的密钥。因此，攻击者构造一个恶意的对象，并且对其序列化，AES加密，base64编码后，作为cookie的rememberMe字段发送。Shiro将rememberMe进行解密并且反序列化，最终造成反序列化漏洞。</p><h1 id="0X03-漏洞复现"><a href="#0X03-漏洞复现" class="headerlink" title="0X03 漏洞复现"></a>0X03 漏洞复现</h1><h2 id="漏洞验证过程"><a href="#漏洞验证过程" class="headerlink" title="漏洞验证过程"></a>漏洞验证过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115094732.png"></p><p>打开主页发现出现remember me，抓包重放发现返回包中出现<code>rememberMe=deleteMe</code></p><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115095502.png"></p><p><a href="https://github.com/insightglacier/Shiro_exploit%EF%BC%8C%E4%BD%BF%E7%94%A8%E8%AF%A5poc%E8%BF%9B%E8%A1%8C%E6%A3%80%E6%B5%8B">https://github.com/insightglacier/Shiro_exploit，使用该poc进行检测</a></p><pre class="line-numbers language-none"><code class="language-none">python3 shiro_exploit.py -t 3 -u http://192.168.60.134:8080<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115163825.png"></p><p>存在漏洞，即可进行进一步利用。</p><h2 id="漏洞利用过程"><a href="#漏洞利用过程" class="headerlink" title="漏洞利用过程"></a>漏洞利用过程</h2><h3 id="1-反弹shell"><a href="#1-反弹shell" class="headerlink" title="1.反弹shell"></a>1.反弹shell</h3><p><a href="https://github.com/feihong-cs/ShiroExploit-Deprecated">https://github.com/feihong-cs/ShiroExploit-Deprecated</a></p><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115191557.png"></p><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115191645.png"></p><p>输入目标地址，开始检测漏洞。</p><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115191727.png"></p><p>攻击机监听</p><pre class="line-numbers language-none"><code class="language-none">nc -lvp 1234<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115191936.png"></p><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115191852.png"></p><p>收到反弹的shell</p><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115192005.png"></p><h3 id="2-命令执行"><a href="#2-命令执行" class="headerlink" title="2.命令执行"></a>2.命令执行</h3><p><a href="https://github.com/j1anFen/shiro_attack">https://github.com/j1anFen/shiro_attack</a></p><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115192545.png"></p><p>命令执行</p><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115192618.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 渗透 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> shiro </tag>
+            
+            <tag> 复现 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>buuctf-web-wp</title>
       <link href="2021/07/10/buuctf-web-wp/"/>
       <url>2021/07/10/buuctf-web-wp/</url>
