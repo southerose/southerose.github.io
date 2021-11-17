@@ -6,7 +6,7 @@
   <link href="http://southerose.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://southerose.gitee.io/"/>
-  <updated>2021-11-16T10:47:30.377Z</updated>
+  <updated>2021-11-17T07:52:01.789Z</updated>
   <id>http://southerose.gitee.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>shiro权限绕过_CVE-2020-1957</title>
+    <link href="http://southerose.gitee.io/2021/09/20/shiro-quan-xian-rao-guo-cve-2020-1957/"/>
+    <id>http://southerose.gitee.io/2021/09/20/shiro-quan-xian-rao-guo-cve-2020-1957/</id>
+    <published>2021-09-20T05:00:00.000Z</published>
+    <updated>2021-11-17T07:52:01.789Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;0X00-漏洞简介&quot;&gt;&lt;a href=&quot;#0X00-漏洞简介&quot; class=&quot;headerlink&quot; title=&quot;0X00 漏洞简介&quot;&gt;&lt;/a&gt;0X00 漏洞简介&lt;/h1&gt;&lt;p&gt;Apache</summary>
+        
+      
+    
+    
+    
+    <category term="复现" scheme="http://southerose.gitee.io/categories/%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+    <category term="shiro漏洞" scheme="http://southerose.gitee.io/tags/shiro%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
   
   <entry>
     <title>shiro550_CVE-2016-4437</title>
