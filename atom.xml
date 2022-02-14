@@ -6,7 +6,7 @@
   <link href="http://southerose.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://southerose.gitee.io/"/>
-  <updated>2021-11-17T07:52:01.789Z</updated>
+  <updated>2022-02-14T04:24:55.839Z</updated>
   <id>http://southerose.gitee.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>redis的简单利用</title>
+    <link href="http://southerose.gitee.io/2021/10/11/redis-de-jian-dan-li-yong/"/>
+    <id>http://southerose.gitee.io/2021/10/11/redis-de-jian-dan-li-yong/</id>
+    <published>2021-10-11T00:24:32.000Z</published>
+    <updated>2022-02-14T04:24:55.839Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;redis简介&quot;&gt;&lt;a href=&quot;#redis简介&quot; class=&quot;headerlink&quot; title=&quot;redis简介&quot;&gt;&lt;/a&gt;redis简介&lt;/h1&gt;&lt;p&gt;Redis是一个开源的使用ANSI</summary>
+        
+      
+    
+    
+    
+    <category term="复现" scheme="http://southerose.gitee.io/categories/%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+    <category term="redis" scheme="http://southerose.gitee.io/tags/redis/"/>
+    
+  </entry>
   
   <entry>
     <title>shiro权限绕过_CVE-2020-1957</title>
@@ -150,6 +175,27 @@
     <category term="wp" scheme="http://southerose.gitee.io/tags/wp/"/>
     
     <category term="ctfhub" scheme="http://southerose.gitee.io/tags/ctfhub/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://southerose.gitee.io/2021/06/08/redis-li-yong/"/>
+    <id>http://southerose.gitee.io/2021/06/08/redis-li-yong/</id>
+    <published>2021-06-08T10:59:20.853Z</published>
+    <updated>2021-06-18T03:40:28.603Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;redis简介&quot;&gt;&lt;a href=&quot;#redis简介&quot; class=&quot;headerlink&quot; title=&quot;redis简介&quot;&gt;&lt;/a&gt;redis简介&lt;/h1&gt;&lt;p&gt;Redis是一个开源的使用ANSI</summary>
+        
+      
+    
+    
+    
     
   </entry>
   

