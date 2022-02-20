@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="渗透测试 CTF southerose 信息安全 网络安全 网络空间安全 博客 学习">
+    <meta name="keywords" content="redis的简单利用, 渗透测试 CTF southerose 信息安全 网络安全 网络空间安全 博客 学习">
     <meta name="description" content="渗透测试 | 信息安全 | CTF">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>southerose&#39;s Blog</title>
+    <title>redis的简单利用 | southerose&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -291,12 +291,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/southerose/PictureBed/raw/master/img/20220220100058.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">redis的简单利用</h1>
                 </div>
             </div>
         </div>
@@ -410,12 +410,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/redis/">
+                                <span class="chip bg-color">redis</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%A4%8D%E7%8E%B0/" class="post-category">
+                                复现
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -424,7 +437,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-02-14
+                    2021-04-21
                 </div>
                 
 
@@ -468,16 +481,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre class="line-numbers language-none"><code class="language-none">title: redis的简单利用
-date: 2021-04-21 18:20:09
-tags: 
-  - redis
-categories: 
-  - 复现
-img: 
-  - https://gitee.com/southerose/PictureBed/raw/master/img/20220220100058.png<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="redis简介"><a href="#redis简介" class="headerlink" title="redis简介"></a>redis简介</h1><p>Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库</p>
+                <h1 id="redis简介"><a href="#redis简介" class="headerlink" title="redis简介"></a>redis简介</h1><p>Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库</p>
 <p>端口：6379</p>
 <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><blockquote>
 <p>kali =&gt;192.168.60.134</p>
@@ -670,7 +674,7 @@ jdk：首先看 value 是不是 base64，如果是解码后看里面有没有 ja
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://southerose.gitee.io/2022/02/14/redis-de-jian-dan-li-yong/">http://southerose.gitee.io/2022/02/14/redis-de-jian-dan-li-yong/</a>
+                    <a href="http://southerose.gitee.io/2021/04/21/redis-de-jian-dan-li-yong/">http://southerose.gitee.io/2021/04/21/redis-de-jian-dan-li-yong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -707,7 +711,11 @@ jdk：首先看 value 是不是 base64，如果是解码后看里面有没有 ja
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/redis/">
+                                    <span class="chip bg-color">redis</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -875,18 +883,16 @@ jdk：首先看 value 是不是 base64，如果是解码后看里面有没有 ja
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/02/14/redis-de-jian-dan-li-yong/">
+                <a href="/2021/04/21/metasploit-zhu-ji-shen-tou/">
                     <div class="card-image">
                         
+                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220220094125.png" class="responsive-img" alt="metasploit主机渗透">
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
+                        <span class="card-title">metasploit主机渗透</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -896,18 +902,29 @@ jdk：首先看 value 是不是 base64，如果是解码后看里面有没有 ja
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-14
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-21
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            southerose
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B8%97%E9%80%8F/" class="post-category">
+                                    渗透
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/metasploit/">
+                        <span class="chip bg-color">metasploit</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -918,12 +935,12 @@ jdk：首先看 value 是不是 base64，如果是解码后看里面有没有 ja
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/11/arp-qi-pian/">
+                <a href="/2021/04/16/dc/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220220100110.png" class="responsive-img" alt="arp欺骗">
+                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210417103737.png" class="responsive-img" alt="DC靶机系列">
                         
-                        <span class="card-title">arp欺骗</span>
+                        <span class="card-title">DC靶机系列</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -934,14 +951,14 @@ jdk：首先看 value 是不是 base64，如果是解码后看里面有没有 ja
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%85%B6%E4%BB%96/" class="post-category">
-                                    其他
+                            <a href="/categories/%E6%B8%97%E9%80%8F/" class="post-category">
+                                    渗透
                                 </a>
                             
                             
@@ -951,8 +968,8 @@ jdk：首先看 value 是不是 base64，如果是解码后看里面有没有 ja
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/arp%E6%AC%BA%E9%AA%97/">
-                        <span class="chip bg-color">arp欺骗</span>
+                    <a href="/tags/%E9%9D%B6%E6%9C%BA/">
+                        <span class="chip bg-color">靶机</span>
                     </a>
                     
                 </div>
