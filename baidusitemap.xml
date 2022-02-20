@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://southerose.gitee.io/2021/10/11/arp-qi-pian/</loc>
+    <loc>http://southerose.gitee.io/2022/02/14/redis-de-jian-dan-li-yong/</loc>
     <lastmod>2022-02-20</lastmod>
   </url>
   <url>
-    <loc>http://southerose.gitee.io/2022/02/14/redis-de-jian-dan-li-yong/</loc>
+    <loc>http://southerose.gitee.io/2021/10/11/arp-qi-pian/</loc>
     <lastmod>2022-02-20</lastmod>
   </url>
   <url>
@@ -59,9 +59,5 @@
   <url>
     <loc>http://southerose.gitee.io/2021/04/16/dc/</loc>
     <lastmod>2021-06-20</lastmod>
-  </url>
-  <url>
-    <loc>http://southerose.gitee.io/2021/06/08/redis-li-yong/</loc>
-    <lastmod>2021-06-18</lastmod>
   </url>
 </urlset> 
