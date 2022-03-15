@@ -6,7 +6,7 @@
   <link href="http://southerose.gitee.io/atom.xml" rel="self"/>
   
   <link href="http://southerose.gitee.io/"/>
-  <updated>2022-02-20T02:01:50.253Z</updated>
+  <updated>2022-03-15T11:51:58.558Z</updated>
   <id>http://southerose.gitee.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apache Log4j2漏洞复现</title>
+    <link href="http://southerose.gitee.io/2021/11/21/apache-log4j2-lou-dong-fu-xian/"/>
+    <id>http://southerose.gitee.io/2021/11/21/apache-log4j2-lou-dong-fu-xian/</id>
+    <published>2021-11-21T10:20:09.000Z</published>
+    <updated>2022-03-15T11:51:58.558Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;redis简介&quot;&gt;&lt;a href=&quot;#redis简介&quot; class=&quot;headerlink&quot; title=&quot;redis简介&quot;&gt;&lt;/a&gt;redis简介&lt;/h1&gt;&lt;h1 id=&quot;Apache-Log4j2漏洞复现&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="复现" scheme="http://southerose.gitee.io/categories/%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+    <category term="log4j2" scheme="http://southerose.gitee.io/tags/log4j2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fastjson 1.2.47 远程命令执行漏洞</title>
+    <link href="http://southerose.gitee.io/2021/10/11/fastjson-1.2.47-yuan-cheng-ming-ling-zhi-xing-lou-dong/"/>
+    <id>http://southerose.gitee.io/2021/10/11/fastjson-1.2.47-yuan-cheng-ming-ling-zhi-xing-lou-dong/</id>
+    <published>2021-10-11T10:20:09.000Z</published>
+    <updated>2022-03-15T11:51:55.063Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;redis简介&quot;&gt;&lt;a href=&quot;#redis简介&quot; class=&quot;headerlink&quot; title=&quot;redis简介&quot;&gt;&lt;/a&gt;redis简介&lt;/h1&gt;&lt;h1 id=&quot;Fastjson-1-2-47-远程命令执行漏洞&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="复现" scheme="http://southerose.gitee.io/categories/%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+    <category term="fastjson" scheme="http://southerose.gitee.io/tags/fastjson/"/>
+    
+  </entry>
   
   <entry>
     <title>arp欺骗</title>
@@ -235,7 +285,7 @@
     <link href="http://southerose.gitee.io/2021/04/21/redis-de-jian-dan-li-yong/"/>
     <id>http://southerose.gitee.io/2021/04/21/redis-de-jian-dan-li-yong/</id>
     <published>2021-04-21T10:20:09.000Z</published>
-    <updated>2022-02-20T02:11:57.835Z</updated>
+    <updated>2022-03-15T11:52:03.106Z</updated>
     
     
       

