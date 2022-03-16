@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://southerose.gitee.io/2021/11/11/jboss-4.x-jbossmq-jms-fan-xu-lie-hua-lou-dong-cve-2017-7504/</loc>
+    <lastmod>2022-03-16</lastmod>
+  </url>
+  <url>
+    <loc>http://southerose.gitee.io/2021/11/13/jboss-5.x6.x-fan-xu-lie-hua-lou-dong-cve-2017-12149/</loc>
+    <lastmod>2022-03-16</lastmod>
+  </url>
+  <url>
+    <loc>http://southerose.gitee.io/2021/03/17/fang-huo-qiang-de-bu-shu-mo-shi/</loc>
+    <lastmod>2022-03-16</lastmod>
+  </url>
+  <url>
+    <loc>http://southerose.gitee.io/2021/09/11/ji-yi-ci-shen-tou-ce-shi/</loc>
+    <lastmod>2022-03-16</lastmod>
+  </url>
+  <url>
+    <loc>http://southerose.gitee.io/2021/05/01/si-da-an-quan-she-bei/</loc>
+    <lastmod>2022-03-16</lastmod>
+  </url>
+  <url>
+    <loc>http://southerose.gitee.io/2021/08/21/yi-xie-ctf-ti-mu/</loc>
+    <lastmod>2022-03-16</lastmod>
+  </url>
+  <url>
     <loc>http://southerose.gitee.io/2021/12/21/apache-log4j2-lou-dong-fu-xian/</loc>
     <lastmod>2022-03-15</lastmod>
   </url>

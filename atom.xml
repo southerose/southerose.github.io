@@ -42,6 +42,56 @@
   </entry>
   
   <entry>
+    <title>JBoss 5.x/6.x 反序列化漏洞（CVE-2017-12149）</title>
+    <link href="http://southerose.gitee.io/2021/11/13/jboss-5.x6.x-fan-xu-lie-hua-lou-dong-cve-2017-12149/"/>
+    <id>http://southerose.gitee.io/2021/11/13/jboss-5.x6.x-fan-xu-lie-hua-lou-dong-cve-2017-12149/</id>
+    <published>2021-11-13T10:20:09.000Z</published>
+    <updated>2022-03-16T09:07:21.949Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JBoss-5-x-6-x-反序列化漏洞（CVE-2017-12149）&quot;&gt;&lt;a href=&quot;#JBoss-5-x-6-x-反序列化漏洞（CVE-2017-12149）&quot; class=&quot;headerlink&quot; title=&quot;JBoss 5.x/6.x</summary>
+        
+      
+    
+    
+    
+    <category term="复现" scheme="http://southerose.gitee.io/categories/%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+    <category term="jboss" scheme="http://southerose.gitee.io/tags/jboss/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JBoss 4.x JBossMQ JMS 反序列化漏洞（CVE-2017-7504）</title>
+    <link href="http://southerose.gitee.io/2021/11/11/jboss-4.x-jbossmq-jms-fan-xu-lie-hua-lou-dong-cve-2017-7504/"/>
+    <id>http://southerose.gitee.io/2021/11/11/jboss-4.x-jbossmq-jms-fan-xu-lie-hua-lou-dong-cve-2017-7504/</id>
+    <published>2021-11-11T10:20:09.000Z</published>
+    <updated>2022-03-16T09:07:23.760Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JBoss-4-x-JBossMQ-JMS-反序列化漏洞（CVE-2017-7504）&quot;&gt;&lt;a href=&quot;#JBoss-4-x-JBossMQ-JMS-反序列化漏洞（CVE-2017-7504）&quot; class=&quot;headerlink&quot; title=&quot;JBoss</summary>
+        
+      
+    
+    
+    
+    <category term="复现" scheme="http://southerose.gitee.io/categories/%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+    <category term="jboss" scheme="http://southerose.gitee.io/tags/jboss/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Fastjson 1.2.47 远程命令执行漏洞</title>
     <link href="http://southerose.gitee.io/2021/10/11/fastjson-1.2.47-yuan-cheng-ming-ling-zhi-xing-lou-dong/"/>
     <id>http://southerose.gitee.io/2021/10/11/fastjson-1.2.47-yuan-cheng-ming-ling-zhi-xing-lou-dong/</id>
@@ -142,6 +192,58 @@
   </entry>
   
   <entry>
+    <title>记一次渗透测试</title>
+    <link href="http://southerose.gitee.io/2021/09/11/ji-yi-ci-shen-tou-ce-shi/"/>
+    <id>http://southerose.gitee.io/2021/09/11/ji-yi-ci-shen-tou-ce-shi/</id>
+    <published>2021-09-11T10:20:09.000Z</published>
+    <updated>2022-03-16T09:07:16.923Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;实战-记一次渗透测试&quot;&gt;&lt;a href=&quot;#实战-记一次渗透测试&quot; class=&quot;headerlink&quot; title=&quot;实战|记一次渗透测试&quot;&gt;&lt;/a&gt;实战|记一次渗透测试&lt;/h1&gt;&lt;h2 id=&quot;注入点探测&quot;&gt;&lt;a href=&quot;#注入点探测&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="渗透" scheme="http://southerose.gitee.io/categories/%E6%B8%97%E9%80%8F/"/>
+    
+    
+    <category term="sql注入" scheme="http://southerose.gitee.io/tags/sql%E6%B3%A8%E5%85%A5/"/>
+    
+    <category term="内网渗透" scheme="http://southerose.gitee.io/tags/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一些CTF题目</title>
+    <link href="http://southerose.gitee.io/2021/08/21/yi-xie-ctf-ti-mu/"/>
+    <id>http://southerose.gitee.io/2021/08/21/yi-xie-ctf-ti-mu/</id>
+    <published>2021-08-21T10:20:09.000Z</published>
+    <updated>2022-03-16T09:07:10.914Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;sql注入&quot;&gt;&lt;a href=&quot;#sql注入&quot; class=&quot;headerlink&quot; title=&quot;sql注入&quot;&gt;&lt;/a&gt;sql注入&lt;/h1&gt;&lt;h2 id=&quot;injection&quot;&gt;&lt;a href=&quot;#injection&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="ctf" scheme="http://southerose.gitee.io/categories/ctf/"/>
+    
+    
+    <category term="wp" scheme="http://southerose.gitee.io/tags/wp/"/>
+    
+  </entry>
+  
+  <entry>
     <title>buuctf-web-wp</title>
     <link href="http://southerose.gitee.io/2021/07/10/buuctf-web-wp/"/>
     <id>http://southerose.gitee.io/2021/07/10/buuctf-web-wp/</id>
@@ -162,40 +264,11 @@
     <category term="ctf" scheme="http://southerose.gitee.io/categories/ctf/"/>
     
     
-    <category term="buuctf" scheme="http://southerose.gitee.io/tags/buuctf/"/>
-    
     <category term="wp" scheme="http://southerose.gitee.io/tags/wp/"/>
+    
+    <category term="buuctf" scheme="http://southerose.gitee.io/tags/buuctf/"/>
     
     <category term="web" scheme="http://southerose.gitee.io/tags/web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>buuctf-misc-wp</title>
-    <link href="http://southerose.gitee.io/2021/06/20/buuctf-misc-wp/"/>
-    <id>http://southerose.gitee.io/2021/06/20/buuctf-misc-wp/</id>
-    <published>2021-06-20T02:24:32.000Z</published>
-    <updated>2021-06-20T06:30:14.813Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;签到&quot;&gt;&lt;a href=&quot;#签到&quot; class=&quot;headerlink&quot; title=&quot;签到&quot;&gt;&lt;/a&gt;签到&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="ctf" scheme="http://southerose.gitee.io/categories/ctf/"/>
-    
-    
-    <category term="buuctf" scheme="http://southerose.gitee.io/tags/buuctf/"/>
-    
-    <category term="misc" scheme="http://southerose.gitee.io/tags/misc/"/>
-    
-    <category term="wp" scheme="http://southerose.gitee.io/tags/wp/"/>
     
   </entry>
   
@@ -220,11 +293,40 @@
     <category term="ctf" scheme="http://southerose.gitee.io/categories/ctf/"/>
     
     
+    <category term="ctfhub" scheme="http://southerose.gitee.io/tags/ctfhub/"/>
+    
     <category term="misc" scheme="http://southerose.gitee.io/tags/misc/"/>
     
     <category term="wp" scheme="http://southerose.gitee.io/tags/wp/"/>
     
-    <category term="ctfhub" scheme="http://southerose.gitee.io/tags/ctfhub/"/>
+  </entry>
+  
+  <entry>
+    <title>buuctf-misc-wp</title>
+    <link href="http://southerose.gitee.io/2021/06/20/buuctf-misc-wp/"/>
+    <id>http://southerose.gitee.io/2021/06/20/buuctf-misc-wp/</id>
+    <published>2021-06-20T02:24:32.000Z</published>
+    <updated>2021-06-20T06:30:14.813Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;签到&quot;&gt;&lt;a href=&quot;#签到&quot; class=&quot;headerlink&quot; title=&quot;签到&quot;&gt;&lt;/a&gt;签到&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="ctf" scheme="http://southerose.gitee.io/categories/ctf/"/>
+    
+    
+    <category term="misc" scheme="http://southerose.gitee.io/tags/misc/"/>
+    
+    <category term="wp" scheme="http://southerose.gitee.io/tags/wp/"/>
+    
+    <category term="buuctf" scheme="http://southerose.gitee.io/tags/buuctf/"/>
     
   </entry>
   
@@ -252,6 +354,31 @@
     <category term="nmap" scheme="http://southerose.gitee.io/tags/nmap/"/>
     
     <category term="nessus" scheme="http://southerose.gitee.io/tags/nessus/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>四大安全设备</title>
+    <link href="http://southerose.gitee.io/2021/05/01/si-da-an-quan-she-bei/"/>
+    <id>http://southerose.gitee.io/2021/05/01/si-da-an-quan-she-bei/</id>
+    <published>2021-05-01T10:20:09.000Z</published>
+    <updated>2022-03-16T09:07:13.630Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-基础防火墙FW-NGFW类&quot;&gt;&lt;a href=&quot;#1-基础防火墙FW-NGFW类&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="复现" scheme="http://southerose.gitee.io/categories/%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+    <category term="设备" scheme="http://southerose.gitee.io/tags/%E8%AE%BE%E5%A4%87/"/>
     
   </entry>
   
@@ -331,6 +458,34 @@
   </entry>
   
   <entry>
+    <title>git+bash教程</title>
+    <link href="http://southerose.gitee.io/2021/04/11/git/"/>
+    <id>http://southerose.gitee.io/2021/04/11/git/</id>
+    <published>2021-04-11T10:20:09.000Z</published>
+    <updated>2021-06-20T02:50:18.014Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;个人学习笔记记录有限，若完整学习，请移步码云官方==Git大全==！&lt;/p&gt;
+&lt;h1 id=&quot;Git完整内容学习&quot;&gt;&lt;a href=&quot;#Git完整内容学习&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="其他" scheme="http://southerose.gitee.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+    <category term="git" scheme="http://southerose.gitee.io/tags/git/"/>
+    
+    <category term="工具" scheme="http://southerose.gitee.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>metasploit教程</title>
     <link href="http://southerose.gitee.io/2021/04/11/metasploit/"/>
     <id>http://southerose.gitee.io/2021/04/11/metasploit/</id>
@@ -354,37 +509,9 @@
     <category term="其他" scheme="http://southerose.gitee.io/categories/%E5%85%B6%E4%BB%96/"/>
     
     
+    <category term="工具" scheme="http://southerose.gitee.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
     <category term="metasploit" scheme="http://southerose.gitee.io/tags/metasploit/"/>
-    
-    <category term="工具" scheme="http://southerose.gitee.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>git+bash教程</title>
-    <link href="http://southerose.gitee.io/2021/04/11/git/"/>
-    <id>http://southerose.gitee.io/2021/04/11/git/</id>
-    <published>2021-04-11T10:20:09.000Z</published>
-    <updated>2021-06-20T02:50:18.014Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;个人学习笔记记录有限，若完整学习，请移步码云官方==Git大全==！&lt;/p&gt;
-&lt;h1 id=&quot;Git完整内容学习&quot;&gt;&lt;a href=&quot;#Git完整内容学习&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="其他" scheme="http://southerose.gitee.io/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-    <category term="工具" scheme="http://southerose.gitee.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="git" scheme="http://southerose.gitee.io/tags/git/"/>
     
   </entry>
   
@@ -412,62 +539,6 @@
     <category term="工具" scheme="http://southerose.gitee.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
     <category term="netcat" scheme="http://southerose.gitee.io/tags/netcat/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>xmctf</title>
-    <link href="http://southerose.gitee.io/2021/04/06/xmctf/"/>
-    <id>http://southerose.gitee.io/2021/04/06/xmctf/</id>
-    <published>2021-04-06T04:36:43.000Z</published>
-    <updated>2021-06-20T02:53:42.752Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt; 关于星盟xmctf上的一些题目。感觉自己还是见得题太少了，有一些题目有些懵懵懂懂的，好多都是参考一些大佬的，不过自己还是整出来了。加油吧~~~&lt;/p&gt;
-&lt;h1 id=&quot;easy-web&quot;&gt;&lt;a href=&quot;#easy-web&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="ctf" scheme="http://southerose.gitee.io/categories/ctf/"/>
-    
-    
-    <category term="wp" scheme="http://southerose.gitee.io/tags/wp/"/>
-    
-    <category term="web" scheme="http://southerose.gitee.io/tags/web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>sql注入-详细步骤</title>
-    <link href="http://southerose.gitee.io/2021/04/05/sql-inject/"/>
-    <id>http://southerose.gitee.io/2021/04/05/sql-inject/</id>
-    <published>2021-04-05T09:13:17.000Z</published>
-    <updated>2021-06-20T02:51:05.405Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt; sql注入的详细步骤，包括寻找注入点，一些基本的流程，还有几种常见的sql注入分类的原理，已经修复建议等。&lt;/p&gt;
-&lt;h2 id=&quot;寻找-SQL-注入点&quot;&gt;&lt;a href=&quot;#寻找-SQL-注入点&quot; class=&quot;headerlink&quot; title=&quot;寻找 SQL</summary>
-        
-      
-    
-    
-    
-    <category term="其他" scheme="http://southerose.gitee.io/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-    <category term="sql注入" scheme="http://southerose.gitee.io/tags/sql%E6%B3%A8%E5%85%A5/"/>
-    
-    <category term="教程" scheme="http://southerose.gitee.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
