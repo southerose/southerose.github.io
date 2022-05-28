@@ -228,14 +228,14 @@
   </url>
   
   <url>
-    <loc>http://southerose.github.io/tags/fastjson/</loc>
+    <loc>http://southerose.github.io/tags/jboss/</loc>
     <lastmod>2022-05-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://southerose.github.io/tags/jboss/</loc>
+    <loc>http://southerose.github.io/tags/fastjson/</loc>
     <lastmod>2022-05-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -284,20 +284,6 @@
   </url>
   
   <url>
-    <loc>http://southerose.github.io/tags/git/</loc>
-    <lastmod>2022-05-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://southerose.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2022-05-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://southerose.github.io/tags/metasploit/</loc>
     <lastmod>2022-05-28</lastmod>
     <changefreq>daily</changefreq>
@@ -305,7 +291,7 @@
   </url>
   
   <url>
-    <loc>http://southerose.github.io/tags/redis/</loc>
+    <loc>http://southerose.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2022-05-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -326,6 +312,13 @@
   </url>
   
   <url>
+    <loc>http://southerose.github.io/tags/redis/</loc>
+    <lastmod>2022-05-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://southerose.github.io/tags/sql%E6%B3%A8%E5%85%A5/</loc>
     <lastmod>2022-05-28</lastmod>
     <changefreq>daily</changefreq>
@@ -334,6 +327,13 @@
   
   <url>
     <loc>http://southerose.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2022-05-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://southerose.github.io/tags/git/</loc>
     <lastmod>2022-05-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
