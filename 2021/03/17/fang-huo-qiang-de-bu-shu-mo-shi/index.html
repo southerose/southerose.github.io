@@ -291,7 +291,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/southerose/PictureBed/raw/master/img/20220316165238.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://github.com/southerose/PictureBed/raw/master/img/20220316165238.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -444,7 +444,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-16
+                    2022-05-28
                 </div>
                 
 
@@ -483,17 +483,17 @@
             <div id="articleContent">
                 <h1 id="防火墙的部署模式"><a href="#防火墙的部署模式" class="headerlink" title="防火墙的部署模式"></a>防火墙的部署模式</h1><h2 id="路由模式"><a href="#路由模式" class="headerlink" title="路由模式"></a>路由模式</h2><p>当防火墙位于内部网络和外部网络之间时，需要将防火墙与内部网络、外部网络以及DMZ 三个区域相连的接口分别配置成不同网段的IP 地址，重新规划原有的网络拓扑，此时相当于一台路由器。</p>
 <p>如下图所示，防火墙的Trust区域接口与公司内部网络相连，Untrust 区域接口与外部网络相连。值得注意的是，Trust 区域接口和Untrust 区域接口分别处于两个不同的子网中。</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/eb9990aba95143e8ada4de538a4a08c5.jpg"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/eb9990aba95143e8ada4de538a4a08c5.jpg"></p>
 <p>采用路由模式时，可以完成ACL 包过滤、ASPF 动态过滤、NAT 转换等功能。然而，路由模式需要对网络拓扑进行修改（内部网络用户需要更改网关、路由器需要更改路由配置等），这是一件相当费事的工作，因此在使用该模式时需权衡利弊。</p>
 <h2 id="透明模式"><a href="#透明模式" class="headerlink" title="透明模式"></a>透明模式</h2><p>如果防火墙采用透明模式进行工作，则可以避免改变拓扑结构造成的麻烦，此时防火墙对于子网用户和路由器来说是完全透明的。也就是说，用户完全感觉不到防火墙的存在。</p>
 <p>采用透明模式时，只需在网络中像放置网桥（bridge）一样插入该防火墙设备即可，无需修改任何已有的配置。与路由模式相同，IP 报文同样经过相关的过滤检查（但是IP 报文中的源或目的地址不会改变），内部网络用户依旧受到防火墙的保护。防火墙透明模式的典型组网方式如下：</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/816b8dac680b97a4067dd27745e1d8f9.jpg"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/816b8dac680b97a4067dd27745e1d8f9.jpg"></p>
 <p>如上图所示，防火墙的Trust 区域接口与公司内部网络相连，Untrust 区域接口与外部网络相连，需要注意的是内部网络和外部网络必须处于同一个子网。</p>
 <h2 id="混合模式"><a href="#混合模式" class="headerlink" title="混合模式"></a>混合模式</h2><p>如果防火墙既存在工作在路由模式的接口（接口具有IP 地址），又存在工作在透明模式的接口（接口无IP  地址），则防火墙工作在混合模式下。混合模式主要用于透明模式作双机备份的情况，此时启动VRRP（Virtual Router Redundancy Protocol，虚拟路由冗余协议）功能的接口需要配置IP 地址，其它接口不配置IP地址。</p>
 <p>防火墙混合模式的典型组网方式如下：</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/9ceb6b1ba98ac62b49a8fcff828cf393.jpg"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/9ceb6b1ba98ac62b49a8fcff828cf393.jpg"></p>
 <p>如上图所示，主/备 防火墙的Trust 区域接口与公司内部网络相连，Untrust区域接口与外部网络相连，主/备防火墙之间通过HUB 或LAN Switch 实现互相连接，并运行VRRP 协议进行备份。需要注意的是内部网络和外部网络必须处于同一个子网。</p>
-<h1 id="防火墙的部署方法"><a href="#防火墙的部署方法" class="headerlink" title="防火墙的部署方法"></a>防火墙的部署方法</h1><h2 id="包过滤路由器"><a href="#包过滤路由器" class="headerlink" title="包过滤路由器"></a>包过滤路由器</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/image-20210126140245738.png"></p>
+<h1 id="防火墙的部署方法"><a href="#防火墙的部署方法" class="headerlink" title="防火墙的部署方法"></a>防火墙的部署方法</h1><h2 id="包过滤路由器"><a href="#包过滤路由器" class="headerlink" title="包过滤路由器"></a>包过滤路由器</h2><p><img src="https://github.com/southerose/PictureBed/raw/master/img/image-20210126140245738.png"></p>
 <h3 id="包过滤防火墙功能的路由器"><a href="#包过滤防火墙功能的路由器" class="headerlink" title="包过滤防火墙功能的路由器"></a>包过滤防火墙功能的路由器</h3><ul>
 <li>内网与外网的唯一连接点</li>
 <li>路由+ACL </li>
@@ -510,7 +510,7 @@
 <li><p>内部信息对外公开，可攻击开放的服务和主机</p>
 </li>
 </ul>
-<h2 id="双宿主堡垒机"><a href="#双宿主堡垒机" class="headerlink" title="双宿主堡垒机"></a>双宿主堡垒机</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/image-20210126140311802.png"></p>
+<h2 id="双宿主堡垒机"><a href="#双宿主堡垒机" class="headerlink" title="双宿主堡垒机"></a>双宿主堡垒机</h2><p><img src="https://github.com/southerose/PictureBed/raw/master/img/image-20210126140311802.png"></p>
 <h3 id="使用应用代理网关作为双宿主堡垒主机"><a href="#使用应用代理网关作为双宿主堡垒主机" class="headerlink" title="使用应用代理网关作为双宿主堡垒主机"></a>使用应用代理网关作为双宿主堡垒主机</h3><ul>
 <li><p>一个网卡使用公网ip地址连接外部网络</p>
 </li>
@@ -526,7 +526,7 @@
 <li>内网对外访问过于严格</li>
 <li>一旦堡垒主机被攻破，内网完全暴露</li>
 </ul>
-<h2 id="屏蔽主机"><a href="#屏蔽主机" class="headerlink" title="屏蔽主机"></a>屏蔽主机</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/image-20210126141121714.png"></p>
+<h2 id="屏蔽主机"><a href="#屏蔽主机" class="headerlink" title="屏蔽主机"></a>屏蔽主机</h2><p><img src="https://github.com/southerose/PictureBed/raw/master/img/image-20210126141121714.png"></p>
 <h3 id="结合包过滤防火墙和应用层代理"><a href="#结合包过滤防火墙和应用层代理" class="headerlink" title="结合包过滤防火墙和应用层代理"></a>结合包过滤防火墙和应用层代理</h3><ul>
 <li>两层安全防护</li>
 <li>包过滤防火墙：网络层的访问控制</li>
@@ -538,7 +538,7 @@
 <h3 id="缺点-2"><a href="#缺点-2" class="headerlink" title="缺点"></a>缺点</h3><ul>
 <li>对外开放服务器成弱点</li>
 </ul>
-<h2 id="屏蔽子网"><a href="#屏蔽子网" class="headerlink" title="屏蔽子网"></a>屏蔽子网</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/image-20210126141622159.png"></p>
+<h2 id="屏蔽子网"><a href="#屏蔽子网" class="headerlink" title="屏蔽子网"></a>屏蔽子网</h2><p><img src="https://github.com/southerose/PictureBed/raw/master/img/image-20210126141622159.png"></p>
 <h3 id="屏蔽子网：DMZ区"><a href="#屏蔽子网：DMZ区" class="headerlink" title="屏蔽子网：DMZ区"></a>屏蔽子网：DMZ区</h3><ul>
 <li>应用代理及对外服务器</li>
 <li>三层安全防护：外网防火墙，应用层代理，内网防火墙</li>
@@ -548,9 +548,9 @@
 <li>不同安全级别的网络之间</li>
 <li>两个需要隔离的区域之间</li>
 </ul>
-<h2 id="防火墙的部署方式"><a href="#防火墙的部署方式" class="headerlink" title="防火墙的部署方式"></a>防火墙的部署方式</h2><h3 id="单防火墙部署方式（有DMZ-）"><a href="#单防火墙部署方式（有DMZ-）" class="headerlink" title="单防火墙部署方式（有DMZ ）"></a>单防火墙部署方式（有DMZ ）</h3><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/image-20210126142555476.png"></p>
-<h3 id="单防火墙部署方式（无DMZ-）"><a href="#单防火墙部署方式（无DMZ-）" class="headerlink" title="单防火墙部署方式（无DMZ ）"></a>单防火墙部署方式（无DMZ ）</h3><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/src=http---5b0988e595225.cdn.sohucs.com-images-20171115-e8707f75463f43c483ca1b1a682d8343.jpeg&amp;refer=http---5b0988e595225.cdn.sohucs.jpg"></p>
-<h3 id="双防火墙部署方式"><a href="#双防火墙部署方式" class="headerlink" title="双防火墙部署方式"></a>双防火墙部署方式</h3><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/image-20210126142609701.png"></p>
+<h2 id="防火墙的部署方式"><a href="#防火墙的部署方式" class="headerlink" title="防火墙的部署方式"></a>防火墙的部署方式</h2><h3 id="单防火墙部署方式（有DMZ-）"><a href="#单防火墙部署方式（有DMZ-）" class="headerlink" title="单防火墙部署方式（有DMZ ）"></a>单防火墙部署方式（有DMZ ）</h3><p><img src="https://github.com/southerose/PictureBed/raw/master/img/image-20210126142555476.png"></p>
+<h3 id="单防火墙部署方式（无DMZ-）"><a href="#单防火墙部署方式（无DMZ-）" class="headerlink" title="单防火墙部署方式（无DMZ ）"></a>单防火墙部署方式（无DMZ ）</h3><p><img src="https://github.com/southerose/PictureBed/raw/master/img/src=http---5b0988e595225.cdn.sohucs.com-images-20171115-e8707f75463f43c483ca1b1a682d8343.jpeg&amp;refer=http---5b0988e595225.cdn.sohucs.jpg"></p>
+<h3 id="双防火墙部署方式"><a href="#双防火墙部署方式" class="headerlink" title="双防火墙部署方式"></a>双防火墙部署方式</h3><p><img src="https://github.com/southerose/PictureBed/raw/master/img/image-20210126142609701.png"></p>
 
                 
             </div>
@@ -793,7 +793,7 @@
                 <a href="/2021/04/05/sql-inject/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/feature.jpg" class="responsive-img" alt="sql注入-详细步骤">
+                        <img src="https://github.com/southerose/PictureBed/raw/master/img/feature.jpg" class="responsive-img" alt="sql注入-详细步骤">
                         
                         <span class="card-title">sql注入-详细步骤</span>
                     </div>
@@ -845,7 +845,7 @@
                 <a href="/2021/03/17/fang-huo-qiang-de-bu-shu-mo-shi/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220316165238.png" class="responsive-img" alt="防火墙的部署模式">
+                        <img src="https://github.com/southerose/PictureBed/raw/master/img/20220316165238.png" class="responsive-img" alt="防火墙的部署模式">
                         
                         <span class="card-title">防火墙的部署模式</span>
                     </div>

